@@ -1,5 +1,7 @@
 package Model;
 
+import java.util.List;
+
 public class Aluno {
     private String nome;
     private String email;
@@ -7,6 +9,15 @@ public class Aluno {
     private String numeroMatricula;
     private int anoIngresso;
     private int semestreIngresso;
+    private List<AtividadeComplementar> atividades;
+
+    public List<AtividadeComplementar> getAtividades() {
+        return atividades;
+    }
+
+    public void setAtividade(AtividadeComplementar atividade){
+        atividades.add(atividade);
+    }
 
     public String getNome() {
         return nome;
