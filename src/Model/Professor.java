@@ -2,6 +2,8 @@ package Model;
 
 public class Professor {
     private int id;
+    private String nome;
+
 
     public int getId() {
         return id;
@@ -18,6 +20,4 @@ public class Professor {
     public void setNome(String nome) {
         this.nome = nome;
     }
-
-    private String nome;
 }

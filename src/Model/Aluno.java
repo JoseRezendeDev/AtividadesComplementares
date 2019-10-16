@@ -9,7 +9,17 @@ public class Aluno {
     private String numeroMatricula;
     private int anoIngresso;
     private int semestreIngresso;
+    private double horasCumpridas;
     private List<AtividadeComplementar> atividades;
+
+
+    public double getHorasCumpridas() {
+        return horasCumpridas;
+    }
+
+    public void setHorasCumpridas(double horasCumpridas) {
+        this.horasCumpridas = horasCumpridas;
+    }
 
     public List<AtividadeComplementar> getAtividades() {
         return atividades;

@@ -2,6 +2,8 @@ package Model;
 
 public class CategoriaAC {
     private int id;
+    private String nome;
+    private double maximoHoras;
 
     public int getId() {
         return id;
@@ -10,9 +12,6 @@ public class CategoriaAC {
     public void setId(int id) {
         this.id = id;
     }
-
-    private String nome;
-    private double maximoHoras;
 
     public String getNome() {
         return nome;
