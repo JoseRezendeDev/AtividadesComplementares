@@ -1,5 +1,6 @@
 package Model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Aluno {
@@ -12,6 +13,9 @@ public class Aluno {
     private double horasCumpridas;
     private List<AtividadeComplementar> atividades;
 
+    public Aluno() {
+        atividades = new ArrayList<>();
+    }
 
     public double getHorasCumpridas() {
         return horasCumpridas;

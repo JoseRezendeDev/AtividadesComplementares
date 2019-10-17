@@ -1,4 +1,4 @@
-package Main;
+package Loader;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -11,10 +11,8 @@ import javafx.stage.Stage;
 public class Main extends Application {
 
     @Override
-    public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("../View/home.fxml"));
-        primaryStage.setTitle("Atividades Complementares");
-        primaryStage.setScene(new Scene(root, 100, 100));
+    public void start(Stage primaryStage) {
+        HomeLoader loader = new HomeLoader();
 
         //Abrir a tela maximizada
         Screen screen = Screen.getPrimary();
@@ -24,7 +22,15 @@ public class Main extends Application {
         primaryStage.setWidth(bounds.getWidth());
         primaryStage.setHeight(bounds.getHeight());
 
+        loader.loadHome(primaryStage);
+
+        //Código original da main pra iniciar o JavaFX, coloquei
+        //na classe HomeLoader
+        /*Parent root = FXMLLoader.load(getClass().getResource("../View/home.fxml"));
+        primaryStage.setTitle("Atividades Complementares");
+        primaryStage.setScene(new Scene(root, 100, 100));
         primaryStage.show();
+         */
     }
 
 

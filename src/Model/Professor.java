@@ -4,6 +4,9 @@ public class Professor {
     private int id;
     private String nome;
 
+    public String toString(){
+        return this.nome;
+    }
 
     public int getId() {
         return id;

@@ -1,7 +1,7 @@
 package Model;
 
 public class AtividadeComplementar {
-    private int codigo;
+    private String codigo;
     private double cargaHoraria;
     private String descricao;
     private int anoAC;
@@ -18,11 +18,11 @@ public class AtividadeComplementar {
         this.professor = professor;
     }
 
-    public int getCodigo() {
+    public String getCodigo() {
         return codigo;
     }
 
-    public void setCodigo(int codigo) {
+    public void setCodigo(String codigo) {
         this.codigo = codigo;
     }
 

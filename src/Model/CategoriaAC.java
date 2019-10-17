@@ -5,6 +5,10 @@ public class CategoriaAC {
     private String nome;
     private double maximoHoras;
 
+    public String toString(){
+        return this.nome;
+    }
+
     public int getId() {
         return id;
     }
