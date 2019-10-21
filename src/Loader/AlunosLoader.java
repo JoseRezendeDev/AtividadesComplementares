@@ -1,7 +1,6 @@
 package Loader;
 
-import Controller.AlunoController;
-import Controller.HomeController;
+import Controller.AlunosController;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
@@ -9,14 +8,14 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class HomeLoader {
-    public void loadHome(Stage stage) {
+public class AlunosLoader {
+    public void loadAlunos(Stage stage) {
         FXMLLoader loader =  new FXMLLoader();
         try {
-            Pane graph = loader.load(getClass().getResource("../View/home.fxml").openStream());
+            Pane graph = loader.load(getClass().getResource("../View/alunos.fxml").openStream());
             Scene scene = new Scene(graph, 1100, 800);
 
-            HomeController ctrl = loader.getController();
+            AlunosController ctrl = loader.getController();
             ctrl.initialize(null, null);
 
             stage.setScene(scene);

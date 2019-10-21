@@ -12,7 +12,7 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) {
-        HomeLoader loader = new HomeLoader();
+        LoginLoader loader = new LoginLoader();
 
         //Abrir a tela maximizada
         Screen screen = Screen.getPrimary();
@@ -22,11 +22,11 @@ public class Main extends Application {
         primaryStage.setWidth(bounds.getWidth());
         primaryStage.setHeight(bounds.getHeight());
 
-        loader.loadHome(primaryStage);
+        loader.loadLogin(primaryStage);
 
         //Código original da main pra iniciar o JavaFX, coloquei
-        //na classe HomeLoader
-        /*Parent root = FXMLLoader.load(getClass().getResource("../View/home.fxml"));
+        //nas classes Loader
+        /*Parent root = FXMLLoader.load(getClass().getResource("../View/alunos.fxml"));
         primaryStage.setTitle("Atividades Complementares");
         primaryStage.setScene(new Scene(root, 100, 100));
         primaryStage.show();

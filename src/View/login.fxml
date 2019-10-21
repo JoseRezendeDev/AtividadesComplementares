@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane fx:id="pane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.172-ea"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.LoginController">
+    <VBox alignment="CENTER" layoutX="258.0" prefHeight="314.0" prefWidth="247.0" spacing="20.0"
+          AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="153.0" AnchorPane.topAnchor="200.0">
+        <children>
+          <HBox alignment="TOP_CENTER" prefHeight="17.0" prefWidth="273.0" spacing="10.0">
+              <children>
+                  <Label text="Usuário:"/>
+                  <TextField fx:id="tfUsuario" alignment="CENTER"/>
+              </children>
+          </HBox>
+          <HBox alignment="TOP_CENTER" prefHeight="31.0" prefWidth="273.0" spacing="10.0">
+              <children>
+                  <Label text="Senha:"/>
+                  <PasswordField fx:id="tfSenha"/>
+              </children>
+          </HBox>
+          <Button fx:id="btEntrar" alignment="CENTER" mnemonicParsing="false" onAction="#logar" text="Entrar"/>
+        </children>
+    </VBox>
+</AnchorPane>

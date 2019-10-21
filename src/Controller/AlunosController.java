@@ -1,11 +1,10 @@
 package Controller;
 
-import Loader.AlunoLoader;
+import Loader.AtividadesLoader;
 import Model.Aluno;
 import Model.AtividadeComplementar;
 import Model.CategoriaAC;
 import Model.Professor;
-import javafx.beans.property.Property;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -17,11 +16,9 @@ import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.ResourceBundle;
 
-public class HomeController implements Initializable {
+public class AlunosController implements Initializable {
     @FXML
     private Pane pane;
     @FXML
@@ -80,8 +77,8 @@ public class HomeController implements Initializable {
 
     public void exibirAluno(){
         Aluno alunoSelecionado = tabela.getSelectionModel().getSelectedItem();
-        AlunoLoader alunoLoader = new AlunoLoader();
+        AtividadesLoader atividadesLoader = new AtividadesLoader();
         Stage stage = (Stage) pane.getScene().getWindow();
-        alunoLoader.loadAluno(alunoSelecionado, stage);
+        atividadesLoader.loadAtividades(alunoSelecionado, stage);
     }
 }
