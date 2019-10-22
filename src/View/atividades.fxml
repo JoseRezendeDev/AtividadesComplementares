@@ -24,4 +24,5 @@
     </TableView>
    <Label fx:id="lbTitulo" alignment="CENTER" contentDisplay="CENTER" layoutX="225.0" layoutY="6.0" text="Atividades complementares" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="5.0" />
    <Button layoutX="31.0" layoutY="1.0" mnemonicParsing="false" onAction="#voltarHome" text="Voltar" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="3.0" />
+   <Button fx:id="btCadastrar" layoutX="431.0" layoutY="261.0" mnemonicParsing="false" onAction="#cadastrarAC" text="Cadastrar nova atividade" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="20.0" />
 </AnchorPane>

@@ -14,6 +14,10 @@ public class Aluno {
     private int semestreIngresso;
     private double horasCumpridas;
 
+    //Esse atributo não tem no diagrama, mas o RF001 do capítulo 3 exige
+    private StatusAluno status;
+    private List<AtividadeComplementar> atividades;
+
     public StatusAluno getStatus() {
         return status;
     }
@@ -21,10 +25,6 @@ public class Aluno {
     public void setStatus(StatusAluno status) {
         this.status = status;
     }
-
-    //Esse atributo não tem no diagrama, mas o RF001 do capítulo 3 exige
-    private StatusAluno status;
-    private List<AtividadeComplementar> atividades;
 
     public Aluno() {
         atividades = new ArrayList<>();
