@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 
-<HBox alignment="BASELINE_CENTER" style="-fx-background-color: #56baec;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.LoginController">
+<HBox alignment="BASELINE_CENTER" style="-fx-background-color: #2f4050;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.LoginController">
    <children>
       <AnchorPane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="283.0" prefWidth="306.0" style="-fx-background-color: #ffffff; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.4), 10, 0, 0, 0); -fx-border-radius: 10 10 10 10; -fx-background-radius: 10 10 10 10;">
          <children>
@@ -29,7 +29,7 @@
                   <Font size="18.0" />
                </font>
             </Label>
-            <Button fx:id="btEntrar" layoutX="100.0" layoutY="220.0" mnemonicParsing="false" onAction="#logar" prefHeight="33.0" prefWidth="107.0" style="-fx-background-color: #56baec; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 5, 0, 0, 0);" text="ENTRAR" textFill="WHITE">
+            <Button fx:id="btEntrar" layoutX="100.0" layoutY="220.0" mnemonicParsing="false" onAction="#logar" prefHeight="33.0" prefWidth="107.0" style="-fx-background-color: #283845; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 5, 0, 0, 0);" text="ENTRAR" textFill="WHITE">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
