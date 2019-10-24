@@ -56,11 +56,7 @@ public class CadastroACController {
         atv.setCargaHoraria(Double.parseDouble(tfCargaHoraria.getText()));
         atv.setCodigo(atv.getDescricao() + "_" + atv.getCargaHoraria());
         AtividadeComplementarDAO atvDAO = new AtividadeComplementarDAO();
-        try {
-            atvDAO.salvar(atv);
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
+        atvDAO.salvar(atv);
         AtividadesLoader atividadesLoader = new AtividadesLoader();
         Stage stage = (Stage) pane.getScene().getWindow();
         atividadesLoader.loadAtividades(aluno, stage);
