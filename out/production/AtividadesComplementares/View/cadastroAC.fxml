@@ -12,7 +12,7 @@
 
 <HBox alignment="BASELINE_CENTER" style="-fx-background-color: #2f4050;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.CadastroACController">
    <children>
-      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="581.0" prefWidth="628.0">
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="610.0" prefWidth="854.0">
          <children>
             <Button fx:id="btVoltar" layoutX="200.0" layoutY="542.0" mnemonicParsing="false" onAction="#voltarAluno" prefHeight="25.0" prefWidth="67.0" style="-fx-background-color: #dbe5ee; -fx-background-radius: 15;" text="VOLTAR">
                <font>
@@ -23,6 +23,11 @@
                </cursor>
             </Button>
             <AnchorPane fx:id="pane" layoutX="48.0" layoutY="9.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="518.0" prefWidth="454.0" style="-fx-background-color: #ffffff; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.4), 10, 0, 0, 0); -fx-background-radius: 10;" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="200.0">
+               <Label fx:id="lbAluno" alignment="CENTER" layoutX="117.0" layoutY="50.0" prefHeight="17.0" prefWidth="336.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
+                  <font>
+                     <Font name="System Bold" size="12.0" />
+                  </font>
+               </Label>
                <Label contentDisplay="CENTER" layoutX="32.0" layoutY="79.0" prefHeight="25.0" prefWidth="78.0" text="DESCRIÇÃO" textAlignment="CENTER" AnchorPane.leftAnchor="33.0" />
                <Label layoutX="32.0" layoutY="153.0" prefHeight="25.0" prefWidth="129.0" text="CARGA HORÁRIA" AnchorPane.leftAnchor="33.0" />
                <Label layoutX="32.0" layoutY="227.0" prefHeight="25.0" prefWidth="58.0" text="SEMESTRE" AnchorPane.leftAnchor="33.0" />
@@ -35,7 +40,6 @@
                <TextField fx:id="tfAno" focusTraversable="false" layoutX="240.0" layoutY="252.0" prefHeight="38.0" prefWidth="182.0" style="-fx-background-color: #ededed;" AnchorPane.rightAnchor="33.0" />
                <ChoiceBox fx:id="cbCategoria" focusTraversable="false" layoutX="32.0" layoutY="323.0" prefHeight="38.0" prefWidth="390.0" style="-fx-background-color: #ededed;" AnchorPane.leftAnchor="33.0" AnchorPane.rightAnchor="33.0" />
                <ChoiceBox fx:id="cbProfessor" focusTraversable="false" layoutX="32.0" layoutY="402.0" prefHeight="38.0" prefWidth="390.0" style="-fx-background-color: #ededed;" AnchorPane.leftAnchor="33.0" AnchorPane.rightAnchor="33.0" />
-               <Label fx:id="lbAluno" layoutX="316.0" layoutY="21.0" />
                <Button fx:id="btCadastrar" layoutX="327.0" layoutY="468.0" mnemonicParsing="false" onAction="#cadastrarAC" prefHeight="30.0" prefWidth="95.0" style="-fx-background-color: #283845; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 5, 0, 0, 0); -fx-background-radius: 10;" text="CADASTRAR" textFill="WHITE" AnchorPane.bottomAnchor="23.0" AnchorPane.rightAnchor="32.0">
                   <font>
                      <Font name="System Bold" size="12.0" />

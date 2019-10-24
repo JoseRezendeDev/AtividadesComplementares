@@ -65,6 +65,14 @@
                </Label>
             </children>
          </Pane>
+         <Label fx:id="lbAluno" layoutX="35.0" layoutY="63.0" prefHeight="37.0" prefWidth="260.0" style="-fx-background-color: #2f4050;" textFill="#979fb4" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="63.0">
+            <padding>
+               <Insets left="30.0" />
+            </padding>
+            <font>
+               <Font name="System Bold" size="14.0" />
+            </font>
+         </Label>
       </children>
    </AnchorPane>
 </AnchorPane>
