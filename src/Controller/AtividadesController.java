@@ -37,6 +37,8 @@ public class AtividadesController {
     private TableColumn<AtividadeComplementar, String> clProfessor;
     @FXML
     private Label lbTitulo;
+    @FXML
+    private Label lbAluno;
 
 
     private Aluno aluno;
@@ -63,7 +65,7 @@ public class AtividadesController {
 
     public void setLbTitulo() {
         if (this.aluno != null)
-            lbTitulo.setText("Atividades Complementares - " + aluno.getNome());
+            lbAluno.setText(aluno.getNome());
     }
 
     public void voltarHome(){
