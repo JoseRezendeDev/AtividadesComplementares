@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.HBox?>
 
 <AnchorPane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="469.0" prefWidth="930.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.AlunosController">
-    <Button layoutX="380.0" layoutY="338.0" mnemonicParsing="false" text="Importar alunos" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="20.0" />
+    <Button layoutX="380.0" layoutY="338.0" mnemonicParsing="false" onAction="#importarAlunos" text="Importar alunos" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="20.0" />
     <TableView fx:id="tabela" layoutX="183.0" layoutY="55.0" onMouseClicked="#exibirAluno" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="60.0">
         <!-- Ocupa toda a largura da tabela -->
         <columnResizePolicy>
@@ -33,4 +33,5 @@
          <TextField maxWidth="200.0" minWidth="50.0" prefWidth="200.0" />
       </children>
    </HBox>
+   <Button layoutX="662.0" layoutY="424.0" mnemonicParsing="false" onAction="#importarAtividades" text="Importar atividades" AnchorPane.rightAnchor="149.0" />
 </AnchorPane>

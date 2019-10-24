@@ -23,16 +23,7 @@ public class Main extends Application {
         primaryStage.setHeight(bounds.getHeight());
 
         loader.loadLogin(primaryStage);
-
-        //Código original da main pra iniciar o JavaFX, coloquei
-        //nas classes Loader
-        /*Parent root = FXMLLoader.load(getClass().getResource("../View/alunos.fxml"));
-        primaryStage.setTitle("Atividades Complementares");
-        primaryStage.setScene(new Scene(root, 100, 100));
-        primaryStage.show();
-         */
     }
-
 
     public static void main(String[] args) {
         launch(args);
