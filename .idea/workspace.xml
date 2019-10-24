@@ -3,7 +3,18 @@
   <component name="ChangeListManager">
     <list default="true" id="f7722e04-9b02-426f-ab78-a836d0f22517" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/alunos.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/alunos.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AtividadesComplementares/Controller/AlunosController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AtividadesComplementares/Controller/AlunosController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AtividadesComplementares/Controller/AtividadesController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AtividadesComplementares/Controller/AtividadesController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AtividadesComplementares/Controller/CadastroACController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AtividadesComplementares/Controller/CadastroACController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AtividadesComplementares/DAO/AlunoDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AtividadesComplementares/DAO/AlunoDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AtividadesComplementares/DAO/AtividadeComplementarDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AtividadesComplementares/DAO/AtividadeComplementarDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AtividadesComplementares/Loader/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AtividadesComplementares/Loader/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AtividadesComplementares/View/alunos.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AtividadesComplementares/View/alunos.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AtividadesComplementares/View/atividades.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AtividadesComplementares/View/atividades.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AtividadesComplementares/View/cadastroAC.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AtividadesComplementares/View/cadastroAC.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AtividadesComplementares/atividades.db" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AtividadesComplementares/atividades.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/atividades.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/atividades.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/cadastroAC.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/cadastroAC.fxml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,9 +30,9 @@
     <window id="1">
       <content type="file-editors">
         <state>
-          <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <leaf>
             <file pinned="false" current-in-tab="true">
-              <entry file="file://$PROJECT_DIR$/src/View/alunos.fxml">
+              <entry file="file://$PROJECT_DIR$/src/View/cadastroAC.fxml">
                 <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
                 <provider editor-type-id="text-editor" />
               </entry>
@@ -33,12 +44,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/View/login.fxml">
-          <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
-          <provider editor-type-id="text-editor" />
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Loader/Main.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -46,6 +51,12 @@
               <caret line="18" column="51" selection-start-line="18" selection-start-column="51" selection-end-line="18" selection-end-column="51" />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/View/atividades.fxml">
+          <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+          <provider editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -69,8 +80,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Controller/AlunosController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1166">
-              <caret line="69" column="67" selection-start-line="69" selection-start-column="63" selection-end-line="69" selection-end-column="67" />
+            <state relative-caret-position="660">
+              <caret line="53" column="67" selection-start-line="53" selection-start-column="67" selection-end-line="53" selection-end-column="67" />
             </state>
           </provider>
         </entry>
@@ -79,7 +90,7 @@
         <entry file="file://$PROJECT_DIR$/src/Controller/AtividadesController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="132">
-              <caret line="19" column="22" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
+              <caret line="20" column="22" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -122,6 +133,8 @@
         <option value="$PROJECT_DIR$/src/Controller/LoginController.java" />
         <option value="$PROJECT_DIR$/src/View/login.fxml" />
         <option value="$PROJECT_DIR$/src/View/alunos.fxml" />
+        <option value="$PROJECT_DIR$/src/View/atividades.fxml" />
+        <option value="$PROJECT_DIR$/src/View/cadastroAC.fxml" />
       </list>
     </option>
   </component>
@@ -136,6 +149,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -152,25 +166,12 @@
               <item name="AtividadesComplementares" type="b2602c69:ProjectViewProjectNode" />
               <item name="AtividadesComplementares" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="AtividadesComplementares" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AtividadesComplementares" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Loader" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="AtividadesComplementares" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AtividadesComplementares" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="View" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -227,7 +228,7 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26928896" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28214827" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -236,7 +237,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3289689" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3289689" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -312,14 +313,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/View/login.fxml">
+    <entry file="file://$PROJECT_DIR$/src/View/alunos.fxml">
       <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
-      <provider editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Loader/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="18" column="51" selection-start-line="18" selection-start-column="51" selection-end-line="18" selection-end-column="51" />
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="1914">
+          <caret line="87" selection-start-line="87" selection-end-line="87" />
         </state>
       </provider>
     </entry>
@@ -339,15 +337,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/AlunosController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1166">
-          <caret line="69" column="67" selection-start-line="69" selection-start-column="63" selection-end-line="69" selection-end-column="67" />
+        <state relative-caret-position="660">
+          <caret line="53" column="67" selection-start-line="53" selection-start-column="67" selection-end-line="53" selection-end-column="67" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/AtividadesController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="132">
-          <caret line="19" column="22" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
+          <caret line="20" column="22" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -372,7 +370,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/View/alunos.fxml">
+    <entry file="file://$PROJECT_DIR$/src/View/login.fxml">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+      <provider editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Loader/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="18" column="51" selection-start-line="18" selection-start-column="51" selection-end-line="18" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/View/atividades.fxml">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+      <provider editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/View/cadastroAC.fxml">
       <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
       <provider editor-type-id="text-editor" />
     </entry>

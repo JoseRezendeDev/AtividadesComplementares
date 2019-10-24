@@ -1,32 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="pane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.CadastroACController">
-   <VBox alignment="CENTER" layoutX="163.0" layoutY="19.0" prefHeight="343.0" prefWidth="238.0" spacing="10.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="332.0" AnchorPane.topAnchor="30.0">
-      <Label alignment="BASELINE_RIGHT" prefHeight="25.0" prefWidth="200.0" text="Descrição" />
-      <Label alignment="BASELINE_RIGHT" layoutX="115.0" layoutY="169.0" prefHeight="25.0" prefWidth="200.0" text="Carga Horária" />
-      <Label alignment="CENTER_RIGHT" layoutX="115.0" layoutY="182.0" prefHeight="25.0" prefWidth="200.0" text="Semestre" />
-      <Label alignment="CENTER_RIGHT" layoutX="115.0" layoutY="194.0" prefHeight="25.0" prefWidth="200.0" text="Ano" />
-      <Label alignment="BASELINE_RIGHT" layoutX="115.0" layoutY="182.0" prefHeight="25.0" prefWidth="200.0" text="Categoria" />
-      <Label alignment="BASELINE_RIGHT" layoutX="115.0" layoutY="169.0" prefHeight="25.0" prefWidth="200.0" text="Professor" />
-   </VBox>
-   <VBox alignment="CENTER" layoutX="268.0" layoutY="29.0" prefHeight="343.0" prefWidth="238.0" spacing="10.0">
-      <children>
-         <TextField fx:id="tfDescricao" />
-         <TextField fx:id="tfCargaHoraria" />
-         <TextField fx:id="tfSemestre" prefHeight="25.0" prefWidth="162.0" />
-         <TextField fx:id="tfAno" />
-         <ChoiceBox fx:id="cbCategoria" prefWidth="150.0" />
-         <ChoiceBox fx:id="cbProfessor" prefWidth="150.0" />
-      </children>
-   </VBox>
-   <Label fx:id="lbAluno" layoutX="316.0" layoutY="21.0" />
-   <Button fx:id="btCadastrar" layoutX="506.0" layoutY="361.0" mnemonicParsing="false" onAction="#cadastrarAC" text="Cadastrar" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="20.0" />
-   <Button fx:id="btVoltar" layoutX="42.0" layoutY="17.0" mnemonicParsing="false" onAction="#voltarAluno" text="Voltar" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="20.0" />
-</AnchorPane>
+<HBox alignment="BASELINE_CENTER" style="-fx-background-color: #2f4050;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.CadastroACController">
+   <children>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="581.0" prefWidth="628.0">
+         <children>
+            <Button fx:id="btVoltar" layoutX="200.0" layoutY="542.0" mnemonicParsing="false" onAction="#voltarAluno" prefHeight="25.0" prefWidth="67.0" style="-fx-background-color: #dbe5ee; -fx-background-radius: 15;" text="VOLTAR">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <AnchorPane fx:id="pane" layoutX="48.0" layoutY="9.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="518.0" prefWidth="454.0" style="-fx-background-color: #ffffff; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.4), 10, 0, 0, 0); -fx-background-radius: 10;" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="200.0">
+               <Label contentDisplay="CENTER" layoutX="32.0" layoutY="79.0" prefHeight="25.0" prefWidth="78.0" text="DESCRIÇÃO" textAlignment="CENTER" AnchorPane.leftAnchor="33.0" />
+               <Label layoutX="32.0" layoutY="153.0" prefHeight="25.0" prefWidth="129.0" text="CARGA HORÁRIA" AnchorPane.leftAnchor="33.0" />
+               <Label layoutX="32.0" layoutY="227.0" prefHeight="25.0" prefWidth="58.0" text="SEMESTRE" AnchorPane.leftAnchor="33.0" />
+               <Label layoutX="240.0" layoutY="227.0" prefHeight="25.0" prefWidth="67.0" text="ANO" AnchorPane.leftAnchor="239.0" />
+               <Label layoutX="32.0" layoutY="298.0" prefHeight="25.0" prefWidth="129.0" text="CATEGORIA" AnchorPane.leftAnchor="33.0" />
+               <Label layoutX="32.0" layoutY="377.0" prefHeight="25.0" prefWidth="78.0" text="PROFESSOR" AnchorPane.leftAnchor="33.0" />
+               <TextField fx:id="tfDescricao" focusTraversable="false" layoutX="32.0" layoutY="104.0" prefHeight="38.0" prefWidth="390.0" style="-fx-background-color: #ededed;" AnchorPane.leftAnchor="33.0" AnchorPane.rightAnchor="33.0" />
+               <TextField fx:id="tfCargaHoraria" focusTraversable="false" layoutX="32.0" layoutY="178.0" prefHeight="38.0" prefWidth="390.0" style="-fx-background-color: #ededed;" AnchorPane.leftAnchor="33.0" AnchorPane.rightAnchor="33.0" />
+               <TextField fx:id="tfSemestre" focusTraversable="false" layoutX="32.0" layoutY="252.0" prefHeight="38.0" prefWidth="182.0" style="-fx-background-color: #ededed;" AnchorPane.leftAnchor="33.0" />
+               <TextField fx:id="tfAno" focusTraversable="false" layoutX="240.0" layoutY="252.0" prefHeight="38.0" prefWidth="182.0" style="-fx-background-color: #ededed;" AnchorPane.rightAnchor="33.0" />
+               <ChoiceBox fx:id="cbCategoria" focusTraversable="false" layoutX="32.0" layoutY="323.0" prefHeight="38.0" prefWidth="390.0" style="-fx-background-color: #ededed;" AnchorPane.leftAnchor="33.0" AnchorPane.rightAnchor="33.0" />
+               <ChoiceBox fx:id="cbProfessor" focusTraversable="false" layoutX="32.0" layoutY="402.0" prefHeight="38.0" prefWidth="390.0" style="-fx-background-color: #ededed;" AnchorPane.leftAnchor="33.0" AnchorPane.rightAnchor="33.0" />
+               <Label fx:id="lbAluno" layoutX="316.0" layoutY="21.0" />
+               <Button fx:id="btCadastrar" layoutX="327.0" layoutY="468.0" mnemonicParsing="false" onAction="#cadastrarAC" prefHeight="30.0" prefWidth="95.0" style="-fx-background-color: #283845; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 5, 0, 0, 0); -fx-background-radius: 10;" text="CADASTRAR" textFill="WHITE" AnchorPane.bottomAnchor="23.0" AnchorPane.rightAnchor="32.0">
+                  <font>
+                     <Font name="System Bold" size="12.0" />
+                  </font>
+                  <cursor>
+                     <Cursor fx:constant="HAND" />
+                  </cursor>
+               </Button>
+               <Label layoutX="50.0" layoutY="25.0" text="CADASTRO DE ATIVIDADE COMPLEMENTAR" textFill="#454545" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="23.0">
+                  <font>
+                     <Font size="18.0" />
+                  </font>
+               </Label>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+   <padding>
+      <Insets bottom="50.0" left="50.0" right="50.0" top="50.0" />
+   </padding>
+</HBox>
