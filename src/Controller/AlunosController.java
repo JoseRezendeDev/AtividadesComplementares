@@ -1,6 +1,7 @@
 package Controller;
 
 import DAO.AlunoDAO;
+import DAO.AtividadeComplementarDAO;
 import Loader.AtividadesLoader;
 import Model.Aluno;
 import Model.AtividadeComplementar;
@@ -42,6 +43,7 @@ public class AlunosController implements Initializable {
 
     private ObservableList<Aluno> alunos;
     private AlunoDAO alunoDAO = new AlunoDAO();
+    private AtividadeComplementarDAO atvDAO = new AtividadeComplementarDAO();
 
     //Não sei o porque dos dois parametros, mas precisa deles
     //pra sobrescrever o método da interface Initializable.
@@ -92,6 +94,27 @@ public class AlunosController implements Initializable {
     }
 
     public void importarAtividades(ActionEvent actionEvent) {
-        System.out.println("Fazer");
+        FileChooser fileChooser = new FileChooser();
+        fileChooser.setTitle("Atividades complementares");
+        fileChooser.getExtensionFilters().addAll(new FileChooser.ExtensionFilter("CSV Files", "*.csv"));
+        File file = fileChooser.showOpenDialog( pane.getScene().getWindow());
+        atvDAO.limpar();
+        try (BufferedReader br = new BufferedReader(new FileReader(file))){
+            String linha;
+            while ((linha = br.readLine()) != null){
+                String[] dados = linha.split(";");
+                AtividadeComplementar atv = new AtividadeComplementar();
+                atv.setDescricao(dados[0]);
+                atv.setAnoAC(Integer.parseInt(dados[1]));
+                atv.setSemestreAC(Integer.parseInt(dados[2]));
+                atv.setAluno(alunoDAO.getAluno(dados[3]));
+                atv.setCargaHoraria(Double.parseDouble(dados[4]));
+                atv.setCodigo(dados[5]);
+
+                atvDAO.salvar(atv);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }

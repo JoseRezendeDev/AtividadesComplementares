@@ -9,8 +9,7 @@ import java.util.List;
 public class AlunoDAO {
     public void salvar(Aluno aluno) {
         String sql = "INSERT INTO aluno (nome, email, telefone, numero_matricula, ano_ingresso, semestre_ingresso) VALUES (?, ?, ?, ?, ?, ?)";
-        PreparedStatement stmt = ConnectionFactory.createPreparedStatement(sql);
-        try {
+        try (PreparedStatement stmt = ConnectionFactory.createPreparedStatement(sql)){
             stmt.setString(1, aluno.getNome());
             stmt.setString(2, aluno.getEmail());
             stmt.setString(3, aluno.getTelefone());
@@ -27,9 +26,8 @@ public class AlunoDAO {
 
     public List<Aluno> getAlunos(){
         String sql = "SELECT * FROM aluno";
-        PreparedStatement stmt = ConnectionFactory.createPreparedStatement(sql);
         List<Aluno> alunos = new ArrayList<>();
-        try {
+        try (PreparedStatement stmt = ConnectionFactory.createPreparedStatement(sql)){
             ResultSet rs = stmt.executeQuery();
             while (rs.next()){
                 Aluno aluno = new Aluno();
@@ -47,10 +45,29 @@ public class AlunoDAO {
         return alunos;
     }
 
+    public Aluno getAluno(String numeroMatricula){
+        String sql = "SELECT * FROM aluno WHERE numero_matricula = ?";
+        Aluno aluno = new Aluno();
+        try (PreparedStatement stmt = ConnectionFactory.createPreparedStatement(sql)){
+            stmt.setString(1, numeroMatricula);
+            ResultSet rs = stmt.executeQuery();
+            if (rs.next()){
+                aluno.setNome(rs.getString("nome"));
+                aluno.setEmail(rs.getString("email"));
+                aluno.setTelefone(rs.getString("telefone"));
+                aluno.setAnoIngresso(rs.getInt("ano_ingresso"));
+                aluno.setSemestreIngresso(rs.getInt("semestre_ingresso"));
+                aluno.setNumeroMatricula(rs.getString("numero_matricula"));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return aluno;
+    }
+
     public void limpar(){
         String sql = "DELETE FROM aluno";
-        PreparedStatement stmt = ConnectionFactory.createPreparedStatement(sql);
-        try {
+        try (PreparedStatement stmt = ConnectionFactory.createPreparedStatement(sql)){
             stmt.execute();
         } catch (SQLException e) {
             e.printStackTrace();

@@ -1,5 +1,6 @@
 package Controller;
 
+import DAO.AtividadeComplementarDAO;
 import Loader.CadastroACLoader;
 import Loader.AlunosLoader;
 import Model.Aluno;
@@ -40,6 +41,7 @@ public class AtividadesController {
 
     private Aluno aluno;
     private ObservableList<AtividadeComplementar> listaAC;
+    private AtividadeComplementarDAO atvDAO = new AtividadeComplementarDAO();
 
     public void setAluno(Aluno aluno) {
         this.aluno = aluno;
@@ -47,7 +49,7 @@ public class AtividadesController {
 
     public void preencherTabelaACdoAluno() {
         if (aluno != null) {
-            listaAC = FXCollections.observableArrayList(aluno.getAtividades());
+            listaAC = FXCollections.observableArrayList(atvDAO.getAtividades(aluno.getNumeroMatricula()));
             clDescricao.setCellValueFactory(new PropertyValueFactory<>("descricao"));
             clCargaHoraria.setCellValueFactory(new PropertyValueFactory<>("cargaHoraria"));
             clCodigo.setCellValueFactory(new PropertyValueFactory<>("codigo"));

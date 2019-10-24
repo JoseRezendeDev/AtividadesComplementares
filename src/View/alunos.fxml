@@ -33,5 +33,5 @@
          <TextField maxWidth="200.0" minWidth="50.0" prefWidth="200.0" />
       </children>
    </HBox>
-   <Button layoutX="662.0" layoutY="424.0" mnemonicParsing="false" onAction="#importarAtividades" text="Importar atividades" AnchorPane.rightAnchor="149.0" />
+   <Button layoutX="662.0" layoutY="424.0" mnemonicParsing="false" onAction="#importarAtividades" text="Importar atividades" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="149.0" />
 </AnchorPane>
