@@ -16,7 +16,7 @@
             <AnchorPane layoutX="156.0" layoutY="84.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="232.0" prefWidth="288.0" style="-fx-background-color: #ffffff; -fx-background-radius: 10; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.4), 10, 0, 0, 0);">
                <children>
                   <TextField fx:id="tfCodigo" layoutX="24.0" layoutY="119.0" prefHeight="38.0" prefWidth="237.0" style="-fx-background-color: #ededed;" AnchorPane.leftAnchor="24.0" AnchorPane.rightAnchor="24.0" />
-                  <Button fx:id="btVerifica" layoutX="106.0" layoutY="184.0" mnemonicParsing="false" onAction="#verificaAC" prefHeight="30.0" style="-fx-background-color: #283845; -fx-background-radius: 10;" text="VERIFICAR" textFill="WHITE" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="106.0" AnchorPane.rightAnchor="106.0">
+                  <Button fx:id="btVerifica" layoutX="106.0" layoutY="184.0" mnemonicParsing="false" onAction="#verificaAC" prefHeight="30.0" style="-fx-background-color: #283845;" text="VERIFICAR" textFill="WHITE" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="106.0" AnchorPane.rightAnchor="106.0">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>
