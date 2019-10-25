@@ -33,6 +33,9 @@
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
             </Button>
          </children>
       </AnchorPane>

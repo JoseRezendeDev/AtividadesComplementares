@@ -40,7 +40,7 @@
                <TextField fx:id="tfAno" focusTraversable="false" layoutX="240.0" layoutY="252.0" prefHeight="38.0" prefWidth="182.0" style="-fx-background-color: #ededed;" AnchorPane.rightAnchor="33.0" />
                <ChoiceBox fx:id="cbCategoria" focusTraversable="false" layoutX="32.0" layoutY="323.0" prefHeight="38.0" prefWidth="390.0" style="-fx-background-color: #ededed;" AnchorPane.leftAnchor="33.0" AnchorPane.rightAnchor="33.0" />
                <ChoiceBox fx:id="cbProfessor" focusTraversable="false" layoutX="32.0" layoutY="402.0" prefHeight="38.0" prefWidth="390.0" style="-fx-background-color: #ededed;" AnchorPane.leftAnchor="33.0" AnchorPane.rightAnchor="33.0" />
-               <Button fx:id="btCadastrar" layoutX="327.0" layoutY="468.0" mnemonicParsing="false" onAction="#cadastrarAC" prefHeight="30.0" prefWidth="95.0" style="-fx-background-color: #283845; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 5, 0, 0, 0); -fx-background-radius: 10;" text="CADASTRAR" textFill="WHITE" AnchorPane.bottomAnchor="23.0" AnchorPane.rightAnchor="32.0">
+               <Button fx:id="btCadastrar" layoutX="327.0" layoutY="468.0" mnemonicParsing="false" onAction="#cadastrarAC" prefHeight="30.0" prefWidth="95.0" style="-fx-background-color: #283845; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 5, 0, 0, 0);" text="CADASTRAR" textFill="WHITE" AnchorPane.bottomAnchor="23.0" AnchorPane.rightAnchor="32.0">
                   <font>
                      <Font name="System Bold" size="12.0" />
                   </font>

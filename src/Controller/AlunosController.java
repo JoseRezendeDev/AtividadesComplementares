@@ -2,7 +2,10 @@ package Controller;
 
 import DAO.AlunoDAO;
 import DAO.AtividadeComplementarDAO;
+import Loader.AlunosLoader;
 import Loader.AtividadesLoader;
+import Loader.LoginLoader;
+import Loader.ValidaACLoader;
 import Model.Aluno;
 import Model.AtividadeComplementar;
 import Model.CategoriaAC;
@@ -116,5 +119,17 @@ public class AlunosController implements Initializable {
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    public void validarAC(ActionEvent actionEvent) {
+        Stage stage = (Stage) pane.getScene().getWindow();
+        ValidaACLoader validaACLoader = new ValidaACLoader();
+        validaACLoader.loadValidaAC(stage);
+    }
+
+    public void deslogar(){
+        Stage stage = (Stage) pane.getScene().getWindow();
+        LoginLoader loginLoader = new LoginLoader();
+        loginLoader.loadLogin(stage);
     }
 }
