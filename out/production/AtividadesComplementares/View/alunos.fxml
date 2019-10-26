@@ -36,7 +36,7 @@
                <Insets left="30.0" />
             </padding>
          </Label>
-         <Button alignment="CENTER" contentDisplay="CENTER" focusTraversable="false" layoutX="182.0" layoutY="6.0" mnemonicParsing="false" onAction="#deslogar" prefHeight="30.0" prefWidth="54.0" style="-fx-background-color: #2f4050;" text="Sair" textFill="#979fb4" AnchorPane.bottomAnchor="470.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <Button alignment="CENTER" contentDisplay="CENTER" focusTraversable="false" layoutX="182.0" layoutY="6.0" mnemonicParsing="false" onAction="#deslogar" prefHeight="47.0" prefWidth="54.0" style="-fx-background-color: #2f4050;" text="Sair" textFill="#979fb4" AnchorPane.bottomAnchor="453.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <cursor>
                <Cursor fx:constant="HAND" />
             </cursor>

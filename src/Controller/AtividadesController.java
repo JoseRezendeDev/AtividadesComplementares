@@ -5,6 +5,9 @@ import Loader.CadastroACLoader;
 import Loader.AlunosLoader;
 import Model.Aluno;
 import Model.AtividadeComplementar;
+import javafx.beans.property.ReadOnlyObjectWrapper;
+import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -15,6 +18,7 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
+import javafx.util.Callback;
 
 public class AtividadesController {
     @FXML
@@ -57,8 +61,8 @@ public class AtividadesController {
             clCodigo.setCellValueFactory(new PropertyValueFactory<>("codigo"));
             clSemestre.setCellValueFactory(new PropertyValueFactory<>("semestreAC"));
             clAno.setCellValueFactory(new PropertyValueFactory<>("anoAC"));
-            clCategoria.setCellValueFactory(new PropertyValueFactory<>("categoriaAC"));
             clProfessor.setCellValueFactory(new PropertyValueFactory<>("professor"));
+            clCategoria.setCellValueFactory(new PropertyValueFactory<>("categoria_ac"));
             tabela.setItems(listaAC);
         }
     }

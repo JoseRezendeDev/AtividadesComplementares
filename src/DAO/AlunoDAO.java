@@ -58,11 +58,12 @@ public class AlunoDAO {
                 aluno.setAnoIngresso(rs.getInt("ano_ingresso"));
                 aluno.setSemestreIngresso(rs.getInt("semestre_ingresso"));
                 aluno.setNumeroMatricula(rs.getString("numero_matricula"));
+                return aluno;
             }
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return aluno;
+        return null;
     }
 
     public void limpar(){
