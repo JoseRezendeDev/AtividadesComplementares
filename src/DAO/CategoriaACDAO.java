@@ -11,6 +11,16 @@ import java.util.List;
 
 public class CategoriaACDAO {
 
+    public void salvar(CategoriaAC categoriaAC){
+        String sql = "INSERT INTO categoria_ac (nome) VALUES (?)";
+        try (PreparedStatement stmt = ConnectionFactory.createPreparedStatement(sql)){
+            stmt.setString(1, categoriaAC.getNome());
+            stmt.execute();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
     public List<CategoriaAC> getCategorias(){
         String sql = "SELECT * FROM categoria_ac";
         List<CategoriaAC> lista = new ArrayList<>();
@@ -20,7 +30,6 @@ public class CategoriaACDAO {
                 CategoriaAC categoriaAC = new CategoriaAC();
                 categoriaAC.setId(rs.getInt("id"));
                 categoriaAC.setNome(rs.getString("nome"));
-                categoriaAC.setMaximoHoras(rs.getDouble("maximo_horas"));
                 lista.add(categoriaAC);
             }
         } catch (SQLException e) {
@@ -38,12 +47,20 @@ public class CategoriaACDAO {
             if (rs.next()){
                 categoriaAC.setId(rs.getInt("id"));
                 categoriaAC.setNome(rs.getString("nome"));
-                categoriaAC.setMaximoHoras(rs.getDouble("maximo_horas"));
                 return categoriaAC;
             }
         } catch (SQLException e) {
             e.printStackTrace();
         }
         return null;
+    }
+
+    public void limpar(){
+        String sql = "DELETE FROM categoria_ac";
+        try (PreparedStatement stmt = ConnectionFactory.createPreparedStatement(sql)){
+            stmt.execute();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 }

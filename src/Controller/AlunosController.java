@@ -2,14 +2,13 @@ package Controller;
 
 import DAO.AlunoDAO;
 import DAO.AtividadeComplementarDAO;
+import DAO.CategoriaACDAO;
+import DAO.ItemCategoriaACDAO;
 import Loader.AlunosLoader;
 import Loader.AtividadesLoader;
 import Loader.LoginLoader;
 import Loader.ValidaACLoader;
-import Model.Aluno;
-import Model.AtividadeComplementar;
-import Model.CategoriaAC;
-import Model.Professor;
+import Model.*;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -47,6 +46,8 @@ public class AlunosController implements Initializable {
     private ObservableList<Aluno> alunos;
     private AlunoDAO alunoDAO = new AlunoDAO();
     private AtividadeComplementarDAO atvDAO = new AtividadeComplementarDAO();
+    private CategoriaACDAO categoriaACDAO = new CategoriaACDAO();
+    private ItemCategoriaACDAO itemCategoriaACDAO = new ItemCategoriaACDAO();
 
     //Não sei o porque dos dois parametros, mas precisa deles
     //pra sobrescrever o método da interface Initializable.
@@ -96,25 +97,35 @@ public class AlunosController implements Initializable {
         }
     }
 
-    public void importarAtividades(ActionEvent actionEvent) {
+    //Arquivo csv deve estar na seguinte ordem
+    //id, nome, carga horaria
+    public void importarTabelaAtividades(ActionEvent actionEvent) {
         FileChooser fileChooser = new FileChooser();
-        fileChooser.setTitle("Atividades complementares");
+        fileChooser.setTitle("Tabela de atividades complementares");
         fileChooser.getExtensionFilters().addAll(new FileChooser.ExtensionFilter("CSV Files", "*.csv"));
         File file = fileChooser.showOpenDialog( pane.getScene().getWindow());
-        atvDAO.limpar();
+        itemCategoriaACDAO.limpar();
+        categoriaACDAO.limpar();
         try (BufferedReader br = new BufferedReader(new FileReader(file))){
             String linha;
+            int categoriaDoItem = 0;
             while ((linha = br.readLine()) != null){
                 String[] dados = linha.split(";");
-                AtividadeComplementar atv = new AtividadeComplementar();
-                atv.setDescricao(dados[0]);
-                atv.setAnoAC(Integer.parseInt(dados[1]));
-                atv.setSemestreAC(Integer.parseInt(dados[2]));
-                atv.setAluno(alunoDAO.getAluno(dados[3]));
-                atv.setCargaHoraria(Double.parseDouble(dados[4]));
-                atv.setCodigo(dados[5]);
-
-                atvDAO.salvar(atv);
+                if (dados[2].equals("0")){
+                    CategoriaAC categoriaAC = new CategoriaAC();
+                    categoriaAC.setId(Integer.parseInt(dados[0]));
+                    categoriaAC.setNome(dados[1]);
+                    categoriaDoItem = Integer.parseInt(dados[0]);
+                    categoriaACDAO.salvar(categoriaAC);
+                }
+                else{
+                    ItemCategoriaAC itemCategoriaAC = new ItemCategoriaAC();
+                    itemCategoriaAC.setId(Integer.parseInt(dados[0]));
+                    itemCategoriaAC.setNome(dados[1]);
+                    itemCategoriaAC.setMaximoHoras(Double.parseDouble(dados[2]));
+                    itemCategoriaAC.setCategoriaAC(new CategoriaAC(categoriaDoItem));
+                    itemCategoriaACDAO.salvar(itemCategoriaAC);
+                }
             }
         } catch (Exception e) {
             e.printStackTrace();

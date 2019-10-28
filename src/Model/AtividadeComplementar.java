@@ -6,7 +6,7 @@ public class AtividadeComplementar {
     private String descricao;
     private int anoAC;
     private int semestreAC;
-    private CategoriaAC categoriaAC;
+    private ItemCategoriaAC itemCategoriaAC;
     private Aluno aluno;
     private Professor professor;
 
@@ -58,12 +58,12 @@ public class AtividadeComplementar {
         this.semestreAC = semestreAC;
     }
 
-    public CategoriaAC getCategoriaAC() {
-        return categoriaAC;
+    public ItemCategoriaAC getItemCategoriaAC() {
+        return itemCategoriaAC;
     }
 
-    public void setCategoriaAC(CategoriaAC categoriaAC) {
-        this.categoriaAC = categoriaAC;
+    public void setItemCategoriaAC(ItemCategoriaAC itemCategoriaAC) {
+        this.itemCategoriaAC = itemCategoriaAC;
     }
 
     public Aluno getAluno() {

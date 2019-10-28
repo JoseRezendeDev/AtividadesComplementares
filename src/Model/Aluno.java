@@ -1,7 +1,5 @@
 package Model;
 
-import Auxiliar.StatusAluno;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,17 +12,7 @@ public class Aluno {
     private int semestreIngresso;
     private double horasCumpridas;
 
-    //Esse atributo não tem no diagrama, mas o RF001 do capítulo 3 exige
-    private StatusAluno status;
     private List<AtividadeComplementar> atividades;
-
-    public StatusAluno getStatus() {
-        return status;
-    }
-
-    public void setStatus(StatusAluno status) {
-        this.status = status;
-    }
 
     public Aluno() {
         atividades = new ArrayList<>();

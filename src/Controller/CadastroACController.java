@@ -2,12 +2,10 @@ package Controller;
 
 import DAO.AtividadeComplementarDAO;
 import DAO.CategoriaACDAO;
+import DAO.ItemCategoriaACDAO;
 import DAO.ProfessorDAO;
 import Loader.AtividadesLoader;
-import Model.Aluno;
-import Model.AtividadeComplementar;
-import Model.CategoriaAC;
-import Model.Professor;
+import Model.*;
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -39,10 +37,10 @@ public class CadastroACController implements Initializable {
     @FXML
     private ChoiceBox<Professor> cbProfessor;
     @FXML
-    private ChoiceBox<CategoriaAC> cbCategoria;
+    private ChoiceBox<ItemCategoriaAC> cbCategoria;
 
     private Aluno aluno;
-    private CategoriaACDAO categoriaACDAO = new CategoriaACDAO();
+    private ItemCategoriaACDAO itemDAO = new ItemCategoriaACDAO();
     private ProfessorDAO professorDAO = new ProfessorDAO();
     private AtividadeComplementarDAO atvDAO = new AtividadeComplementarDAO();
 
@@ -72,7 +70,7 @@ public class CadastroACController implements Initializable {
             atv.setProfessor(cbProfessor.getValue());
             atv.setAnoAC(Integer.parseInt(tfAno.getText()));
             atv.setSemestreAC(Integer.parseInt(tfSemestre.getText()));
-            atv.setCategoriaAC(cbCategoria.getValue());
+            atv.setItemCategoriaAC(cbCategoria.getValue());
             atv.setAluno(aluno);
             atvDAO.salvar(atv);
             AtividadesLoader atividadesLoader = new AtividadesLoader();
@@ -119,7 +117,7 @@ public class CadastroACController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        cbCategoria.setItems(FXCollections.observableArrayList(categoriaACDAO.getCategorias()));
+        cbCategoria.setItems(FXCollections.observableArrayList(itemDAO.getItensCategoria()));
         cbProfessor.setItems(FXCollections.observableArrayList(professorDAO.getProfessores()));
     }
 }
