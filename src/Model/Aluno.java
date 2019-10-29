@@ -5,8 +5,6 @@ import java.util.List;
 
 public class Aluno {
     private String nome;
-    private String email;
-    private String telefone;
     private String numeroMatricula;
     private int anoIngresso;
     private int semestreIngresso;
@@ -40,22 +38,6 @@ public class Aluno {
 
     public void setNome(String nome) {
         this.nome = nome;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getTelefone() {
-        return telefone;
-    }
-
-    public void setTelefone(String telefone) {
-        this.telefone = telefone;
     }
 
     public String getNumeroMatricula() {

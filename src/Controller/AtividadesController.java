@@ -72,7 +72,7 @@ public class AtividadesController {
             lbAluno.setText(aluno.getNome());
     }
 
-    public void voltarHome(){
+    public void voltarAluno(){
         Stage stage = (Stage) pane.getScene().getWindow();
         AlunosLoader alunosLoader = new AlunosLoader();
         alunosLoader.loadAlunos(stage);

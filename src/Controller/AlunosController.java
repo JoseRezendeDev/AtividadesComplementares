@@ -4,10 +4,7 @@ import DAO.AlunoDAO;
 import DAO.AtividadeComplementarDAO;
 import DAO.CategoriaACDAO;
 import DAO.ItemCategoriaACDAO;
-import Loader.AlunosLoader;
-import Loader.AtividadesLoader;
-import Loader.LoginLoader;
-import Loader.ValidaACLoader;
+import Loader.*;
 import Model.*;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -23,9 +20,7 @@ import javafx.stage.Stage;
 
 import java.io.*;
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.ResourceBundle;
+import java.util.*;
 
 public class AlunosController implements Initializable {
     @FXML
@@ -54,7 +49,7 @@ public class AlunosController implements Initializable {
     //Esse método é chamado automaticamente para inicializar o fxml
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        alunos = FXCollections.observableArrayList(alunoDAO.getAlunos());
+        alunos = FXCollections.observableArrayList(alunoDAO.getAlunosAsList());
         clNome.setCellValueFactory(new PropertyValueFactory<>("nome"));
         clProntuario.setCellValueFactory(new PropertyValueFactory<>("numeroMatricula"));
         clAnoIngresso.setCellValueFactory(new PropertyValueFactory<>("anoIngresso"));
@@ -63,7 +58,7 @@ public class AlunosController implements Initializable {
         tabela.setItems(alunos);
     }
 
-    public void exibirAluno(){
+    public void exibirAtividades(){
         Aluno alunoSelecionado = tabela.getSelectionModel().getSelectedItem();
         AtividadesLoader atividadesLoader = new AtividadesLoader();
         Stage stage = (Stage) pane.getScene().getWindow();
@@ -75,25 +70,49 @@ public class AlunosController implements Initializable {
         fileChooser.setTitle("Alunos");
         fileChooser.getExtensionFilters().addAll(new FileChooser.ExtensionFilter("CSV Files", "*.csv"));
         File file = fileChooser.showOpenDialog( pane.getScene().getWindow());
-        alunoDAO.limpar();
         try (BufferedReader br = new BufferedReader(new FileReader(file))){
+            Map<String, Aluno> mapaAlunos = new HashMap<>();
+            List<Aluno> listaAlunos = new ArrayList<>();
             String linha;
             while ((linha = br.readLine()) != null){
                 String[] dados = linha.split(";");
                 Aluno aluno = new Aluno();
-                aluno.setNome(dados[0]);
                 aluno.setNumeroMatricula(dados[1]);
-                aluno.setAnoIngresso(Integer.parseInt(dados[2]));
-                aluno.setSemestreIngresso(Integer.parseInt(dados[3]));
-                aluno.setTelefone(dados[4]);
-                aluno.setEmail(dados[5]);
+                aluno.setNome(dados[2]);
+                aluno.setAnoIngresso(Integer.parseInt(dados[3]));
+                aluno.setSemestreIngresso(Integer.parseInt(dados[6]));
                 aluno.setHorasCumpridas(0);
-
-                alunoDAO.salvar(aluno);
+                mapaAlunos.put(aluno.getNumeroMatricula(), aluno);
+                listaAlunos.add(aluno);
             }
-            initialize(null, null);
+            cadastrarAlunosBanco(listaAlunos);
+            removerAlunosFormados(mapaAlunos);
         } catch (Exception e) {
-            e.printStackTrace();
+            exibirAlunos();
+        }
+
+        initialize(null, null);
+    }
+
+    private void exibirAlunos() {
+        Stage stage = (Stage) pane.getScene().getWindow();
+        AlunosLoader alunosLoader = new AlunosLoader();
+        alunosLoader.loadAlunos(stage);
+    }
+
+    private void cadastrarAlunosBanco(List<Aluno> lista){
+        Map<String, Aluno> mapaAlunosBanco = alunoDAO.getAlunosAsMap();
+        for (Aluno aluno : lista){
+            if (!mapaAlunosBanco.containsKey(aluno.getNumeroMatricula()))
+                alunoDAO.salvar(aluno);
+        }
+    }
+
+    private void removerAlunosFormados(Map<String, Aluno> mapa){
+        List<Aluno> listaAlunosBanco = alunoDAO.getAlunosAsList();
+        for (Aluno aluno : listaAlunosBanco){
+            if (!mapa.containsKey(aluno.getNumeroMatricula()))
+                alunoDAO.remover(aluno.getNumeroMatricula());
         }
     }
 
@@ -104,9 +123,9 @@ public class AlunosController implements Initializable {
         fileChooser.setTitle("Tabela de atividades complementares");
         fileChooser.getExtensionFilters().addAll(new FileChooser.ExtensionFilter("CSV Files", "*.csv"));
         File file = fileChooser.showOpenDialog( pane.getScene().getWindow());
-        itemCategoriaACDAO.limpar();
-        categoriaACDAO.limpar();
         try (BufferedReader br = new BufferedReader(new FileReader(file))){
+            itemCategoriaACDAO.limpar();
+            categoriaACDAO.limpar();
             String linha;
             int categoriaDoItem = 0;
             while ((linha = br.readLine()) != null){
@@ -128,7 +147,7 @@ public class AlunosController implements Initializable {
                 }
             }
         } catch (Exception e) {
-            e.printStackTrace();
+            exibirAlunos();
         }
     }
 
@@ -142,5 +161,11 @@ public class AlunosController implements Initializable {
         Stage stage = (Stage) pane.getScene().getWindow();
         LoginLoader loginLoader = new LoginLoader();
         loginLoader.loadLogin(stage);
+    }
+
+    public void cadastrarNovaCategoria(ActionEvent actionEvent) {
+        Stage stage = (Stage) pane.getScene().getWindow();
+        CadastroCategoriaLoader cadastroCategoriaLoader = new CadastroCategoriaLoader();
+        cadastroCategoriaLoader.loadCadastroCategoria(stage);
     }
 }
