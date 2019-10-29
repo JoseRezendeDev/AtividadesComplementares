@@ -63,7 +63,7 @@ public class CadastroACController implements Initializable {
             AtividadeComplementar atv = new AtividadeComplementar();
             atv.setDescricao(tfDescricao.getText());
             atv.setCargaHoraria(Double.parseDouble(tfCargaHoraria.getText()));
-            atv.setCodigo(aluno.getNome() + "_" + aluno.getNumeroMatricula() + "_" + tfSemestre + "_" + cbCategoria.getValue().getId());
+            atv.setCodigo(aluno.getNome() + "_" + aluno.getNumeroMatricula() + "_" + tfSemestre.getText() + "_" + cbCategoria.getValue().getId());
             atv.setProfessor(cbProfessor.getValue());
             atv.setAnoAC(Integer.parseInt(tfAno.getText()));
             atv.setSemestreAC(Integer.parseInt(tfSemestre.getText()));

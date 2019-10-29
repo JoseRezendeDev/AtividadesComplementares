@@ -16,7 +16,7 @@ public class AtividadeComplementarDAO {
     private ItemCategoriaACDAO itemDAO = new ItemCategoriaACDAO();
 
     public void salvar(AtividadeComplementar atividadeComplementar) {
-        String sql = "INSERT INTO atividade_complementar (codigo, carga_horaria, descricao, ano, semestre, aluno, professor, categoria_ac) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+        String sql = "INSERT INTO atividade_complementar (codigo, carga_horaria, descricao, ano, semestre, aluno, professor, item_categoria_ac) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
         try (PreparedStatement stmt = ConnectionFactory.createPreparedStatement(sql)) {
             stmt.setString(1, atividadeComplementar.getCodigo());
             stmt.setDouble(2, atividadeComplementar.getCargaHoraria());
@@ -55,7 +55,7 @@ public class AtividadeComplementarDAO {
                 atv.setAnoAC(rs.getInt("ano"));
                 atv.setDescricao(rs.getString("descricao"));
                 atv.setAluno(alunoDAO.getAluno(rs.getString("aluno")));
-
+                atv.setItemCategoriaAC(itemDAO.getItemCategoria(rs.getInt("item_categoria_ac")));
                 listaAtividades.add(atv);
             }
         } catch (SQLException e) {
@@ -78,7 +78,7 @@ public class AtividadeComplementarDAO {
                 atv.setSemestreAC(rs.getInt("semestre"));
                 atv.setAluno(alunoDAO.getAluno(rs.getString("aluno")));
                 atv.setProfessor(professorDAO.getProfessor(rs.getInt("professor")));
-                atv.setItemCategoriaAC(itemDAO.getItemCategoria(rs.getInt("categoria_ac")));
+                atv.setItemCategoriaAC(itemDAO.getItemCategoria(rs.getInt("item_categoria_ac")));
                 return atv;
             }
         } catch (SQLException e) {

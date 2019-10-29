@@ -2,6 +2,8 @@ package Controller;
 
 import DAO.AtividadeComplementarDAO;
 import Loader.AlunosLoader;
+import Loader.AtividadeValidadaLoader;
+import Model.AtividadeComplementar;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -30,9 +32,16 @@ public class ValidaACController {
     }
 
     public void verificaAC(ActionEvent actionEvent) {
-        if (atvDAO.getAtividade(tfCodigo.getText()) != null)
-            lbMensagem.setText("O código é válido");
-        else
+        if (atvDAO.getAtividade(tfCodigo.getText()) != null) {
+            AtividadeComplementar atv = atvDAO.getAtividade(tfCodigo.getText());
+            exibirAtividadeValidada(atv);
+        } else
             lbMensagem.setText("O código não é válido.");
+    }
+
+    private void exibirAtividadeValidada(AtividadeComplementar atv){
+        Stage stage = (Stage) pane.getScene().getWindow();
+        AtividadeValidadaLoader loader = new AtividadeValidadaLoader();
+        loader.loadAtividadeValidada(stage, atv);
     }
 }
