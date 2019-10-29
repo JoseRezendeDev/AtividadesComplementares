@@ -33,8 +33,7 @@ public class ValidaACController {
 
     public void verificaAC(ActionEvent actionEvent) {
         if (atvDAO.getAtividade(tfCodigo.getText()) != null) {
-            AtividadeComplementar atv = atvDAO.getAtividade(tfCodigo.getText());
-            exibirAtividadeValidada(atv);
+            exibirAtividadeValidada(atvDAO.getAtividade(tfCodigo.getText()));
         } else
             lbMensagem.setText("O código não é válido.");
     }

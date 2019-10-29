@@ -16,13 +16,12 @@ public class AtividadeValidadaLoader {
             Pane graph = loader.load(getClass().getResource("../View/atividadeValidada.fxml").openStream());
             Scene scene = new Scene(graph, 1100, 800);
 
-            System.out.println(atv);
             AtividadeValidadaController ctrl = loader.getController();
             ctrl.setAtividade(atv);
+            ctrl.initialize(null, null);
 
-            //Stage stage = new Stage();
             stage.setScene(scene);
-            stage.setTitle("Cadastro de atividade complementar");
+            stage.setTitle("Atividade válida");
             stage.show();
         } catch (IOException e) {
             e.printStackTrace();

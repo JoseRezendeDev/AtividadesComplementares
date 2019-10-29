@@ -1,5 +1,6 @@
 package Controller;
 
+import DAO.AtividadeComplementarDAO;
 import Loader.ValidaACLoader;
 import Model.AtividadeComplementar;
 import Model.ItemCategoriaAC;
@@ -15,7 +16,7 @@ import javafx.stage.Stage;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class AtividadeValidadaController implements Initializable {
+public class AtividadeValidadaController{
     @FXML
     private Pane pane;
     @FXML
@@ -35,26 +36,28 @@ public class AtividadeValidadaController implements Initializable {
 
     private AtividadeComplementar atividadeComplementar;
 
-
     public void voltarValidaAC(){
         Stage stage = (Stage) pane.getScene().getWindow();
         ValidaACLoader loader = new ValidaACLoader();
         loader.loadValidaAC(stage);
     }
 
-    @Override
     public void initialize(URL location, ResourceBundle resources) {
-        /*
         tfDescricao.setText(atividadeComplementar.getDescricao());
+        tfDescricao.setDisable(true);
         tfAno.setText(String.valueOf(atividadeComplementar.getAnoAC()));
-        tfSemestre.setText(String.valueOf(atividadeComplementar.getSemestreAC()));
+        tfAno.setDisable(true);
+        tfSemestre.setText(String.valueOf(this.atividadeComplementar.getSemestreAC()));
+        tfSemestre.setDisable(true);
         tfCargaHoraria.setText(String.valueOf(atividadeComplementar.getCargaHoraria()));
+        tfCargaHoraria.setDisable(true);
         lbAluno.setText(atividadeComplementar.getAluno().getNome());
+        lbAluno.setDisable(true);
         cbCategoria.setValue(atividadeComplementar.getItemCategoriaAC());
+        cbCategoria.setDisable(true);
         cbProfessor.setValue(atividadeComplementar.getProfessor());
-    */
+        cbProfessor.setDisable(true);
     }
-
 
     public void setAtividade(AtividadeComplementar atv) {
         this.atividadeComplementar = atv;
