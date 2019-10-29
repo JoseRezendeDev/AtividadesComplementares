@@ -14,12 +14,12 @@
    <children>
       <AnchorPane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="283.0" prefWidth="306.0" style="-fx-background-color: #ffffff; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.4), 10, 0, 0, 0); -fx-border-radius: 10 10 10 10; -fx-background-radius: 10 10 10 10;">
          <children>
-            <TextField fx:id="tfUsuario" focusTraversable="false" layoutX="25.0" layoutY="77.0" prefHeight="41.0" prefWidth="258.0" promptText="usuário" style="-fx-background-color: #f6f6f6; -fx-border-style: none none solid none;">
+            <TextField fx:id="tfUsuario" focusTraversable="false" layoutX="25.0" layoutY="77.0" prefHeight="41.0" prefWidth="258.0" promptText="usuário" style="-fx-background-color: #ededed; -fx-border-style: none none solid none;">
                <font>
                   <Font size="14.0" />
                </font>
             </TextField>
-            <PasswordField fx:id="tfSenha" focusTraversable="false" layoutX="25.0" layoutY="142.0" prefHeight="41.0" prefWidth="258.0" promptText="senha" style="-fx-background-color: #f6f6f6;">
+            <PasswordField fx:id="tfSenha" focusTraversable="false" layoutX="25.0" layoutY="142.0" prefHeight="41.0" prefWidth="258.0" promptText="senha" style="-fx-background-color: #ededed;">
                <font>
                   <Font size="14.0" />
                </font>

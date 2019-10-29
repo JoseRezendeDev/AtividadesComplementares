@@ -51,8 +51,8 @@
                      <Font size="18.0" />
                   </font>
                </Label>
-               <ComboBox fx:id="cbCategoria" layoutX="35.0" layoutY="330.0" prefHeight="38.0" prefWidth="388.0" />
-               <ComboBox fx:id="cbProfessor" layoutX="35.0" layoutY="402.0" prefHeight="38.0" prefWidth="388.0" />
+               <ComboBox fx:id="cbCategoria" layoutX="35.0" layoutY="330.0" prefHeight="38.0" prefWidth="388.0" style="-fx-background-color: #ededed;" />
+               <ComboBox fx:id="cbProfessor" layoutX="35.0" layoutY="402.0" prefHeight="38.0" prefWidth="388.0" style="-fx-background-color: #ededed;" />
             </AnchorPane>
          </children>
       </AnchorPane>
