@@ -10,6 +10,10 @@ public class ItemCategoriaAC {
         return categoriaAC;
     }
 
+    public String toString(){
+        return this.nome;
+    }
+
     public void setCategoriaAC(CategoriaAC categoriaAC) {
         this.categoriaAC = categoriaAC;
     }

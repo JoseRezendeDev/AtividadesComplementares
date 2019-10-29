@@ -10,10 +10,7 @@ import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Alert;
-import javafx.scene.control.ChoiceBox;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
@@ -35,9 +32,9 @@ public class CadastroACController implements Initializable {
     @FXML
     private TextField tfAno;
     @FXML
-    private ChoiceBox<Professor> cbProfessor;
+    private ComboBox<Professor> cbProfessor;
     @FXML
-    private ChoiceBox<ItemCategoriaAC> cbCategoria;
+    private ComboBox<ItemCategoriaAC> cbCategoria;
 
     private Aluno aluno;
     private ItemCategoriaACDAO itemDAO = new ItemCategoriaACDAO();

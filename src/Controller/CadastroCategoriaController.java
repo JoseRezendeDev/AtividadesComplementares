@@ -27,7 +27,7 @@ public class CadastroCategoriaController implements Initializable {
     @FXML
     private RadioButton rbItemCategoria;
     @FXML
-    private ChoiceBox<CategoriaAC> cbCategoria;
+    private ComboBox<CategoriaAC> cbCategoria;
     @FXML
     private ToggleGroup categoriaOuItem;
 

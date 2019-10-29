@@ -41,7 +41,7 @@
                </Label>
             </children>
          </Pane>
-         <Button layoutX="14.0" layoutY="361.0" mnemonicParsing="false" onAction="#voltarHome" prefHeight="25.0" prefWidth="69.0" style="-fx-background-color: #dbe5ee; -fx-background-radius: 15; -fx-fill-text: #283845;" text="VOLTAR" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0">
+         <Button layoutX="14.0" layoutY="361.0" mnemonicParsing="false" onAction="#voltarAluno" prefHeight="25.0" prefWidth="69.0" style="-fx-background-color: #dbe5ee; -fx-background-radius: 15; -fx-fill-text: #283845;" text="VOLTAR" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0">
             <cursor>
                <Cursor fx:constant="HAND" />
             </cursor>
@@ -50,7 +50,7 @@
             </font></Button>
          <Pane layoutX="6.0" layoutY="100.0" prefHeight="91.0" prefWidth="260.0" style="-fx-background-color: #283845;" AnchorPane.leftAnchor="0.0">
             <children>
-               <Button fx:id="btCadastrar" layoutX="28.0" layoutY="39.0" mnemonicParsing="false" onAction="#cadastrarAC" prefHeight="30.0" prefWidth="204.0" style="-fx-background-color: #dbe5ee; -fx-background-radius: 15; -fx-fill-text: #283845;" text="CADASTRAR NOVA ATIVIDADE" textFill="#283845">
+               <Button layoutX="28.0" layoutY="39.0" mnemonicParsing="false" onAction="#cadastrarAC" prefHeight="30.0" prefWidth="204.0" style="-fx-background-color: #dbe5ee; -fx-background-radius: 15; -fx-fill-text: #283845;" text="CADASTRAR NOVA ATIVIDADE" textFill="#283845">
                   <cursor>
                      <Cursor fx:constant="HAND" />
                   </cursor>
