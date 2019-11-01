@@ -16,6 +16,8 @@ import javafx.stage.Stage;
 
 import java.net.URL;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.ResourceBundle;
 
 public class CadastroACController implements Initializable {
@@ -28,9 +30,9 @@ public class CadastroACController implements Initializable {
     @FXML
     private TextField tfCargaHoraria;
     @FXML
-    private TextField tfSemestre;
+    private ComboBox<Integer> cbSemestre;
     @FXML
-    private TextField tfAno;
+    private ComboBox<Integer> cbAno;
     @FXML
     private ComboBox<Professor> cbProfessor;
     @FXML
@@ -63,10 +65,10 @@ public class CadastroACController implements Initializable {
             AtividadeComplementar atv = new AtividadeComplementar();
             atv.setDescricao(tfDescricao.getText());
             atv.setCargaHoraria(Double.parseDouble(tfCargaHoraria.getText()));
-            atv.setCodigo(aluno.getNome() + "_" + aluno.getNumeroMatricula() + "_" + tfSemestre.getText() + "_" + cbCategoria.getValue().getId());
+            atv.setCodigo(aluno.getNome() + "_" + aluno.getNumeroMatricula() + "_" + cbSemestre.getValue() + "_" + cbCategoria.getValue().getId());
             atv.setProfessor(cbProfessor.getValue());
-            atv.setAnoAC(Integer.parseInt(tfAno.getText()));
-            atv.setSemestreAC(Integer.parseInt(tfSemestre.getText()));
+            atv.setAnoAC(cbAno.getValue());
+            atv.setSemestreAC(cbSemestre.getValue());
             atv.setItemCategoriaAC(cbCategoria.getValue());
             atv.setAluno(aluno);
             atvDAO.salvar(atv);
@@ -89,18 +91,6 @@ public class CadastroACController implements Initializable {
         } catch (NumberFormatException e) {
             return "Carga horária inválida";
         }
-        try {
-            int semestre = Integer.parseInt(tfSemestre.getText());
-            if (!(semestre == 1 || semestre == 2))
-                return "Semestre inválido";
-        } catch (NumberFormatException e) {
-            return "Semestre inválido";
-        }
-        try {
-            int ano = Integer.parseInt(tfAno.getText());
-        } catch (NumberFormatException e) {
-            return "Ano inválido";
-        }
         if (cbCategoria.getValue() == null)
             return "Selecione uma categoria";
         if (cbProfessor.getValue() == null)
@@ -114,6 +104,11 @@ public class CadastroACController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        List<Integer> listaAnos = new ArrayList<>();
+        for (int i=2008;i<2020;i++)
+            listaAnos.add(i);
+        cbAno.setItems(FXCollections.observableArrayList(listaAnos));
+        cbSemestre.setItems(FXCollections.observableArrayList(1, 2));
         cbCategoria.setItems(FXCollections.observableArrayList(itemDAO.getItensCategoria()));
         cbProfessor.setItems(FXCollections.observableArrayList(professorDAO.getProfessores()));
     }

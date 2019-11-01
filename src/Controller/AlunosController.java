@@ -58,13 +58,17 @@ public class AlunosController implements Initializable {
         tabela.setItems(alunos);
     }
 
-    public void exibirAtividades(){
+    public void exibirAtividades() {
         Aluno alunoSelecionado = tabela.getSelectionModel().getSelectedItem();
-        AtividadesLoader atividadesLoader = new AtividadesLoader();
-        Stage stage = (Stage) pane.getScene().getWindow();
-        atividadesLoader.loadAtividades(alunoSelecionado, stage);
+        if (alunoSelecionado != null) {
+            AtividadesLoader atividadesLoader = new AtividadesLoader();
+            Stage stage = (Stage) pane.getScene().getWindow();
+            atividadesLoader.loadAtividades(alunoSelecionado, stage);
+        }
     }
 
+    //Arquivo csv deve estar na seguinte ordem
+    //***;prontuario;nome;ano de ingresso;***;***;semestre de ingresso
     public void importarAlunos(ActionEvent actionEvent) {
         FileChooser fileChooser = new FileChooser();
         fileChooser.setTitle("Alunos");
@@ -85,8 +89,8 @@ public class AlunosController implements Initializable {
                 mapaAlunos.put(aluno.getNumeroMatricula(), aluno);
                 listaAlunos.add(aluno);
             }
-            cadastrarAlunosBanco(listaAlunos);
             removerAlunosFormados(mapaAlunos);
+            cadastrarAlunosBanco(listaAlunos);
         } catch (Exception e) {
             exibirAlunos();
         }
@@ -111,8 +115,10 @@ public class AlunosController implements Initializable {
     private void removerAlunosFormados(Map<String, Aluno> mapa){
         List<Aluno> listaAlunosBanco = alunoDAO.getAlunosAsList();
         for (Aluno aluno : listaAlunosBanco){
-            if (!mapa.containsKey(aluno.getNumeroMatricula()))
+            if (!mapa.containsKey(aluno.getNumeroMatricula())) {
                 alunoDAO.remover(aluno.getNumeroMatricula());
+                atvDAO.removerAtividadesDoAluno(aluno.getNumeroMatricula());
+            }
         }
     }
 
