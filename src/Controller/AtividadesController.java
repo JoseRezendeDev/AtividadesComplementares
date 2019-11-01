@@ -1,6 +1,7 @@
 package Controller;
 
 import DAO.AtividadeComplementarDAO;
+import Loader.AtividadeSelecionadaLoader;
 import Loader.CadastroACLoader;
 import Loader.AlunosLoader;
 import Model.Aluno;
@@ -39,8 +40,6 @@ public class AtividadesController {
     private TableColumn<AtividadeComplementar, String> clCategoria;
     @FXML
     private TableColumn<AtividadeComplementar, String> clProfessor;
-    @FXML
-    private Label lbTitulo;
     @FXML
     private Label lbAluno;
 
@@ -82,5 +81,12 @@ public class AtividadesController {
         Stage stage = (Stage) pane.getScene().getWindow();
         CadastroACLoader cadastroACLoader = new CadastroACLoader();
         cadastroACLoader.loadCadastroAC(aluno, stage);
+    }
+
+    public void abrirAtividade(){
+        Stage stage = (Stage) pane.getScene().getWindow();
+        AtividadeComplementar atvSelecionada = tabela.getSelectionModel().getSelectedItem();
+        AtividadeSelecionadaLoader atvSelLoader = new AtividadeSelecionadaLoader();
+        atvSelLoader.loadAtividadeSelecionada(atvSelecionada, aluno, stage);
     }
 }

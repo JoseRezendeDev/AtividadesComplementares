@@ -56,6 +56,7 @@ public class AtividadeComplementarDAO {
                 atv.setDescricao(rs.getString("descricao"));
                 atv.setAluno(alunoDAO.getAluno(rs.getString("aluno")));
                 atv.setItemCategoriaAC(itemDAO.getItemCategoria(rs.getInt("item_categoria_ac")));
+                atv.setProfessor(professorDAO.getProfessor(rs.getInt("professor")));
                 listaAtividades.add(atv);
             }
         } catch (SQLException e) {
@@ -85,5 +86,15 @@ public class AtividadeComplementarDAO {
             e.printStackTrace();
         }
         return null;
+    }
+
+    public void removerAtividadesDoAluno(String numeroMatricula){
+        String sql = "DELETE FROM atividade_complementar WHERE aluno = ?";
+        try (PreparedStatement stmt = ConnectionFactory.createPreparedStatement(sql)) {
+            stmt.setString(1, numeroMatricula);
+            stmt.execute();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 }

@@ -1,12 +1,12 @@
 package Controller;
 
-import DAO.AtividadeComplementarDAO;
+import Loader.AtividadesLoader;
 import Loader.ValidaACLoader;
+import Model.Aluno;
 import Model.AtividadeComplementar;
 import Model.ItemCategoriaAC;
 import Model.Professor;
 import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
@@ -16,7 +16,7 @@ import javafx.stage.Stage;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class AtividadeValidadaController{
+public class AtividadeSelecionadaController {
     @FXML
     private Pane pane;
     @FXML
@@ -35,11 +35,12 @@ public class AtividadeValidadaController{
     private ComboBox<ItemCategoriaAC> cbCategoria;
 
     private AtividadeComplementar atividadeComplementar;
+    private Aluno aluno;
 
-    public void voltarValidaAC(){
+    public void voltarAtividades(){
         Stage stage = (Stage) pane.getScene().getWindow();
-        ValidaACLoader loader = new ValidaACLoader();
-        loader.loadValidaAC(stage);
+        AtividadesLoader atividadesLoader = new AtividadesLoader();
+        atividadesLoader.loadAtividades(aluno, stage);
     }
 
     public void initialize(URL location, ResourceBundle resources) {
@@ -57,6 +58,10 @@ public class AtividadeValidadaController{
         cbCategoria.setDisable(true);
         cbProfessor.setValue(atividadeComplementar.getProfessor());
         cbProfessor.setDisable(true);
+    }
+
+    public void setAluno(Aluno aluno){
+        this.aluno = aluno;
     }
 
     public void setAtividade(AtividadeComplementar atv) {
