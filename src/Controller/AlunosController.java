@@ -11,12 +11,15 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.Pane;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
+import org.omg.CORBA.INTERNAL;
 
 import java.io.*;
 import java.net.URL;
@@ -37,6 +40,14 @@ public class AlunosController implements Initializable {
     private TableColumn<Aluno, Integer> clSemestreIngresso;
     @FXML
     private TableColumn<Aluno, Double> clHorasCumpridas;
+    @FXML
+    private TextField tfNome;
+    @FXML
+    private TextField tfProntuario;
+    @FXML
+    private ComboBox<Integer> cbAnoIngresso;
+    @FXML
+    private ComboBox<Integer> cbSemestreIngresso;
 
     private ObservableList<Aluno> alunos;
     private AlunoDAO alunoDAO = new AlunoDAO();
@@ -56,6 +67,11 @@ public class AlunosController implements Initializable {
         clSemestreIngresso.setCellValueFactory(new PropertyValueFactory<>("semestreIngresso"));
         clHorasCumpridas.setCellValueFactory(new PropertyValueFactory<>("horasCumpridas"));
         tabela.setItems(alunos);
+        List<Integer> listaAnos = new ArrayList<>();
+        for (int i=2008;i<2020;i++)
+            listaAnos.add(i);
+        cbAnoIngresso.setItems(FXCollections.observableArrayList(listaAnos));
+        cbSemestreIngresso.setItems(FXCollections.observableArrayList(1,2));
     }
 
     public void exibirAtividades() {
@@ -173,5 +189,67 @@ public class AlunosController implements Initializable {
         Stage stage = (Stage) pane.getScene().getWindow();
         CadastroCategoriaLoader cadastroCategoriaLoader = new CadastroCategoriaLoader();
         cadastroCategoriaLoader.loadCadastroCategoria(stage);
+    }
+
+    public void filtrar(){
+        alunos.clear();
+        alunos = FXCollections.observableArrayList(alunoDAO.getAlunosAsList());
+        filtrarNome();
+        filtrarProntuario();
+        filtrarAnoIngresso();
+        filtrarSemestreIngresso();
+        tabela.setItems(FXCollections.observableArrayList(alunos));
+    }
+
+    private void filtrarNome() {
+        String nome = tfNome.getText();
+        Iterator<Aluno> it = alunos.iterator();
+        while (it.hasNext()){
+            Aluno aluno = it.next();
+            if (!aluno.getNome().contains(nome))
+                it.remove();
+        }
+    }
+
+    private void filtrarProntuario(){
+        String prontuario = tfProntuario.getText();
+        Iterator<Aluno> it = alunos.iterator();
+        while (it.hasNext()){
+            Aluno aluno = it.next();
+            if (!aluno.getNumeroMatricula().contains(prontuario))
+                it.remove();
+        }
+    }
+
+    private void filtrarAnoIngresso(){
+        if (cbAnoIngresso.getValue() != null) {
+            int anoIngresso = cbAnoIngresso.getValue();
+            Iterator<Aluno> it = alunos.iterator();
+            while (it.hasNext()) {
+                Aluno aluno = it.next();
+                if (aluno.getAnoIngresso() != anoIngresso)
+                    it.remove();
+            }
+        }
+    }
+
+    private void filtrarSemestreIngresso() {
+        if (cbSemestreIngresso.getValue() != null) {
+            int semestreIngresso = cbSemestreIngresso.getValue();
+            Iterator<Aluno> it = alunos.iterator();
+            while (it.hasNext()) {
+                Aluno aluno = it.next();
+                if (aluno.getSemestreIngresso() != semestreIngresso)
+                    it.remove();
+            }
+        }
+    }
+
+    public void limparFiltros(){
+        tfNome.setText("");
+        tfProntuario.setText("");
+        cbAnoIngresso.getSelectionModel().clearSelection();
+        cbSemestreIngresso.getSelectionModel().clearSelection();
+        filtrar();
     }
 }

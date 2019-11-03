@@ -3,6 +3,7 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
@@ -62,31 +63,26 @@
                      <Font name="System Bold" size="12.0" />
                   </font>
                </Label>
-               <TextField layoutX="28.0" layoutY="36.0" prefHeight="30.0" prefWidth="204.0" promptText="nome" style="-fx-background-color: #283845; -fx-border-color: #dbe5ee; -fx-background-radius: 10; -fx-border-radius: 10; -fx-text-fill: white;">
+               <TextField fx:id="tfNome" layoutX="28.0" layoutY="36.0" onKeyReleased="#filtrar" prefHeight="30.0" prefWidth="204.0" promptText="nome" style="-fx-background-color: #283845; -fx-border-color: #dbe5ee; -fx-background-radius: 10; -fx-border-radius: 10; -fx-text-fill: white;">
                   <padding>
                      <Insets left="20.0" />
                   </padding></TextField>
-               <TextField layoutX="28.0" layoutY="78.0" prefHeight="30.0" prefWidth="204.0" promptText="prontuário" style="-fx-background-color: #283845; -fx-border-color: #dbe5ee; -fx-background-radius: 10; -fx-border-radius: 10; -fx-text-fill: white;">
-                  <padding>
-                     <Insets left="20.0" />
-                  </padding>
-               </TextField>
-               <TextField layoutX="28.0" layoutY="118.0" prefHeight="30.0" prefWidth="204.0" promptText="ano de ingresso" style="-fx-background-color: #283845; -fx-border-color: #dbe5ee; -fx-background-radius: 10; -fx-border-radius: 10; -fx-text-fill: white;">
-                  <padding>
-                     <Insets left="20.0" />
-                  </padding>
-               </TextField>
-               <TextField layoutX="28.0" layoutY="162.0" prefHeight="30.0" prefWidth="204.0" promptText="semestre de ingresso" style="-fx-background-color: #283845; -fx-border-color: #dbe5ee; -fx-background-radius: 10; -fx-border-radius: 10; -fx-text-fill: white;">
-                  <padding>
-                     <Insets left="20.0" />
-                  </padding>
-               </TextField>
-               <TextField layoutX="28.0" layoutY="204.0" prefHeight="30.0" prefWidth="204.0" promptText="horas cumpridas" style="-fx-background-color: #283845; -fx-border-color: #dbe5ee; -fx-background-radius: 10; -fx-border-radius: 10; -fx-text-fill: white;">
+               <TextField fx:id="tfProntuario" layoutX="28.0" layoutY="78.0" onKeyReleased="#filtrar" prefHeight="30.0" prefWidth="204.0" promptText="prontuário" style="-fx-background-color: #283845; -fx-border-color: #dbe5ee; -fx-background-radius: 10; -fx-border-radius: 10; -fx-text-fill: white;">
                   <padding>
                      <Insets left="20.0" />
                   </padding>
                </TextField>
                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="265.0" layoutX="-2.0" stroke="BLACK" strokeType="INSIDE" style="-fx-stroke: #283845;" width="11.0" />
+               <ComboBox fx:id="cbAnoIngresso" layoutX="25.0" layoutY="120.0" onAction="#filtrar" prefHeight="22.0" prefWidth="204.0" promptText="ano de ingresso" />
+               <ComboBox fx:id="cbSemestreIngresso" layoutX="25.0" layoutY="162.0" onAction="#filtrar" prefHeight="22.0" prefWidth="204.0" promptText="semestre de ingresso" />
+               <Button alignment="CENTER" layoutX="59.0" layoutY="221.0" mnemonicParsing="false" onAction="#limparFiltros" prefHeight="30.0" prefWidth="142.0" style="-fx-background-color: #dbe5ee; -fx-background-radius: 15;" text="LIMPAR FILTROS" textFill="#283845">
+                  <cursor>
+                     <Cursor fx:constant="HAND" />
+                  </cursor>
+                  <font>
+                     <Font name="System Bold" size="12.0" />
+                  </font>
+               </Button>
             </children>
          </Pane>
          <Button alignment="BASELINE_LEFT" layoutY="369.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="260.0" style="-fx-background-color: #2f4050;" text="Exportar dados" textFill="#979fb4" AnchorPane.bottomAnchor="95.0" AnchorPane.leftAnchor="0.0">
