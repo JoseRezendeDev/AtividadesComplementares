@@ -61,10 +61,10 @@
       <Pane prefHeight="1.0" prefWidth="440.0" style="-fx-background-color: #e8e9eb;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="104.0" />
           <Label contentDisplay="CENTER" layoutX="33.0" layoutY="117.0" prefHeight="25.0" prefWidth="78.0" text="DESCRIÇÃO:" textAlignment="CENTER" AnchorPane.leftAnchor="33.0" AnchorPane.topAnchor="117.0" />
           <Label layoutX="33.0" layoutY="177.0" prefHeight="25.0" prefWidth="129.0" text="CARGA HORÁRIA:" AnchorPane.leftAnchor="33.0" />
-          <Label layoutX="33.0" layoutY="293.0" prefHeight="25.0" prefWidth="58.0" text="SEMESTRE:" AnchorPane.leftAnchor="33.0" />
+          <Label layoutX="33.0" layoutY="294.0" prefHeight="25.0" prefWidth="58.0" text="SEMESTRE:" AnchorPane.leftAnchor="33.0" />
           <Label layoutX="33.0" layoutY="237.0" prefHeight="25.0" prefWidth="67.0" text="ANO:" AnchorPane.leftAnchor="33.0" />
-          <Label layoutX="33.0" layoutY="353.0" prefHeight="25.0" prefWidth="129.0" text="CATEGORIA:" AnchorPane.leftAnchor="33.0" />
-          <Label layoutX="33.0" layoutY="418.0" prefHeight="25.0" prefWidth="78.0" text="PROFESSOR:" AnchorPane.leftAnchor="33.0" />
+          <Label layoutX="33.0" layoutY="354.0" prefHeight="25.0" prefWidth="129.0" text="CATEGORIA:" AnchorPane.leftAnchor="33.0" />
+          <Label layoutX="33.0" layoutY="419.0" prefHeight="25.0" prefWidth="78.0" text="PROFESSOR:" AnchorPane.leftAnchor="33.0" />
       <Label fx:id="lbDescricao" layoutX="33.0" layoutY="142.0" text="Descrição" textFill="#6f6e6e" AnchorPane.leftAnchor="33.0">
          <font>
             <Font name="System Bold" size="14.0" />
@@ -79,17 +79,17 @@
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <Label fx:id="lbSemestre" layoutX="33.0" layoutY="318.0" text="Semestre" textFill="#6f6e6e" AnchorPane.leftAnchor="33.0">
+      <Label fx:id="lbSemestre" layoutX="33.0" layoutY="319.0" text="Semestre" textFill="#6f6e6e" AnchorPane.leftAnchor="33.0">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <Label fx:id="lbCategoria" layoutX="33.0" layoutY="378.0" text="Categoria" textFill="#6f6e6e" AnchorPane.leftAnchor="33.0">
+      <Label fx:id="lbCategoria" layoutX="33.0" layoutY="379.0" text="Categoria" textFill="#6f6e6e" AnchorPane.leftAnchor="33.0">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <Label fx:id="lbProfessor" layoutX="33.0" layoutY="443.0" text="Professor" textFill="#6f6e6e" AnchorPane.leftAnchor="33.0">
+      <Label fx:id="lbProfessor" layoutX="33.0" layoutY="444.0" text="Professor" textFill="#6f6e6e" AnchorPane.leftAnchor="33.0">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>

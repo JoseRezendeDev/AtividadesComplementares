@@ -73,4 +73,9 @@ public class AtividadeComplementar {
     public void setAluno(Aluno aluno) {
         this.aluno = aluno;
     }
+
+    @Override
+    public String toString() {
+        return aluno.getNumeroMatricula() + ";" + aluno.getNome() + ";" + codigo + ";" + descricao + ";" + cargaHoraria + ";" + semestreAC + ";" + anoAC + ";" + itemCategoriaAC.getNome() + "\n";
+    }
 }

@@ -97,7 +97,7 @@
                </Button>
             </children>
          </Pane>
-         <Button alignment="BASELINE_LEFT" layoutY="369.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="260.0" style="-fx-background-color: #2f4050;" text="Exportar dados" textFill="#979fb4" AnchorPane.bottomAnchor="95.0" AnchorPane.leftAnchor="0.0">
+         <Button alignment="BASELINE_LEFT" layoutY="369.0" mnemonicParsing="false" onAction="#exportarDados" prefHeight="36.0" prefWidth="260.0" style="-fx-background-color: #2f4050;" text="Exportar dados" textFill="#979fb4" AnchorPane.bottomAnchor="95.0" AnchorPane.leftAnchor="0.0">
             <padding>
                <Insets left="30.0" />
             </padding>

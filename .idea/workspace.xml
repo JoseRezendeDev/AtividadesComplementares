@@ -2,17 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6db74bfc-8768-47a2-92ed-92e48d0e7253" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AtividadesComplementares/Controller/AtividadeSelecionadaController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AtividadesComplementares/Controller/AtividadeSelecionadaController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AtividadesComplementares/Loader/AtividadeSelecionadaLoader.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AtividadesComplementares/Loader/AtividadeSelecionadaLoader.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AtividadesComplementares/Loader/AtividadeValidadaLoader.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AtividadesComplementares/Loader/AtividadeValidadaLoader.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AtividadesComplementares/View/atividadeSelecionada.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AtividadesComplementares/View/atividadeSelecionada.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AtividadesComplementares/atividades.db" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AtividadesComplementares/atividades.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/AtividadeSelecionadaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AtividadeSelecionadaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Loader/AtividadeSelecionadaLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Loader/AtividadeSelecionadaLoader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Loader/AtividadeValidadaLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Loader/AtividadeValidadaLoader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/atividadeSelecionada.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/atividadeSelecionada.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/atividades.db" beforeDir="false" afterPath="$PROJECT_DIR$/src/atividades.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/AlunosController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AlunosController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/AtividadeComplementar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/AtividadeComplementar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/alunos.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/alunos.fxml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -24,70 +16,67 @@
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
   </component>
-  <component name="DockManager">
-    <window id="1">
-      <content type="file-editors">
-        <state>
-          <leaf>
-            <file pinned="false" current-in-tab="true">
-              <entry file="file://$PROJECT_DIR$/src/View/atividadeSelecionada.fxml">
-                <provider editor-type-id="text-editor" />
-                <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
-              </entry>
-            </file>
-          </leaf>
-        </state>
-      </content>
-    </window>
-  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Controller/AlunosController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1826">
-              <caret line="106" column="13" selection-start-line="106" selection-start-column="13" selection-end-line="106" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Loader/AtividadeSelecionadaLoader.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="21" column="52" lean-forward="true" selection-start-line="21" selection-start-column="52" selection-end-line="21" selection-end-column="52" />
+            <state relative-caret-position="220">
+              <caret line="153" column="34" selection-start-line="153" selection-start-column="34" selection-end-line="153" selection-end-column="34" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Controller/AtividadeSelecionadaController.java">
+        <entry file="file://$PROJECT_DIR$/src/Model/AtividadeComplementar.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="36" column="9" lean-forward="true" selection-start-line="36" selection-start-column="9" selection-end-line="36" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Controller/AtividadeValidadaController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="814">
-              <caret line="51" column="29" selection-start-line="51" selection-start-column="29" selection-end-line="51" selection-end-column="29" />
+            <state relative-caret-position="286">
+              <caret line="81" lean-forward="true" selection-start-line="81" selection-end-line="81" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#1282#1283#0" expanded="true" />
+                <element signature="e#1320#1321#0" expanded="true" />
+                <element signature="e#1391#1392#0" expanded="true" />
+                <element signature="e#1445#1446#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Controller/ValidaACController.java">
+        <entry file="file://$PROJECT_DIR$/src/Model/ItemCategoriaAC.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="704">
-              <caret line="43" column="15" selection-start-line="43" selection-start-column="15" selection-end-line="43" selection-end-column="15" />
+            <state relative-caret-position="264">
+              <caret line="13" column="14" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
+              <folding>
+                <element signature="e#202#203#0" expanded="true" />
+                <element signature="e#236#237#0" expanded="true" />
+              </folding>
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Model/CategoriaAC.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="242">
+              <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#298#299#0" expanded="true" />
+                <element signature="e#326#327#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/View/alunos.fxml">
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="22">
+              <caret line="17" column="47" selection-start-line="17" selection-start-column="47" selection-end-line="17" selection-end-column="47" />
+            </state>
+          </provider>
+          <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
         </entry>
       </file>
     </leaf>
@@ -104,6 +93,7 @@
     <findStrings>
       <find>impor</find>
       <find>cbAnoIngresso</find>
+      <find>alunos</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -122,7 +112,6 @@
         <option value="$PROJECT_DIR$/src/View/validaAC.fxml" />
         <option value="$PROJECT_DIR$/src/DAO/ProfessorDAO.java" />
         <option value="$PROJECT_DIR$/src/Auxiliar/StatusAluno.java" />
-        <option value="$PROJECT_DIR$/src/Model/AtividadeComplementar.java" />
         <option value="$PROJECT_DIR$/src/DAO/ItemCategoriaACDAO.java" />
         <option value="$PROJECT_DIR$/src/Model/Aluno.java" />
         <option value="$PROJECT_DIR$/src/DAO/AlunoDAO.java" />
@@ -143,12 +132,13 @@
         <option value="$PROJECT_DIR$/src/View/atividades.fxml" />
         <option value="$PROJECT_DIR$/src/Controller/AtividadesController.java" />
         <option value="$PROJECT_DIR$/src/DAO/AtividadeComplementarDAO.java" />
-        <option value="$PROJECT_DIR$/src/Controller/AlunosController.java" />
-        <option value="$PROJECT_DIR$/src/View/alunos.fxml" />
         <option value="$PROJECT_DIR$/src/Loader/AtividadeValidadaLoader.java" />
         <option value="$PROJECT_DIR$/src/Loader/AtividadeSelecionadaLoader.java" />
         <option value="$PROJECT_DIR$/src/Controller/AtividadeSelecionadaController.java" />
         <option value="$PROJECT_DIR$/src/View/atividadeSelecionada.fxml" />
+        <option value="$PROJECT_DIR$/src/View/alunos.fxml" />
+        <option value="$PROJECT_DIR$/src/Controller/AlunosController.java" />
+        <option value="$PROJECT_DIR$/src/Model/AtividadeComplementar.java" />
       </list>
     </option>
   </component>
@@ -398,18 +388,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/AtividadeComplementar.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="972">
-          <caret line="60" column="49" selection-start-line="60" selection-start-column="49" selection-end-line="60" selection-end-column="49" />
-          <folding>
-            <element signature="e#1320#1321#0" expanded="true" />
-            <element signature="e#1391#1392#0" expanded="true" />
-            <element signature="e#1445#1446#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/atividades.db">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
@@ -417,33 +395,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/ItemCategoriaAC.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="13" column="14" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
-          <folding>
-            <element signature="e#202#203#0" expanded="true" />
-            <element signature="e#236#237#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Model/Professor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
           <caret line="7" column="8" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/CategoriaAC.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#298#299#0" expanded="true" />
-            <element signature="e#326#327#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -493,14 +448,6 @@
       <provider editor-type-id="text-editor" />
       <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/View/atividadeValidada.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1269">
-          <caret line="47" column="17" selection-start-line="12" selection-start-column="4" selection-end-line="47" selection-end-column="17" />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/View/cadastroAC.fxml">
       <provider editor-type-id="text-editor">
         <state relative-caret-position="351">
@@ -516,14 +463,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/View/alunos.fxml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="-1004">
-          <caret line="17" column="47" selection-start-line="17" selection-start-column="47" selection-end-line="17" selection-end-column="47" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/CSV/FakeAlunos.csv">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="341">
@@ -536,13 +475,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/CSV/tabelaAC.csv">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DAO/AtividadeComplementarDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="341">
-          <caret line="61" column="34" selection-start-line="61" selection-start-column="34" selection-end-line="61" selection-end-column="34" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/DAO/CategoriaACDAO.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -609,13 +541,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/DAO/AlunoDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="11">
-          <caret line="73" column="13" selection-start-line="73" selection-start-column="13" selection-end-line="73" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Loader/AlunosLoader.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
@@ -627,13 +552,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="781">
           <caret line="99" column="8" selection-start-line="99" selection-start-column="8" selection-end-line="99" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/AlunosController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1826">
-          <caret line="106" column="13" selection-start-line="106" selection-start-column="13" selection-end-line="106" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -662,6 +580,25 @@
       </provider>
       <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/View/atividadeSelecionada.fxml">
+      <provider editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/View/atividadeValidada.fxml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="316">
+          <caret line="47" column="17" lean-forward="true" selection-start-line="47" selection-start-column="17" selection-end-line="47" selection-end-column="17" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/AtividadeSelecionadaController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="36" column="9" lean-forward="true" selection-start-line="36" selection-start-column="9" selection-end-line="36" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Loader/AtividadeSelecionadaLoader.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="132">
@@ -669,16 +606,70 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/AtividadeSelecionadaController.java">
+    <entry file="file://$PROJECT_DIR$/src/View/alunos.fxml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="17" column="47" selection-start-line="17" selection-start-column="47" selection-end-line="17" selection-end-column="47" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DAO/AtividadeComplementarDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="36" column="9" lean-forward="true" selection-start-line="36" selection-start-column="9" selection-end-line="36" selection-end-column="9" />
+        <state relative-caret-position="-4">
+          <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/View/atividadeSelecionada.fxml">
-      <provider editor-type-id="text-editor" />
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+    <entry file="file://$PROJECT_DIR$/src/DAO/AlunoDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-268">
+          <caret line="73" column="13" selection-start-line="73" selection-start-column="13" selection-end-line="73" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/AlunosController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="153" column="34" selection-start-line="153" selection-start-column="34" selection-end-line="153" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/ItemCategoriaAC.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="13" column="14" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
+          <folding>
+            <element signature="e#202#203#0" expanded="true" />
+            <element signature="e#236#237#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/CategoriaAC.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#298#299#0" expanded="true" />
+            <element signature="e#326#327#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/AtividadeComplementar.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="81" lean-forward="true" selection-start-line="81" selection-end-line="81" />
+          <folding>
+            <element signature="e#1282#1283#0" expanded="true" />
+            <element signature="e#1320#1321#0" expanded="true" />
+            <element signature="e#1391#1392#0" expanded="true" />
+            <element signature="e#1445#1446#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
   </component>
   <component name="masterDetails">
