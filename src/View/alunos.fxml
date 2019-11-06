@@ -37,7 +37,7 @@
                <Insets left="30.0" />
             </padding>
          </Label>
-         <Button alignment="CENTER" contentDisplay="CENTER" focusTraversable="false" layoutX="182.0" layoutY="6.0" mnemonicParsing="false" onAction="#deslogar" prefHeight="47.0" prefWidth="54.0" style="-fx-background-color: #2f4050;" text="Sair" textFill="#979fb4" AnchorPane.bottomAnchor="453.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <Button alignment="CENTER" contentDisplay="CENTER" focusTraversable="false" layoutX="182.0" layoutY="6.0" mnemonicParsing="false" onAction="#deslogar" prefHeight="47.0" prefWidth="54.0" style="-fx-background-color: #2f4050;" text="Sair" textFill="#979fb4" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <cursor>
                <Cursor fx:constant="HAND" />
             </cursor>
@@ -63,19 +63,31 @@
                      <Font name="System Bold" size="12.0" />
                   </font>
                </Label>
-               <TextField fx:id="tfNome" layoutX="28.0" layoutY="36.0" onKeyReleased="#filtrar" prefHeight="30.0" prefWidth="204.0" promptText="nome" style="-fx-background-color: #283845; -fx-border-color: #dbe5ee; -fx-background-radius: 10; -fx-border-radius: 10; -fx-text-fill: white;">
+               <TextField fx:id="tfNome" layoutX="28.0" layoutY="36.0" onAction="#filtrar" onKeyReleased="#filtrar" prefHeight="30.0" prefWidth="204.0" promptText="nome" style="-fx-background-color: #283845; -fx-border-color: #dbe5ee; -fx-background-radius: 10; -fx-border-radius: 10; -fx-text-fill: white;">
                   <padding>
                      <Insets left="20.0" />
                   </padding></TextField>
-               <TextField fx:id="tfProntuario" layoutX="28.0" layoutY="78.0" onKeyReleased="#filtrar" prefHeight="30.0" prefWidth="204.0" promptText="prontuário" style="-fx-background-color: #283845; -fx-border-color: #dbe5ee; -fx-background-radius: 10; -fx-border-radius: 10; -fx-text-fill: white;">
+               <TextField fx:id="tfProntuario" layoutX="28.0" layoutY="78.0" onAction="#filtrar" onKeyReleased="#filtrar" prefHeight="30.0" prefWidth="204.0" promptText="prontuário" style="-fx-background-color: #283845; -fx-border-color: #dbe5ee; -fx-background-radius: 10; -fx-border-radius: 10; -fx-text-fill: white;">
                   <padding>
                      <Insets left="20.0" />
                   </padding>
                </TextField>
                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="265.0" layoutX="-2.0" stroke="BLACK" strokeType="INSIDE" style="-fx-stroke: #283845;" width="11.0" />
-               <ComboBox fx:id="cbAnoIngresso" layoutX="25.0" layoutY="120.0" onAction="#filtrar" prefHeight="22.0" prefWidth="204.0" promptText="ano de ingresso" />
-               <ComboBox fx:id="cbSemestreIngresso" layoutX="25.0" layoutY="162.0" onAction="#filtrar" prefHeight="22.0" prefWidth="204.0" promptText="semestre de ingresso" />
-               <Button alignment="CENTER" layoutX="59.0" layoutY="221.0" mnemonicParsing="false" onAction="#limparFiltros" prefHeight="30.0" prefWidth="142.0" style="-fx-background-color: #dbe5ee; -fx-background-radius: 15;" text="LIMPAR FILTROS" textFill="#283845">
+               <ComboBox fx:id="cbAnoIngresso" focusTraversable="false" layoutX="28.0" layoutY="119.0" onAction="#filtrar" prefHeight="30.0" prefWidth="204.0" promptText="ano de ingresso" style="-fx-text-fill: white; -fx-background-color: #dbe5ee; -fx-border-color: #dbe5ee; -fx-border-radius: 10; -fx-background-radius: 10;" visibleRowCount="5">
+                  <padding>
+                     <Insets left="13.0" />
+                  </padding>
+                  <cursor>
+                     <Cursor fx:constant="HAND" />
+                  </cursor></ComboBox>
+               <ComboBox fx:id="cbSemestreIngresso" focusTraversable="false" layoutX="28.0" layoutY="161.0" onAction="#filtrar" prefHeight="30.0" prefWidth="204.0" promptText="semestre de ingresso" style="-fx-border-color: #dbe5ee; -fx-background-color: #dbe5ee; -fx-border-radius: 10; -fx-prompt-text-fill: #ffffff; -fx-background-radius: 10;">
+                  <padding>
+                     <Insets left="13.0" />
+                  </padding>
+                  <cursor>
+                     <Cursor fx:constant="HAND" />
+                  </cursor></ComboBox>
+               <Button alignment="CENTER" layoutX="90.0" layoutY="204.0" mnemonicParsing="false" onAction="#limparFiltros" prefHeight="30.0" prefWidth="142.0" style="-fx-background-color: #dbe5ee; -fx-background-radius: 15;" text="LIMPAR FILTROS" textFill="#283845">
                   <cursor>
                      <Cursor fx:constant="HAND" />
                   </cursor>

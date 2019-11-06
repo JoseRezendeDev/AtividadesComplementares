@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Font?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="Controller.AtividadeSelecionadaController"
+            prefHeight="400.0" prefWidth="600.0">
+    <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="610.0" prefWidth="854.0">
+        <children>
+            <Button fx:id="btVoltar" layoutX="200.0" layoutY="542.0" mnemonicParsing="false" onAction="#voltarAtividades" prefHeight="25.0" prefWidth="67.0" style="-fx-background-color: #dbe5ee; -fx-background-radius: 15;" text="VOLTAR">
+                <font>
+                    <Font name="System Bold" size="12.0" />
+                </font>
+                <cursor>
+                    <Cursor fx:constant="HAND" />
+                </cursor>
+            </Button>
+            <AnchorPane fx:id="pane" layoutX="48.0" layoutY="9.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="518.0" prefWidth="454.0" style="-fx-background-color: #ffffff; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.4), 10, 0, 0, 0); -fx-background-radius: 10;" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="200.0">
+                <Label fx:id="lbAluno" alignment="CENTER" layoutX="117.0" layoutY="50.0" prefHeight="17.0" prefWidth="336.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Label>
+                <Label contentDisplay="CENTER" layoutX="32.0" layoutY="79.0" prefHeight="25.0" prefWidth="78.0" text="DESCRIÇÃO" textAlignment="CENTER" AnchorPane.leftAnchor="33.0" />
+                <Label layoutX="32.0" layoutY="153.0" prefHeight="25.0" prefWidth="129.0" text="CARGA HORÁRIA" AnchorPane.leftAnchor="33.0" />
+                <Label layoutX="32.0" layoutY="227.0" prefHeight="25.0" prefWidth="58.0" text="SEMESTRE" AnchorPane.leftAnchor="33.0" />
+                <Label layoutX="240.0" layoutY="227.0" prefHeight="25.0" prefWidth="67.0" text="ANO" AnchorPane.leftAnchor="239.0" />
+                <Label layoutX="32.0" layoutY="298.0" prefHeight="25.0" prefWidth="129.0" text="CATEGORIA" AnchorPane.leftAnchor="33.0" />
+                <Label layoutX="32.0" layoutY="377.0" prefHeight="25.0" prefWidth="78.0" text="PROFESSOR" AnchorPane.leftAnchor="33.0" />
+                <TextField fx:id="tfDescricao" focusTraversable="false" layoutX="32.0" layoutY="104.0" prefHeight="38.0" prefWidth="390.0" style="-fx-background-color: #ededed;" AnchorPane.leftAnchor="33.0" AnchorPane.rightAnchor="33.0" />
+                <TextField fx:id="tfCargaHoraria" focusTraversable="false" layoutX="32.0" layoutY="178.0" prefHeight="38.0" prefWidth="390.0" style="-fx-background-color: #ededed;" AnchorPane.leftAnchor="33.0" AnchorPane.rightAnchor="33.0" />
+                <Label layoutX="50.0" layoutY="25.0" text="ATIVIDADE COMPLEMENTAR" textFill="#454545" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="23.0">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Label>
+                <ComboBox fx:id="cbCategoria" layoutX="35.0" layoutY="330.0" prefHeight="38.0" prefWidth="388.0" />
+                <ComboBox fx:id="cbProfessor" layoutX="35.0" layoutY="402.0" prefHeight="38.0" prefWidth="388.0" />
+                <ComboBox fx:id="cbSemestre" layoutX="33.0" layoutY="252.0" prefHeight="38.0" prefWidth="190.0" />
+                <ComboBox fx:id="cbAno" layoutX="233.0" layoutY="252.0" prefHeight="38.0" prefWidth="190.0" />
+            </AnchorPane>
+        </children>
+    </AnchorPane>
+</AnchorPane>

@@ -206,7 +206,7 @@ public class AlunosController implements Initializable {
         Iterator<Aluno> it = alunos.iterator();
         while (it.hasNext()){
             Aluno aluno = it.next();
-            if (!aluno.getNome().contains(nome))
+            if (!aluno.getNome().toUpperCase().contains(nome.toUpperCase()))
                 it.remove();
         }
     }
@@ -216,7 +216,7 @@ public class AlunosController implements Initializable {
         Iterator<Aluno> it = alunos.iterator();
         while (it.hasNext()){
             Aluno aluno = it.next();
-            if (!aluno.getNumeroMatricula().contains(prontuario))
+            if (!aluno.getNumeroMatricula().toUpperCase().contains(prontuario.toUpperCase()))
                 it.remove();
         }
     }
