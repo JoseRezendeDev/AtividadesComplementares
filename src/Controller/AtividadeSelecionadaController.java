@@ -10,6 +10,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
@@ -22,17 +23,19 @@ public class AtividadeSelecionadaController {
     @FXML
     private Label lbAluno;
     @FXML
-    private TextField tfDescricao;
+    private Label lbCodigo;
     @FXML
-    private TextField tfCargaHoraria;
+    private Label lbDescricao;
     @FXML
-    private ComboBox<Integer> cbSemestre;
+    private Label lbCargaHoraria;
     @FXML
-    private ComboBox<Integer> cbAno;
+    private Label lbSemestre;
     @FXML
-    private ComboBox<Professor> cbProfessor;
+    private Label lbAno;
     @FXML
-    private ComboBox<ItemCategoriaAC> cbCategoria;
+    private Label lbProfessor;
+    @FXML
+    private Label lbCategoria;
 
     private AtividadeComplementar atividadeComplementar;
     private Aluno aluno;
@@ -44,20 +47,14 @@ public class AtividadeSelecionadaController {
     }
 
     public void initialize(URL location, ResourceBundle resources) {
-        tfDescricao.setText(atividadeComplementar.getDescricao());
-        tfDescricao.setDisable(true);
-        cbSemestre.setValue(atividadeComplementar.getSemestreAC());
-        cbSemestre.setDisable(true);
-        cbAno.setValue(atividadeComplementar.getAnoAC());
-        cbAno.setDisable(true);
-        tfCargaHoraria.setText(String.valueOf(atividadeComplementar.getCargaHoraria()));
-        tfCargaHoraria.setDisable(true);
+        lbDescricao.setText(atividadeComplementar.getDescricao());
+        lbSemestre.setText(String.valueOf(atividadeComplementar.getSemestreAC()));
+        lbAno.setText(String.valueOf(atividadeComplementar.getAnoAC()));
+        lbCargaHoraria.setText(String.valueOf(atividadeComplementar.getCargaHoraria()));
+        lbCategoria.setText(atividadeComplementar.getItemCategoriaAC().getNome());
+        lbProfessor.setText(atividadeComplementar.getProfessor().getNome());
         lbAluno.setText(atividadeComplementar.getAluno().getNome());
-        lbAluno.setDisable(true);
-        cbCategoria.setValue(atividadeComplementar.getItemCategoriaAC());
-        cbCategoria.setDisable(true);
-        cbProfessor.setValue(atividadeComplementar.getProfessor());
-        cbProfessor.setDisable(true);
+        lbCodigo.setText(atividadeComplementar.getCodigo());
     }
 
     public void setAluno(Aluno aluno){

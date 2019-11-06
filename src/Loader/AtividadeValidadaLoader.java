@@ -21,7 +21,7 @@ public class AtividadeValidadaLoader {
             ctrl.initialize(null, null);
 
             stage.setScene(scene);
-            stage.setTitle("Atividade válida");
+            stage.setTitle("Atividade Válida - " + atv.getCodigo());
             stage.show();
         } catch (IOException e) {
             e.printStackTrace();
