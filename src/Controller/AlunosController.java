@@ -138,6 +138,28 @@ public class AlunosController implements Initializable {
         }
     }
 
+    public void exportarDados(ActionEvent actionEvent) {
+        FileChooser fileChooser = new FileChooser();
+        fileChooser.setTitle("Exportar Dados do Sistema");
+        fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("CSV Files", "*.csv"));
+        File file = fileChooser.showSaveDialog(pane.getScene().getWindow());
+
+        if(file == null)
+            return;
+
+        try(PrintWriter out = new PrintWriter(new FileOutputStream(new File(file.getAbsolutePath())))){
+            for (Aluno aluno : alunos) {
+                List<AtividadeComplementar> listaAC = atvDAO.getAtividades(aluno.getNumeroMatricula());
+                for (AtividadeComplementar ac : listaAC) {
+                    out.append(ac.toString());
+                }
+            }
+            System.out.println("Arquivo Exportado");
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+
     //Arquivo csv deve estar na seguinte ordem
     //id, nome, carga horaria
     public void importarTabelaAtividades(ActionEvent actionEvent) {
@@ -206,7 +228,7 @@ public class AlunosController implements Initializable {
         Iterator<Aluno> it = alunos.iterator();
         while (it.hasNext()){
             Aluno aluno = it.next();
-            if (!aluno.getNome().contains(nome))
+            if (!aluno.getNome().toUpperCase().contains(nome.toUpperCase()))
                 it.remove();
         }
     }
@@ -216,7 +238,7 @@ public class AlunosController implements Initializable {
         Iterator<Aluno> it = alunos.iterator();
         while (it.hasNext()){
             Aluno aluno = it.next();
-            if (!aluno.getNumeroMatricula().contains(prontuario))
+            if (!aluno.getNumeroMatricula().toUpperCase().contains(prontuario.toUpperCase()))
                 it.remove();
         }
     }
