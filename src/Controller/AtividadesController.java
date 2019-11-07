@@ -61,7 +61,7 @@ public class AtividadesController {
             clSemestre.setCellValueFactory(new PropertyValueFactory<>("semestreAC"));
             clAno.setCellValueFactory(new PropertyValueFactory<>("anoAC"));
             clProfessor.setCellValueFactory(new PropertyValueFactory<>("professor"));
-            clCategoria.setCellValueFactory(new PropertyValueFactory<>("categoria_ac"));
+            clCategoria.setCellValueFactory(new PropertyValueFactory<>("itemCategoriaAC"));
             tabela.setItems(listaAC);
         }
     }

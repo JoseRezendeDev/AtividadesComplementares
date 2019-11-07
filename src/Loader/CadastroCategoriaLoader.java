@@ -18,7 +18,7 @@ public class CadastroCategoriaLoader {
 
             //Stage stage = new Stage();
             stage.setScene(scene);
-            stage.setTitle("Cadastro de atividade complementar");
+            stage.setTitle("Cadastro de Categoria");
             stage.show();
         } catch (IOException e) {
             e.printStackTrace();
