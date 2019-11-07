@@ -22,7 +22,7 @@ public class CadastroACLoader {
 
             //Stage stage = new Stage();
             stage.setScene(scene);
-            stage.setTitle("Cadastro de atividade complementar");
+            stage.setTitle("Cadastro de Atividade Complementar");
             stage.show();
         } catch (IOException e) {
             e.printStackTrace();

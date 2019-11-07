@@ -23,7 +23,7 @@ public class AtividadesLoader {
 
             //Stage stage = new Stage();
             stage.setScene(scene);
-            stage.setTitle("Atividades complementares");
+            stage.setTitle("Atividades Complementares - " + aluno.getNome());
             stage.show();
         } catch (IOException e) {
             e.printStackTrace();
