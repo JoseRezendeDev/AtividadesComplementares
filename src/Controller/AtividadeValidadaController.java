@@ -1,15 +1,9 @@
 package Controller;
 
-import DAO.AtividadeComplementarDAO;
 import Loader.ValidaACLoader;
 import Model.AtividadeComplementar;
-import Model.ItemCategoriaAC;
-import Model.Professor;
 import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
-import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
