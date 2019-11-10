@@ -16,7 +16,7 @@
    <children>
       <AnchorPane prefHeight="518.0" prefWidth="474.0">
          <children>
-              <Button layoutX="67.0" layoutY="487.0" mnemonicParsing="false" onAction="#voltarAluno" prefHeight="25.0" prefWidth="67.0" style="-fx-background-color: #dbe5ee; -fx-background-radius: 15;" text="VOLTAR" AnchorPane.leftAnchor="0.0">
+              <Button layoutX="67.0" layoutY="487.0" mnemonicParsing="false" onAction="#voltarAluno" prefHeight="25.0" prefWidth="67.0" style="-fx-background-color: #dbe5ee; -fx-background-radius: 15;" text="VOLTAR" AnchorPane.bottomAnchor="6.0" AnchorPane.leftAnchor="0.0">
                   <font>
                       <Font name="System Bold" size="12.0" />
                   </font>

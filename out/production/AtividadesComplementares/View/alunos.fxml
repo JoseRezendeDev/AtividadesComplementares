@@ -73,14 +73,14 @@
                   </padding>
                </TextField>
                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="265.0" layoutX="-2.0" stroke="BLACK" strokeType="INSIDE" style="-fx-stroke: #283845;" width="11.0" />
-               <ComboBox fx:id="cbAnoIngresso" focusTraversable="false" layoutX="28.0" layoutY="119.0" onAction="#filtrar" prefHeight="30.0" prefWidth="204.0" promptText="ano de ingresso" style="-fx-text-fill: white; -fx-background-color: #283845; -fx-border-color: #dbe5ee; -fx-border-radius: 10; -fx-background-radius: 10;" visibleRowCount="5">
+               <ComboBox fx:id="cbAnoIngresso" focusTraversable="false" layoutX="28.0" layoutY="119.0" onAction="#filtrar" prefHeight="30.0" prefWidth="204.0" promptText="ano de ingresso" style="-fx-text-fill: white; -fx-background-color: #a0aeba; -fx-border-radius: 10; -fx-background-radius: 10; -fx-border-color: #a0aeba;" visibleRowCount="5">
                   <padding>
                      <Insets left="13.0" />
                   </padding>
                   <cursor>
                      <Cursor fx:constant="HAND" />
                   </cursor></ComboBox>
-               <ComboBox fx:id="cbSemestreIngresso" focusTraversable="false" layoutX="28.0" layoutY="161.0" onAction="#filtrar" prefHeight="30.0" prefWidth="204.0" promptText="semestre de ingresso" style="-fx-border-color: #dbe5ee; -fx-background-color: #dbe5ee; -fx-border-radius: 10; -fx-prompt-text-fill: #ffffff; -fx-background-radius: 10;">
+               <ComboBox fx:id="cbSemestreIngresso" focusTraversable="false" layoutX="28.0" layoutY="161.0" onAction="#filtrar" prefHeight="30.0" prefWidth="204.0" promptText="semestre de ingresso" style="-fx-border-color: #a0aeba; -fx-background-color: #a0aeba; -fx-border-radius: 10; -fx-prompt-text-fill: #ffffff; -fx-background-radius: 10;">
                   <padding>
                      <Insets left="13.0" />
                   </padding>
