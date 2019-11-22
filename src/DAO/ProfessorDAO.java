@@ -44,4 +44,30 @@ public class ProfessorDAO {
         }
         return null;
     }
+
+    public void salvar(Professor professor){
+        String sql = "INSERT INTO professor (nome, senha) VALUES (?, ?)";
+        try (PreparedStatement stmt = ConnectionFactory.createPreparedStatement(sql)){
+            stmt.setString(1, professor.getNome());
+            stmt.setString(2, professor.getSenha());
+            stmt.execute();
+        } catch (SQLException e){
+            e.printStackTrace();
+        }
+    }
+
+    public boolean autentica(String usuario, String senha){
+        String sql = "SELECT * FROM professor WHERE nome = ? AND senha = ?";
+        try (PreparedStatement stmt = ConnectionFactory.createPreparedStatement(sql)){
+            stmt.setString(1, usuario);
+            stmt.setString(2, senha);
+            ResultSet rs = stmt.executeQuery();
+            if (rs.next()){
+                return true;
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
 }

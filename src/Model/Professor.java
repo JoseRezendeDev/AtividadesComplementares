@@ -3,6 +3,15 @@ package Model;
 public class Professor {
     private int id;
     private String nome;
+    private String senha;
+
+    public String getSenha() {
+        return senha;
+    }
+
+    public void setSenha(String senha) {
+        this.senha = senha;
+    }
 
     public String toString(){
         return this.nome;
