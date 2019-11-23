@@ -4,6 +4,7 @@ public class ItemCategoriaAC {
     private int id;
     private String nome;
     private double maximoHoras;
+    private int numeroTabela;
     private CategoriaAC categoriaAC;
 
     public CategoriaAC getCategoriaAC() {
@@ -12,6 +13,14 @@ public class ItemCategoriaAC {
 
     public String toString(){
         return this.nome;
+    }
+
+    public int getNumeroTabela() {
+        return numeroTabela;
+    }
+
+    public void setNumeroTabela(int numeroTabela) {
+        this.numeroTabela = numeroTabela;
     }
 
     public void setCategoriaAC(CategoriaAC categoriaAC) {

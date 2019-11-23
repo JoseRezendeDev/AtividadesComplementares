@@ -20,7 +20,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
 
-public class CadastroACController implements Initializable {
+public class CadastroACController{
     @FXML
     private Pane pane;
     @FXML
@@ -37,6 +37,8 @@ public class CadastroACController implements Initializable {
     private ComboBox<Professor> cbProfessor;
     @FXML
     private ComboBox<ItemCategoriaAC> cbCategoria;
+    @FXML
+    private Label lbCategoria;
 
     private Aluno aluno;
     private ItemCategoriaACDAO itemDAO = new ItemCategoriaACDAO();
@@ -102,14 +104,14 @@ public class CadastroACController implements Initializable {
         return "";
     }
 
-    @Override
     public void initialize(URL location, ResourceBundle resources) {
         List<Integer> listaAnos = new ArrayList<>();
         for (int i=2008;i<2020;i++)
             listaAnos.add(i);
+        lbCategoria.setText(lbCategoria.getText() + " TABELA " + aluno.getNumeroTabelaReferente());
         cbAno.setItems(FXCollections.observableArrayList(listaAnos));
         cbSemestre.setItems(FXCollections.observableArrayList(1, 2));
-        cbCategoria.setItems(FXCollections.observableArrayList(itemDAO.getItensCategoria()));
+        cbCategoria.setItems(FXCollections.observableArrayList(itemDAO.getItensCategoria(aluno.getNumeroTabelaReferente())));
         cbProfessor.setItems(FXCollections.observableArrayList(professorDAO.getProfessores()));
     }
 }
