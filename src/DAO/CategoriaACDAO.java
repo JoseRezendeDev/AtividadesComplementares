@@ -12,9 +12,11 @@ import java.util.List;
 public class CategoriaACDAO {
 
     public void salvar(CategoriaAC categoriaAC){
-        String sql = "INSERT INTO categoria_ac (nome) VALUES (?)";
+        String sql = "INSERT INTO categoria_ac (id, nome, numero_tabela) VALUES (?, ?, ?)";
         try (PreparedStatement stmt = ConnectionFactory.createPreparedStatement(sql)){
-            stmt.setString(1, categoriaAC.getNome());
+            stmt.setInt(1,categoriaAC.getId());
+            stmt.setString(2, categoriaAC.getNome());
+            stmt.setInt(3, categoriaAC.getNumeroTabela());
             stmt.execute();
         } catch (SQLException e) {
             e.printStackTrace();
@@ -30,6 +32,7 @@ public class CategoriaACDAO {
                 CategoriaAC categoriaAC = new CategoriaAC();
                 categoriaAC.setId(rs.getInt("id"));
                 categoriaAC.setNome(rs.getString("nome"));
+                categoriaAC.setNumeroTabela(rs.getInt("numero_tabela"));
                 lista.add(categoriaAC);
             }
         } catch (SQLException e) {
@@ -47,6 +50,7 @@ public class CategoriaACDAO {
             if (rs.next()){
                 categoriaAC.setId(rs.getInt("id"));
                 categoriaAC.setNome(rs.getString("nome"));
+                categoriaAC.setNumeroTabela(rs.getInt("numero_tabela"));
                 return categoriaAC;
             }
         } catch (SQLException e) {

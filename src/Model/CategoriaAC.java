@@ -6,6 +6,7 @@ import java.util.List;
 public class CategoriaAC {
     private int id;
     private String nome;
+    private int numeroTabela;
     private List<ItemCategoriaAC> itensCategoria;
 
     public CategoriaAC(){
@@ -14,6 +15,14 @@ public class CategoriaAC {
 
     public CategoriaAC(int id){
         this.id = id;
+    }
+
+    public int getNumeroTabela() {
+        return numeroTabela;
+    }
+
+    public void setNumeroTabela(int numeroTabela) {
+        this.numeroTabela = numeroTabela;
     }
 
     public List<ItemCategoriaAC> getItensCategoria() {

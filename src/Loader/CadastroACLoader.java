@@ -19,6 +19,7 @@ public class CadastroACLoader {
             CadastroACController ctrl = loader.getController();
             ctrl.setAluno(aluno);
             ctrl.setLbAluno(aluno);
+            ctrl.initialize(null, null);
 
             //Stage stage = new Stage();
             stage.setScene(scene);

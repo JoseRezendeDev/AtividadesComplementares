@@ -63,4 +63,11 @@ public class Aluno {
     public void setSemestreIngresso(int semestreIngresso) {
         this.semestreIngresso = semestreIngresso;
     }
+
+    public int getNumeroTabelaReferente() {
+        if (this.anoIngresso <= 2017)
+            return 1;
+        else
+            return 2;
+    }
 }

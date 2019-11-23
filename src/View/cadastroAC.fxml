@@ -32,7 +32,7 @@
                <Label layoutX="32.0" layoutY="153.0" prefHeight="25.0" prefWidth="129.0" text="CARGA HORÁRIA" AnchorPane.leftAnchor="33.0" />
                <Label layoutX="32.0" layoutY="227.0" prefHeight="25.0" prefWidth="58.0" text="SEMESTRE" AnchorPane.leftAnchor="33.0" />
                <Label layoutX="240.0" layoutY="227.0" prefHeight="25.0" prefWidth="67.0" text="ANO" AnchorPane.leftAnchor="239.0" />
-               <Label layoutX="32.0" layoutY="298.0" prefHeight="25.0" prefWidth="129.0" text="CATEGORIA" AnchorPane.leftAnchor="33.0" />
+               <Label fx:id="lbCategoria" layoutX="32.0" layoutY="298.0" prefHeight="25.0" prefWidth="129.0" text="CATEGORIA" AnchorPane.leftAnchor="33.0" />
                <Label layoutX="32.0" layoutY="377.0" prefHeight="25.0" prefWidth="78.0" text="PROFESSOR" AnchorPane.leftAnchor="33.0" />
                <TextField fx:id="tfDescricao" focusTraversable="false" layoutX="32.0" layoutY="104.0" prefHeight="38.0" prefWidth="390.0" style="-fx-background-color: #ededed;" AnchorPane.leftAnchor="33.0" AnchorPane.rightAnchor="33.0" />
                <TextField fx:id="tfCargaHoraria" focusTraversable="false" layoutX="32.0" layoutY="178.0" prefHeight="38.0" prefWidth="390.0" style="-fx-background-color: #ededed;" AnchorPane.leftAnchor="33.0" AnchorPane.rightAnchor="33.0" />

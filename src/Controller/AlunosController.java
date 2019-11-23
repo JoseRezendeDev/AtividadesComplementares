@@ -160,8 +160,12 @@ public class AlunosController implements Initializable {
         }
     }
 
-    //Arquivo csv deve estar na seguinte ordem
-    //id, nome, carga horaria
+    /*
+    Categoria:
+    numeroTabela;id;nome
+    ItemCategoria:
+    numeroTabela;idParcial1;idParcial2;nome;cargaHoraria
+    */
     public void importarTabelaAtividades(ActionEvent actionEvent) {
         FileChooser fileChooser = new FileChooser();
         fileChooser.setTitle("Tabela de atividades complementares");
@@ -171,26 +175,27 @@ public class AlunosController implements Initializable {
             itemCategoriaACDAO.limpar();
             categoriaACDAO.limpar();
             String linha;
-            int categoriaDoItem = 0;
             while ((linha = br.readLine()) != null){
                 String[] dados = linha.split(";");
-                if (dados[2].equals("0")){
+                if (dados.length == 3){
                     CategoriaAC categoriaAC = new CategoriaAC();
-                    categoriaAC.setId(Integer.parseInt(dados[0]));
-                    categoriaAC.setNome(dados[1]);
-                    categoriaDoItem = Integer.parseInt(dados[0]);
+                    categoriaAC.setId(Integer.parseInt(dados[0] + dados[1]));
+                    categoriaAC.setNumeroTabela(Integer.parseInt(dados[0]));
+                    categoriaAC.setNome(dados[2]);
                     categoriaACDAO.salvar(categoriaAC);
                 }
                 else{
                     ItemCategoriaAC itemCategoriaAC = new ItemCategoriaAC();
-                    itemCategoriaAC.setId(Integer.parseInt(dados[0]));
-                    itemCategoriaAC.setNome(dados[1]);
-                    itemCategoriaAC.setMaximoHoras(Double.parseDouble(dados[2]));
-                    itemCategoriaAC.setCategoriaAC(new CategoriaAC(categoriaDoItem));
+                    itemCategoriaAC.setId(Integer.parseInt(dados[0] + dados[1] + dados[2]));
+                    itemCategoriaAC.setNome(dados[3]);
+                    itemCategoriaAC.setNumeroTabela(Integer.parseInt(dados[0]));
+                    itemCategoriaAC.setMaximoHoras(Double.parseDouble(dados[4]));
+                    itemCategoriaAC.setCategoriaAC(categoriaACDAO.getCategoria(Integer.parseInt(dados[0] + dados[1])));
                     itemCategoriaACDAO.salvar(itemCategoriaAC);
                 }
             }
         } catch (Exception e) {
+            e.printStackTrace();
             exibirAlunos();
         }
     }
