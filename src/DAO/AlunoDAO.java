@@ -3,10 +3,7 @@ package DAO;
 import Model.Aluno;
 
 import java.sql.*;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class AlunoDAO {
     public void salvar(Aluno aluno) {
@@ -107,7 +104,7 @@ public class AlunoDAO {
         }
     }
 
-    private double getHorasCumpridas(String numeroMatricula) {
+    public double getHorasCumpridas(String numeroMatricula) {
         String sql = "SELECT SUM(carga_horaria) FROM atividade_complementar WHERE aluno = ?";
         double horasCumpridas = 0;
         try (PreparedStatement stmt = ConnectionFactory.createPreparedStatement(sql)) {
@@ -130,5 +127,37 @@ public class AlunoDAO {
         } catch (SQLException e){
             e.printStackTrace();
         }
+    }
+
+    public void setHorasCumpridasAll(){
+        Map<String, Double> mapaAlunosHoras = getMapaAlunosHorasCumpridas();
+        String sql = "UPDATE aluno SET horas_cumpridas = ? WHERE numero_matricula = ?";
+        Set<String> chaves = mapaAlunosHoras.keySet();
+        try (PreparedStatement stmt = ConnectionFactory.createPreparedStatement(sql)){
+            for (String chave : chaves){
+                stmt.setDouble(1, mapaAlunosHoras.get(chave));
+                stmt.setString(2, chave);
+                stmt.execute();
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    //usado apenas por setHorasCumpridasAll
+    private Map<String, Double> getMapaAlunosHorasCumpridas(){
+        Map<String, Double> mapaAlunosHoras = new HashMap<>();
+        String sql = "SELECT SUM(carga_horaria) FROM atividade_complementar WHERE aluno = ?";
+        try (PreparedStatement stmt = ConnectionFactory.createPreparedStatement(sql)){
+            for (Aluno aluno : getAlunosAsList()){
+                stmt.setString(1, aluno.getNumeroMatricula());
+                ResultSet rs = stmt.executeQuery();
+                if (rs.next())
+                    mapaAlunosHoras.put(aluno.getNumeroMatricula(), rs.getDouble(1));
+            }
+        } catch (SQLException e){
+            e.printStackTrace();
+        }
+        return mapaAlunosHoras;
     }
 }

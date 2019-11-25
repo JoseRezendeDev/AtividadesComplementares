@@ -83,10 +83,12 @@ public class AtividadesController {
         cadastroACLoader.loadCadastroAC(aluno, stage);
     }
 
-    public void abrirAtividade(){
-        Stage stage = (Stage) pane.getScene().getWindow();
+    public void abrirAtividade() {
         AtividadeComplementar atvSelecionada = tabela.getSelectionModel().getSelectedItem();
-        AtividadeSelecionadaLoader atvSelLoader = new AtividadeSelecionadaLoader();
-        atvSelLoader.loadAtividadeSelecionada(atvSelecionada, aluno, stage);
+        if (atvSelecionada != null) {
+            Stage stage = (Stage) pane.getScene().getWindow();
+            AtividadeSelecionadaLoader atvSelLoader = new AtividadeSelecionadaLoader();
+            atvSelLoader.loadAtividadeSelecionada(atvSelecionada, aluno, stage);
+        }
     }
 }

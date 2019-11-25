@@ -83,8 +83,12 @@ public class Aluno {
             return 2;
     }
 
-    public void atualizarHorasCumpridas(){
+    public boolean atualizarHorasCumpridas(AtividadeComplementar atv){
         AlunoDAO alunoDAO = new AlunoDAO();
-        alunoDAO.setHorasCumpridas(this.getNumeroMatricula());
+        if (alunoDAO.getHorasCumpridas(this.getNumeroMatricula()) + atv.getCargaHoraria() < 100){
+            alunoDAO.setHorasCumpridas(this.getNumeroMatricula());
+            return true;
+        }
+        return false;
     }
 }
