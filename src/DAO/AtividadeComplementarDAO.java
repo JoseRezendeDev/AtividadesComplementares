@@ -32,15 +32,6 @@ public class AtividadeComplementarDAO {
         }
     }
 
-    public void limpar() {
-        String sql = "DELETE FROM atividade_complementar";
-        try (PreparedStatement stmt = ConnectionFactory.createPreparedStatement(sql)) {
-            stmt.execute();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-    }
-
     public List<AtividadeComplementar> getAtividades(String numeroMatricula) {
         String sql = "SELECT * FROM atividade_complementar WHERE aluno = ?";
         List<AtividadeComplementar> listaAtividades = new ArrayList<>();
@@ -86,15 +77,5 @@ public class AtividadeComplementarDAO {
             e.printStackTrace();
         }
         return null;
-    }
-
-    public void removerAtividadesDoAluno(String numeroMatricula){
-        String sql = "DELETE FROM atividade_complementar WHERE aluno = ?";
-        try (PreparedStatement stmt = ConnectionFactory.createPreparedStatement(sql)) {
-            stmt.setString(1, numeroMatricula);
-            stmt.execute();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
     }
 }

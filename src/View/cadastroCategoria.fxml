@@ -12,9 +12,9 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 
-<HBox alignment="CENTER" style="-fx-background-color: #2f4050;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.CadastroCategoriaController">
+<HBox alignment="CENTER" prefHeight="629.0" prefWidth="574.0" style="-fx-background-color: #2f4050;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.CadastroCategoriaController">
    <children>
-      <AnchorPane prefHeight="518.0" prefWidth="474.0">
+      <AnchorPane prefHeight="526.0" prefWidth="474.0">
          <children>
               <Button layoutX="67.0" layoutY="487.0" mnemonicParsing="false" onAction="#voltarAluno" prefHeight="25.0" prefWidth="67.0" style="-fx-background-color: #dbe5ee; -fx-background-radius: 15;" text="VOLTAR" AnchorPane.bottomAnchor="6.0" AnchorPane.leftAnchor="0.0">
                   <font>
@@ -24,7 +24,7 @@
                       <Cursor fx:constant="HAND" />
                   </cursor>
               </Button>
-              <AnchorPane fx:id="pane" layoutX="67.0" layoutY="9.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="462.0" prefWidth="454.0" style="-fx-background-color: #ffffff; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.4), 10, 0, 0, 0); -fx-background-radius: 10;" AnchorPane.bottomAnchor="47.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+              <AnchorPane fx:id="pane" layoutX="67.0" layoutY="9.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="486.0" prefWidth="474.0" style="-fx-background-color: #ffffff; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.4), 10, 0, 0, 0); -fx-background-radius: 10;" AnchorPane.bottomAnchor="23.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
                   <Label alignment="CENTER" layoutX="117.0" layoutY="50.0" prefHeight="17.0" prefWidth="336.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
                       <font>
                           <Font name="System Bold" size="12.0" />
@@ -35,7 +35,7 @@
                   <Label layoutX="33.0" layoutY="273.0" prefHeight="25.0" prefWidth="129.0" text="CATEGORIA" AnchorPane.leftAnchor="33.0" />
                   <TextField fx:id="tfNome" focusTraversable="false" layoutX="33.0" layoutY="153.0" prefHeight="38.0" prefWidth="390.0" style="-fx-background-color: #ededed;" AnchorPane.leftAnchor="33.0" AnchorPane.rightAnchor="33.0" />
                   <TextField fx:id="tfMaximoHoras" focusTraversable="false" layoutX="33.0" layoutY="227.0" prefHeight="38.0" prefWidth="388.0" style="-fx-background-color: #ededed;" AnchorPane.leftAnchor="33.0" AnchorPane.rightAnchor="33.0" />
-                  <Button layoutX="327.0" layoutY="384.0" mnemonicParsing="false" onAction="#cadastrarCategoria" prefHeight="30.0" prefWidth="95.0" style="-fx-background-color: #283845; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 5, 0, 0, 0);" text="CADASTRAR" textFill="WHITE" AnchorPane.bottomAnchor="48.0" AnchorPane.rightAnchor="32.0">
+                  <Button layoutX="346.0" layoutY="404.0" mnemonicParsing="false" onAction="#cadastrarCategoria" prefHeight="30.0" prefWidth="95.0" style="-fx-background-color: #283845; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 5, 0, 0, 0);" text="CADASTRAR" textFill="WHITE" AnchorPane.bottomAnchor="28.0" AnchorPane.rightAnchor="33.0">
                       <font>
                           <Font name="System Bold" size="12.0" />
                       </font>
@@ -64,6 +64,12 @@
                   <cursor>
                      <Cursor fx:constant="HAND" />
                   </cursor></ComboBox>
+               <Label layoutX="33.0" layoutY="350.0" prefHeight="25.0" prefWidth="129.0" text="NÚMERO DA TABELA" />
+               <ComboBox fx:id="cbNumeroTabela" layoutX="33.0" layoutY="375.0" prefHeight="38.0" prefWidth="408.0" style="-fx-background-color: #ededed;">
+                  <cursor>
+                     <Cursor fx:constant="HAND" />
+                  </cursor>
+               </ComboBox>
               </AnchorPane>
          </children>
       </AnchorPane>

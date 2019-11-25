@@ -10,12 +10,14 @@ import java.util.Map;
 
 public class AlunoDAO {
     public void salvar(Aluno aluno) {
-        String sql = "INSERT INTO aluno (nome, numero_matricula, ano_ingresso, semestre_ingresso) VALUES (?, ?, ?, ?)";
+        String sql = "INSERT INTO aluno (nome, numero_matricula, ano_ingresso, semestre_ingresso, horas_cumpridas, graduando) VALUES (?, ?, ?, ?, ?, ?)";
         try (PreparedStatement stmt = ConnectionFactory.createPreparedStatement(sql)){
             stmt.setString(1, aluno.getNome());
             stmt.setString(2, aluno.getNumeroMatricula());
             stmt.setInt(3, aluno.getAnoIngresso());
             stmt.setInt(4, aluno.getSemestreIngresso());
+            stmt.setDouble(5, aluno.getHorasCumpridas());
+            stmt.setInt(6, aluno.isGraduando() ? 1 : 0);
             stmt.execute();
         } catch (SQLException e) {
             e.printStackTrace();
@@ -33,6 +35,8 @@ public class AlunoDAO {
                 aluno.setAnoIngresso(rs.getInt("ano_ingresso"));
                 aluno.setSemestreIngresso(rs.getInt("semestre_ingresso"));
                 aluno.setNumeroMatricula(rs.getString("numero_matricula"));
+                aluno.setHorasCumpridas(rs.getDouble("horas_cumpridas"));
+                aluno.setGraduando(rs.getInt("graduando") == 1);
                 alunos.put(aluno.getNumeroMatricula(), aluno);
             }
         } catch (SQLException e) {
@@ -52,6 +56,8 @@ public class AlunoDAO {
                 aluno.setAnoIngresso(rs.getInt("ano_ingresso"));
                 aluno.setSemestreIngresso(rs.getInt("semestre_ingresso"));
                 aluno.setNumeroMatricula(rs.getString("numero_matricula"));
+                aluno.setHorasCumpridas(rs.getDouble("horas_cumpridas"));
+                aluno.setGraduando(rs.getInt("graduando") == 1);
                 alunos.add(aluno);
             }
         } catch (SQLException e) {
@@ -71,6 +77,8 @@ public class AlunoDAO {
                 aluno.setAnoIngresso(rs.getInt("ano_ingresso"));
                 aluno.setSemestreIngresso(rs.getInt("semestre_ingresso"));
                 aluno.setNumeroMatricula(rs.getString("numero_matricula"));
+                aluno.setHorasCumpridas(rs.getDouble("horas_cumpridas"));
+                aluno.setGraduando(rs.getInt("graduando") == 1);
                 return aluno;
             }
         } catch (SQLException e) {
@@ -79,19 +87,45 @@ public class AlunoDAO {
         return null;
     }
 
-    public void limpar(){
-        String sql = "DELETE FROM aluno";
+    public void remover(String prontuario){
+        String sql = "UPDATE aluno SET graduando = 0 WHERE numero_matricula = ?";
         try (PreparedStatement stmt = ConnectionFactory.createPreparedStatement(sql)){
+            stmt.setString(1, prontuario);
             stmt.execute();
-        } catch (SQLException e) {
+        } catch (SQLException e){
             e.printStackTrace();
         }
     }
 
-    public void remover(String prontuario){
-        String sql = "DELETE FROM aluno WHERE numero_matricula = ?";
+    public void reativar(String prontuario){
+        String sql = "UPDATE aluno SET graduando = 1 WHERE numero_matricula = ?";
         try (PreparedStatement stmt = ConnectionFactory.createPreparedStatement(sql)){
             stmt.setString(1, prontuario);
+            stmt.execute();
+        } catch (SQLException e){
+            e.printStackTrace();
+        }
+    }
+
+    private double getHorasCumpridas(String numeroMatricula) {
+        String sql = "SELECT SUM(carga_horaria) FROM atividade_complementar WHERE aluno = ?";
+        double horasCumpridas = 0;
+        try (PreparedStatement stmt = ConnectionFactory.createPreparedStatement(sql)) {
+            stmt.setString(1, numeroMatricula);
+            ResultSet rs = stmt.executeQuery();
+            if (rs.next())
+                horasCumpridas = rs.getDouble(1);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return horasCumpridas;
+    }
+
+    public void setHorasCumpridas(String numeroMatricula){
+        String sql = "UPDATE aluno SET horas_cumpridas = ? WHERE numero_matricula = ?";
+        try (PreparedStatement stmt = ConnectionFactory.createPreparedStatement(sql)){
+            stmt.setString(1, numeroMatricula);
+            stmt.setDouble(2, getHorasCumpridas(numeroMatricula));
             stmt.execute();
         } catch (SQLException e){
             e.printStackTrace();

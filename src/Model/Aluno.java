@@ -1,5 +1,7 @@
 package Model;
 
+import DAO.AlunoDAO;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -9,11 +11,21 @@ public class Aluno {
     private int anoIngresso;
     private int semestreIngresso;
     private double horasCumpridas;
+    private boolean graduando;
+    public static final double TOTAL_HORAS_NECESSARIAS = 100;
 
     private List<AtividadeComplementar> atividades;
 
     public Aluno() {
         atividades = new ArrayList<>();
+    }
+
+    public boolean isGraduando() {
+        return graduando;
+    }
+
+    public void setGraduando(boolean graduando) {
+        this.graduando = graduando;
     }
 
     public double getHorasCumpridas() {
@@ -69,5 +81,10 @@ public class Aluno {
             return 1;
         else
             return 2;
+    }
+
+    public void atualizarHorasCumpridas(){
+        AlunoDAO alunoDAO = new AlunoDAO();
+        alunoDAO.setHorasCumpridas(this.getNumeroMatricula());
     }
 }

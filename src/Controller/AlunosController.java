@@ -102,6 +102,7 @@ public class AlunosController implements Initializable {
                 aluno.setAnoIngresso(Integer.parseInt(dados[3]));
                 aluno.setSemestreIngresso(Integer.parseInt(dados[6]));
                 aluno.setHorasCumpridas(0);
+                aluno.setGraduando(true);
                 mapaAlunos.put(aluno.getNumeroMatricula(), aluno);
                 listaAlunos.add(aluno);
             }
@@ -125,6 +126,8 @@ public class AlunosController implements Initializable {
         for (Aluno aluno : lista){
             if (!mapaAlunosBanco.containsKey(aluno.getNumeroMatricula()))
                 alunoDAO.salvar(aluno);
+            else
+                alunoDAO.reativar(aluno.getNumeroMatricula());
         }
     }
 
@@ -133,7 +136,6 @@ public class AlunosController implements Initializable {
         for (Aluno aluno : listaAlunosBanco){
             if (!mapa.containsKey(aluno.getNumeroMatricula())) {
                 alunoDAO.remover(aluno.getNumeroMatricula());
-                atvDAO.removerAtividadesDoAluno(aluno.getNumeroMatricula());
             }
         }
     }
