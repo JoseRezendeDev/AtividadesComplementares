@@ -73,6 +73,7 @@ public class CadastroACController{
             atv.setSemestreAC(cbSemestre.getValue());
             atv.setItemCategoriaAC(cbCategoria.getValue());
             atv.setAluno(aluno);
+            aluno.atualizarHorasCumpridas();
             atvDAO.salvar(atv);
             AtividadesLoader atividadesLoader = new AtividadesLoader();
             Stage stage = (Stage) pane.getScene().getWindow();

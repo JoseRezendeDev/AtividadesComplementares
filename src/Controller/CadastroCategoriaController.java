@@ -34,6 +34,8 @@ public class CadastroCategoriaController implements Initializable {
     @FXML
     private ComboBox<CategoriaAC> cbCategoria;
     @FXML
+    private ComboBox<Integer> cbNumeroTabela;
+    @FXML
     private ToggleGroup categoriaOuItem;
 
     private CategoriaACDAO categoriaACDAO = new CategoriaACDAO();
@@ -63,18 +65,16 @@ public class CadastroCategoriaController implements Initializable {
 
         if (mensagemValidar.equals("")) {
             if (valorRb.equals("Categoria")) {
-                String nome = tfNome.getText();
                 CategoriaAC categoriaAC = new CategoriaAC();
-                categoriaAC.setNome(nome);
+                categoriaAC.setNome(tfNome.getText());
+                categoriaAC.setNumeroTabela(cbNumeroTabela.getValue());
                 categoriaACDAO.salvar(categoriaAC);
             } else if (valorRb.equals("Item de categoria")) {
-                String nome = tfNome.getText();
-                double maximoHoras = Double.parseDouble(tfMaximoHoras.getText());
-                CategoriaAC categoriaAC = cbCategoria.getValue();
                 ItemCategoriaAC itemCategoriaAC = new ItemCategoriaAC();
-                itemCategoriaAC.setNome(nome);
-                itemCategoriaAC.setMaximoHoras(maximoHoras);
-                itemCategoriaAC.setCategoriaAC(categoriaAC);
+                itemCategoriaAC.setNome(tfNome.getText());
+                itemCategoriaAC.setMaximoHoras(Double.parseDouble(tfMaximoHoras.getText()));
+                itemCategoriaAC.setNumeroTabela(cbNumeroTabela.getValue());
+                itemCategoriaAC.setCategoriaAC(cbCategoria.getValue());
                 itemCategoriaACDAO.salvar(itemCategoriaAC);
             }
             voltarAluno();
@@ -107,6 +107,7 @@ public class CadastroCategoriaController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         cbCategoria.setItems(FXCollections.observableArrayList(categoriaACDAO.getCategorias()));
+        cbNumeroTabela.setItems(FXCollections.observableArrayList(1,2));
         tfMaximoHoras.setDisable(true);
         cbCategoria.setDisable(true);
         rbCategoria.setUserData("Categoria");

@@ -3,23 +3,24 @@
   <component name="ChangeListManager">
     <list default="true" id="6db74bfc-8768-47a2-92ed-92e48d0e7253" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AtividadesComplementares/CSV/tabelaAC.csv" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AtividadesComplementares/CSV/tabelaAC.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/AtividadesComplementares/Controller/AlunosController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AtividadesComplementares/Controller/AlunosController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AtividadesComplementares/DAO/CategoriaACDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AtividadesComplementares/DAO/CategoriaACDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AtividadesComplementares/DAO/ItemCategoriaACDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AtividadesComplementares/DAO/ItemCategoriaACDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AtividadesComplementares/Model/CategoriaAC.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AtividadesComplementares/Model/CategoriaAC.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AtividadesComplementares/Model/ItemCategoriaAC.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AtividadesComplementares/Model/ItemCategoriaAC.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AtividadesComplementares/Controller/CadastroACController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AtividadesComplementares/Controller/CadastroACController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AtividadesComplementares/Controller/CadastroCategoriaController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AtividadesComplementares/Controller/CadastroCategoriaController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AtividadesComplementares/DAO/AlunoDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AtividadesComplementares/DAO/AlunoDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AtividadesComplementares/DAO/AtividadeComplementarDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AtividadesComplementares/DAO/AtividadeComplementarDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AtividadesComplementares/Loader/CadastroACLoader.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AtividadesComplementares/Loader/CadastroACLoader.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AtividadesComplementares/Model/Aluno.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AtividadesComplementares/Model/Aluno.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AtividadesComplementares/View/cadastroAC.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AtividadesComplementares/View/cadastroAC.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AtividadesComplementares/View/cadastroCategoria.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AtividadesComplementares/View/cadastroCategoria.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/AtividadesComplementares/atividades.db" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AtividadesComplementares/atividades.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CSV/tabelaAC.csv" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/AlunosController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AlunosController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/CadastroACController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/CadastroACController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/CadastroCategoriaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/CadastroCategoriaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DAO/CategoriaACDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DAO/CategoriaACDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DAO/ItemCategoriaACDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DAO/ItemCategoriaACDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Loader/CadastroACLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Loader/CadastroACLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DAO/AlunoDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DAO/AlunoDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DAO/AtividadeComplementarDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DAO/AtividadeComplementarDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Model/Aluno.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Aluno.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/CategoriaAC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/CategoriaAC.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/ItemCategoriaAC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/ItemCategoriaAC.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/cadastroAC.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/cadastroAC.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/cadastroCategoria.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/cadastroCategoria.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/atividades.db" beforeDir="false" afterPath="$PROJECT_DIR$/src/atividades.db" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -33,36 +34,12 @@
     <option name="delegatedBuild" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Controller/AlunosController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="11">
-              <caret line="189" column="20" selection-start-line="189" selection-start-column="20" selection-end-line="189" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Controller/CadastroACController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2457">
-              <caret line="113" column="75" selection-start-line="113" selection-start-column="75" selection-end-line="113" selection-end-column="75" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/View/cadastroAC.fxml">
-          <provider editor-type-id="text-editor" />
-          <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Loader/CadastroACLoader.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="282">
-              <caret line="21" column="38" selection-start-line="21" selection-start-column="38" selection-end-line="21" selection-end-column="38" />
+            <state relative-caret-position="308">
+              <caret line="62" column="60" selection-start-line="62" selection-start-column="60" selection-end-line="62" selection-end-column="60" />
             </state>
           </provider>
         </entry>
@@ -70,8 +47,35 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Model/Aluno.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="70" column="21" selection-start-line="70" selection-start-column="21" selection-end-line="70" selection-end-column="21" />
+            <state relative-caret-position="1458">
+              <caret line="87" column="27" selection-start-line="87" selection-start-column="27" selection-end-line="87" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/DAO/AlunoDAO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="58" column="60" selection-start-line="58" selection-start-column="60" selection-end-line="58" selection-end-column="60" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Loader/AlunosLoader.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="128">
+              <caret line="14" column="32" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Controller/LoginController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="128">
+              <caret line="31" column="25" selection-start-line="31" selection-start-column="25" selection-end-line="31" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -79,44 +83,50 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Controller/CadastroCategoriaController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="158">
-              <caret line="36" column="40" selection-start-line="36" selection-start-column="40" selection-end-line="36" selection-end-column="40" />
+            <state relative-caret-position="1593">
+              <caret line="77" column="38" selection-start-line="77" selection-start-column="38" selection-end-line="77" selection-end-column="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Model/CategoriaAC.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="189">
+              <caret line="8" column="29" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Model/ItemCategoriaAC.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="459">
+              <caret line="25" column="16" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="16" />
+              <folding>
+                <element signature="e#365#366#0" expanded="true" />
+                <element signature="e#400#401#0" expanded="true" />
+                <element signature="e#453#454#0" expanded="true" />
+                <element signature="e#501#502#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/View/cadastroCategoria.fxml">
-          <provider editor-type-id="text-editor">
-            <state relative-caret-position="-729" />
-          </provider>
           <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Controller/AtividadesController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="131">
-              <caret line="82" column="25" selection-start-line="82" selection-start-column="25" selection-end-line="82" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/CSV/tabelaAC.csv">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-810" />
-          </provider>
+          <provider editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/DAO/ItemCategoriaACDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="783">
-              <caret line="36" column="39" selection-start-line="36" selection-start-column="39" selection-end-line="36" selection-end-column="39" />
+            <state relative-caret-position="243">
+              <caret line="18" column="16" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
               <folding>
                 <element signature="e#324#325#0" expanded="true" />
-                <element signature="e#376#377#0" expanded="true" />
+                <element signature="e#382#383#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -141,7 +151,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="tabelaACgradeAntiga" />
       </map>
     </option>
   </component>
@@ -151,14 +161,16 @@
         <option value="$PROJECT_DIR$/src/Model/CategoriaAC.java" />
         <option value="$PROJECT_DIR$/src/Model/ItemCategoriaAC.java" />
         <option value="$PROJECT_DIR$/src/DAO/CategoriaACDAO.java" />
-        <option value="$PROJECT_DIR$/src/Controller/AlunosController.java" />
         <option value="$PROJECT_DIR$/src/DAO/ItemCategoriaACDAO.java" />
-        <option value="$PROJECT_DIR$/src/Model/Aluno.java" />
         <option value="$PROJECT_DIR$/src/Loader/CadastroACLoader.java" />
+        <option value="$PROJECT_DIR$/src/View/cadastroAC.fxml" />
+        <option value="$PROJECT_DIR$/src/Controller/AlunosController.java" />
+        <option value="$PROJECT_DIR$/src/DAO/AtividadeComplementarDAO.java" />
         <option value="$PROJECT_DIR$/src/View/cadastroCategoria.fxml" />
         <option value="$PROJECT_DIR$/src/Controller/CadastroCategoriaController.java" />
-        <option value="$PROJECT_DIR$/src/View/cadastroAC.fxml" />
         <option value="$PROJECT_DIR$/src/Controller/CadastroACController.java" />
+        <option value="$PROJECT_DIR$/src/Model/Aluno.java" />
+        <option value="$PROJECT_DIR$/src/DAO/AlunoDAO.java" />
       </list>
     </option>
   </component>
@@ -175,7 +187,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -228,6 +239,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -334,39 +346,46 @@
       <option name="project" value="LOCAL" />
       <updated>1573415295314</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Inclusao da tabela de atividades complementares da grade antiga">
+      <created>1574528586807</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1574528586807</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Image Layers" />
-      <window_info id="Designer" />
-      <window_info id="UI Designer" />
-      <window_info id="Capture Tool" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24962178" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25718608" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3289689" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.2487725" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Palette" />
-      <window_info anchor="right" id="Theme Preview" />
-      <window_info anchor="right" id="Maven" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="right" id="Palette&#9;" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.3289689" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Maven" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Capture Analysis" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -413,109 +432,148 @@
     <MESSAGE value="Exibir atividade validada" />
     <MESSAGE value="Exibir atividade validada incompleto" />
     <MESSAGE value="Exibir atividade selecionada, impedir clique em nenhum aluno" />
-    <option name="LAST_COMMIT_MESSAGE" value="Exibir atividade selecionada, impedir clique em nenhum aluno" />
+    <MESSAGE value="Inclusao da tabela de atividades complmentares da grade antiga" />
+    <MESSAGE value="Inclusao da tabela de atividades complementares da grade antiga" />
+    <option name="LAST_COMMIT_MESSAGE" value="Inclusao da tabela de atividades complementares da grade antiga" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/View/cadastroAC.fxml">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+      <provider editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Loader/CadastroACLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="21" column="38" selection-start-line="21" selection-start-column="38" selection-end-line="21" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CSV/tabelaAC.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/AtividadesController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="131">
+          <caret line="89" column="21" selection-start-line="89" selection-start-column="21" selection-end-line="89" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Loader/AtividadeSelecionadaLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="23" column="17" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/AtividadeSelecionadaController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="201">
+          <caret line="53" selection-start-line="53" selection-end-line="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DAO/AtividadeComplementarDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-936">
+          <caret line="32" column="5" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DAO/ProfessorDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/CadastroACController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1431">
+          <caret line="75" column="27" selection-start-line="75" selection-start-column="27" selection-end-line="75" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DAO/CategoriaACDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="13" column="16" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/Aluno.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1458">
+          <caret line="87" column="27" selection-start-line="87" selection-start-column="27" selection-end-line="87" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/CadastroCategoriaController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1593">
+          <caret line="77" column="38" selection-start-line="77" selection-start-column="38" selection-end-line="77" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Model/CategoriaAC.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
+        <state relative-caret-position="189">
           <caret line="8" column="29" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
-          <folding>
-            <element signature="e#204#205#0" expanded="true" />
-            <element signature="e#239#240#0" expanded="true" />
-            <element signature="e#292#293#0" expanded="true" />
-            <element signature="e#340#341#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Model/ItemCategoriaAC.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="567">
+        <state relative-caret-position="459">
           <caret line="25" column="16" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="16" />
           <folding>
             <element signature="e#365#366#0" expanded="true" />
             <element signature="e#400#401#0" expanded="true" />
             <element signature="e#453#454#0" expanded="true" />
             <element signature="e#501#502#0" expanded="true" />
-            <element signature="e#358#359#0" expanded="true" />
-            <element signature="e#404#405#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DAO/CategoriaACDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-960">
-          <caret line="18" column="56" selection-start-line="18" selection-start-column="56" selection-end-line="18" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CSV/tabelaAC.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-810" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/AlunosController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="11">
-          <caret line="189" column="20" selection-start-line="189" selection-start-column="20" selection-end-line="189" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DAO/ItemCategoriaACDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="783">
-          <caret line="36" column="39" selection-start-line="36" selection-start-column="39" selection-end-line="36" selection-end-column="39" />
-          <folding>
-            <element signature="e#324#325#0" expanded="true" />
-            <element signature="e#376#377#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/Aluno.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="70" column="21" selection-start-line="70" selection-start-column="21" selection-end-line="70" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/AtividadesController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="131">
-          <caret line="82" column="25" selection-start-line="82" selection-start-column="25" selection-end-line="82" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Loader/CadastroACLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="21" column="38" selection-start-line="21" selection-start-column="38" selection-end-line="21" selection-end-column="38" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/View/cadastroCategoria.fxml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="-729" />
-      </provider>
       <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+      <provider editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/CadastroCategoriaController.java">
+    <entry file="file://$PROJECT_DIR$/src/DAO/ItemCategoriaACDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="36" column="40" selection-start-line="36" selection-start-column="40" selection-end-line="36" selection-end-column="40" />
+        <state relative-caret-position="243">
+          <caret line="18" column="16" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
+          <folding>
+            <element signature="e#324#325#0" expanded="true" />
+            <element signature="e#382#383#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/View/cadastroAC.fxml">
-      <provider editor-type-id="text-editor" />
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/CadastroACController.java">
+    <entry file="file://$PROJECT_DIR$/src/Controller/AlunosController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2457">
-          <caret line="113" column="75" selection-start-line="113" selection-start-column="75" selection-end-line="113" selection-end-column="75" />
+        <state relative-caret-position="308">
+          <caret line="62" column="60" selection-start-line="62" selection-start-column="60" selection-end-line="62" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Loader/AlunosLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="14" column="32" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/LoginController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="31" column="25" selection-start-line="31" selection-start-column="25" selection-end-line="31" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DAO/AlunoDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="58" column="60" selection-start-line="58" selection-start-column="60" selection-end-line="58" selection-end-column="60" />
         </state>
       </provider>
     </entry>
