@@ -60,6 +60,7 @@ public class AlunosController implements Initializable {
     //Esse método é chamado automaticamente para inicializar o fxml
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        alunoDAO.setHorasCumpridasAll();
         alunos = FXCollections.observableArrayList(alunoDAO.getAlunosAsList());
         clNome.setCellValueFactory(new PropertyValueFactory<>("nome"));
         clProntuario.setCellValueFactory(new PropertyValueFactory<>("numeroMatricula"));
@@ -85,6 +86,7 @@ public class AlunosController implements Initializable {
 
     //Arquivo csv deve estar na seguinte ordem
     //***;prontuario;nome;ano de ingresso;***;***;semestre de ingresso
+    //*** == qualquer coisa
     public void importarAlunos(ActionEvent actionEvent) {
         FileChooser fileChooser = new FileChooser();
         fileChooser.setTitle("Alunos");

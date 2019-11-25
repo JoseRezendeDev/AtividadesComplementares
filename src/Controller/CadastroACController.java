@@ -73,17 +73,23 @@ public class CadastroACController{
             atv.setSemestreAC(cbSemestre.getValue());
             atv.setItemCategoriaAC(cbCategoria.getValue());
             atv.setAluno(aluno);
-            aluno.atualizarHorasCumpridas();
-            atvDAO.salvar(atv);
-            AtividadesLoader atividadesLoader = new AtividadesLoader();
-            Stage stage = (Stage) pane.getScene().getWindow();
-            atividadesLoader.loadAtividades(aluno, stage);
+            if (aluno.atualizarHorasCumpridas(atv)) {
+                atvDAO.salvar(atv);
+                AtividadesLoader atividadesLoader = new AtividadesLoader();
+                Stage stage = (Stage) pane.getScene().getWindow();
+                atividadesLoader.loadAtividades(aluno, stage);
+            } else
+                exibirMensagemErro("A carga horária máxima deste aluno atingiu o limite de 100 horas");
         } else{
-            Alert dialogoInfo = new Alert(Alert.AlertType.INFORMATION);
-            dialogoInfo.setTitle("Cadastro inválido");
-            dialogoInfo.setHeaderText(mensagemValidar);
-            dialogoInfo.showAndWait();
+            exibirMensagemErro(mensagemValidar);
         }
+    }
+
+    private void exibirMensagemErro(String mensagem){
+        Alert dialogoInfo = new Alert(Alert.AlertType.INFORMATION);
+        dialogoInfo.setTitle("Cadastro inválido");
+        dialogoInfo.setHeaderText(mensagem);
+        dialogoInfo.showAndWait();
     }
 
     private String validarCadastro(){
