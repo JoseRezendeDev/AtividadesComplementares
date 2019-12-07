@@ -8,7 +8,7 @@
 
 <HBox alignment="BASELINE_CENTER" style="-fx-background-color: #2f4050;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.LoginController">
    <children>
-      <AnchorPane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="319.0" prefWidth="306.0" style="-fx-background-color: #ffffff; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.4), 10, 0, 0, 0); -fx-border-radius: 10 10 10 10; -fx-background-radius: 10 10 10 10;">
+      <AnchorPane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="306.0" style="-fx-background-color: #ffffff; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.4), 10, 0, 0, 0); -fx-border-radius: 10 10 10 10; -fx-background-radius: 10 10 10 10;">
          <children>
             <TextField fx:id="tfUsuario" focusTraversable="false" layoutX="25.0" layoutY="77.0" prefHeight="41.0" prefWidth="258.0" promptText="usuário" style="-fx-background-color: #ededed; -fx-border-style: none none solid none;">
                <font>
@@ -25,7 +25,7 @@
                   <Font size="18.0" />
                </font>
             </Label>
-            <Button fx:id="btEntrar" layoutX="100.0" layoutY="220.0" mnemonicParsing="false" onAction="#logar" prefHeight="33.0" prefWidth="107.0" style="-fx-background-color: #283845; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 5, 0, 0, 0);" text="ENTRAR" textFill="WHITE">
+            <Button fx:id="btEntrar" layoutX="101.0" layoutY="200.0" mnemonicParsing="false" onAction="#logar" prefHeight="33.0" prefWidth="107.0" style="-fx-background-color: #283845; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 5, 0, 0, 0);" text="ENTRAR" textFill="WHITE">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
@@ -33,7 +33,7 @@
                   <Font name="System Bold" size="12.0" />
                </font>
             </Button>
-            <Button fx:id="btCadastrar" layoutX="100.0" layoutY="272.0" mnemonicParsing="false" onAction="#cadastrar" prefHeight="33.0" prefWidth="107.0" style="-fx-background-color: #283845; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 5, 0, 0, 0);" text="CADASTRAR" textFill="WHITE">
+            <Button fx:id="btCadastrar" layoutX="119.0" layoutY="265.0" mnemonicParsing="false" onAction="#cadastrar" prefHeight="27.0" prefWidth="72.0" style="-fx-background-color: none;" text="Cadastrar" textFill="#3e9ca4" underline="true" AnchorPane.bottomAnchor="8.0">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
@@ -41,6 +41,7 @@
                   <Font name="System Bold" size="12.0" />
                </font>
             </Button>
+            <Label layoutX="103.0" layoutY="257.0" text="Não é cadastrado?" AnchorPane.leftAnchor="103.0" AnchorPane.rightAnchor="103.0" />
          </children>
       </AnchorPane>
    </children>
