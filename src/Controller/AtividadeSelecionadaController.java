@@ -1,20 +1,21 @@
 package Controller;
 
+import DAO.AtividadeComplementarDAO;
 import Loader.AtividadesLoader;
 import Loader.ValidaACLoader;
 import Model.Aluno;
 import Model.AtividadeComplementar;
 import Model.ItemCategoriaAC;
 import Model.Professor;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
 import java.net.URL;
+import java.util.Optional;
 import java.util.ResourceBundle;
 
 public class AtividadeSelecionadaController {
@@ -39,6 +40,7 @@ public class AtividadeSelecionadaController {
 
     private AtividadeComplementar atividadeComplementar;
     private Aluno aluno;
+    private AtividadeComplementarDAO atvDAO = new AtividadeComplementarDAO();
 
     public void voltarAtividades(){
         Stage stage = (Stage) pane.getScene().getWindow();
@@ -63,5 +65,25 @@ public class AtividadeSelecionadaController {
 
     public void setAtividade(AtividadeComplementar atv) {
         this.atividadeComplementar = atv;
+    }
+
+    public void excluirAtividade(ActionEvent actionEvent) {
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Atividade Complementar - Excluir Atividade");
+        alert.setHeaderText("Atenção, você está prestes a excluir essa atividade permanentemente!");
+        alert.setContentText("Você deseja excluir essa atividade complementar?");
+
+        Optional<ButtonType> result = alert.showAndWait();
+        if (result.get() == ButtonType.OK){
+            atvDAO.excluirAtividade(this.atividadeComplementar.getCodigo());
+            Stage stage = (Stage) pane.getScene().getWindow();
+            AtividadesLoader atividadesLoader = new AtividadesLoader();
+            atividadesLoader.loadAtividades(aluno, stage);
+        } else {
+            Stage stage = (Stage) pane.getScene().getWindow();
+            AtividadesLoader atividadesLoader = new AtividadesLoader();
+            atividadesLoader.loadAtividades(aluno, stage);
+        }
+
     }
 }

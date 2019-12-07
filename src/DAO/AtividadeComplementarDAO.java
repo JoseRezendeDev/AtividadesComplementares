@@ -78,4 +78,14 @@ public class AtividadeComplementarDAO {
         }
         return null;
     }
+
+    public void excluirAtividade(String codigo){
+        String sql = "DELETE FROM atividade_complementar WHERE codigo = ?";
+        try (PreparedStatement stmt = ConnectionFactory.createPreparedStatement(sql)) {
+            stmt.setString(1, codigo);
+            stmt.execute();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 }
