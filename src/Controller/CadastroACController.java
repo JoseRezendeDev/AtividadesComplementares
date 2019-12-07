@@ -73,13 +73,11 @@ public class CadastroACController{
             atv.setSemestreAC(cbSemestre.getValue());
             atv.setItemCategoriaAC(cbCategoria.getValue());
             atv.setAluno(aluno);
-            if (aluno.atualizarHorasCumpridas(atv)) {
-                atvDAO.salvar(atv);
-                AtividadesLoader atividadesLoader = new AtividadesLoader();
-                Stage stage = (Stage) pane.getScene().getWindow();
-                atividadesLoader.loadAtividades(aluno, stage);
-            } else
-                exibirMensagemErro("A carga horária máxima deste aluno atingiu o limite de 100 horas");
+            atvDAO.salvar(atv);
+            aluno.atualizarHorasCumpridas();
+            AtividadesLoader atividadesLoader = new AtividadesLoader();
+            Stage stage = (Stage) pane.getScene().getWindow();
+            atividadesLoader.loadAtividades(aluno, stage);
         } else{
             exibirMensagemErro(mensagemValidar);
         }
@@ -97,6 +95,8 @@ public class CadastroACController{
             return "Descrição inválida";
         try {
             double cargaHoraria = Double.parseDouble(tfCargaHoraria.getText());
+            if (cargaHoraria <= 0)
+                return "Carga horária inválida";
         } catch (NumberFormatException e) {
             return "Carga horária inválida";
         }

@@ -63,6 +63,48 @@ public class AlunoDAO {
         return alunos;
     }
 
+    public List<Aluno> getAlunosAtivos(){
+        String sql = "SELECT * FROM aluno WHERE graduando = 1";
+        List<Aluno> alunos = new ArrayList<>();
+        try (PreparedStatement stmt = ConnectionFactory.createPreparedStatement(sql)){
+            ResultSet rs = stmt.executeQuery();
+            while (rs.next()){
+                Aluno aluno = new Aluno();
+                aluno.setNome(rs.getString("nome"));
+                aluno.setAnoIngresso(rs.getInt("ano_ingresso"));
+                aluno.setSemestreIngresso(rs.getInt("semestre_ingresso"));
+                aluno.setNumeroMatricula(rs.getString("numero_matricula"));
+                aluno.setHorasCumpridas(rs.getDouble("horas_cumpridas"));
+                aluno.setGraduando(rs.getInt("graduando") == 1);
+                alunos.add(aluno);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return alunos;
+    }
+
+    public List<Aluno> getAlunosInativos(){
+        String sql = "SELECT * FROM aluno WHERE graduando = 0";
+        List<Aluno> alunos = new ArrayList<>();
+        try (PreparedStatement stmt = ConnectionFactory.createPreparedStatement(sql)){
+            ResultSet rs = stmt.executeQuery();
+            while (rs.next()){
+                Aluno aluno = new Aluno();
+                aluno.setNome(rs.getString("nome"));
+                aluno.setAnoIngresso(rs.getInt("ano_ingresso"));
+                aluno.setSemestreIngresso(rs.getInt("semestre_ingresso"));
+                aluno.setNumeroMatricula(rs.getString("numero_matricula"));
+                aluno.setHorasCumpridas(rs.getDouble("horas_cumpridas"));
+                aluno.setGraduando(rs.getInt("graduando") == 1);
+                alunos.add(aluno);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return alunos;
+    }
+
     public Aluno getAluno(String numeroMatricula){
         String sql = "SELECT * FROM aluno WHERE numero_matricula = ?";
         Aluno aluno = new Aluno();
@@ -159,5 +201,23 @@ public class AlunoDAO {
             e.printStackTrace();
         }
         return mapaAlunosHoras;
+    }
+
+    public List<Aluno> getAlunosEmAndamento(List<Aluno> alunos){
+        Iterator<Aluno> it = alunos.iterator();
+        while (it.hasNext()) {
+            if (it.next().getProgresso())
+                it.remove();
+        }
+        return alunos;
+    }
+
+    public List<Aluno> getAlunosConcluidos(List<Aluno> alunos){
+        Iterator<Aluno> it = alunos.iterator();
+        while (it.hasNext()) {
+            if (!it.next().getProgresso())
+                it.remove();
+        }
+        return alunos;
     }
 }
