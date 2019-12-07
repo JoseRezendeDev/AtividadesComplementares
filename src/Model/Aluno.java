@@ -83,12 +83,23 @@ public class Aluno {
             return 2;
     }
 
-    public boolean atualizarHorasCumpridas(AtividadeComplementar atv){
+    public void atualizarHorasCumpridas(){
         AlunoDAO alunoDAO = new AlunoDAO();
-        if (alunoDAO.getHorasCumpridas(this.getNumeroMatricula()) + atv.getCargaHoraria() < 100){
-            alunoDAO.setHorasCumpridas(this.getNumeroMatricula());
-            return true;
+        alunoDAO.setHorasCumpridas(this.getNumeroMatricula());
+    }
+
+    //return true para concluido e false para em andamento
+    public boolean getProgresso() {
+        if (this.getNumeroTabelaReferente() == 1){
+            if (this.getHorasCumpridas() < 74)
+                return false;
+            else
+                return true;
+        } else {
+            if (this.getHorasCumpridas() < 100)
+                return false;
+            else
+                return true;
         }
-        return false;
     }
 }

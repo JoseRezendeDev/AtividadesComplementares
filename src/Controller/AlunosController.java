@@ -11,11 +11,9 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
@@ -48,6 +46,11 @@ public class AlunosController implements Initializable {
     private ComboBox<Integer> cbAnoIngresso;
     @FXML
     private ComboBox<Integer> cbSemestreIngresso;
+    @FXML
+    private ToggleGroup situacaoAlunos;
+    @FXML
+    private ToggleGroup progressao;
+
 
     private ObservableList<Aluno> alunos;
     private AlunoDAO alunoDAO = new AlunoDAO();
@@ -61,7 +64,7 @@ public class AlunosController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         alunoDAO.setHorasCumpridasAll();
-        alunos = FXCollections.observableArrayList(alunoDAO.getAlunosAsList());
+        alunos = FXCollections.observableArrayList(alunoDAO.getAlunosAtivos());
         clNome.setCellValueFactory(new PropertyValueFactory<>("nome"));
         clProntuario.setCellValueFactory(new PropertyValueFactory<>("numeroMatricula"));
         clAnoIngresso.setCellValueFactory(new PropertyValueFactory<>("anoIngresso"));
@@ -110,8 +113,10 @@ public class AlunosController implements Initializable {
             }
             removerAlunosFormados(mapaAlunos);
             cadastrarAlunosBanco(listaAlunos);
+            exibirMensagem("Importar alunos", "Alunos importados COM SUCESSO!");
         } catch (Exception e) {
             exibirAlunos();
+            exibirMensagem("Importar alunos", "Falha ao importar alunos");
         }
 
         initialize(null, null);
@@ -158,9 +163,9 @@ public class AlunosController implements Initializable {
                     out.append(ac.toString());
                 }
             }
-            System.out.println("Arquivo Exportado");
+            exibirMensagem("Exportar dados", "Dados exportados COM SUCESSO!");
         } catch (FileNotFoundException e) {
-            e.printStackTrace();
+            exibirMensagem("Exportar dados", "Falha ao exportar dados");
         }
     }
 
@@ -198,9 +203,10 @@ public class AlunosController implements Initializable {
                     itemCategoriaACDAO.salvar(itemCategoriaAC);
                 }
             }
+            exibirMensagem("Importar tabela de atividades", "Tabela importada COM SUCESSO!");
         } catch (Exception e) {
-            e.printStackTrace();
             exibirAlunos();
+            exibirMensagem("Importar tabela de atividades", "Falha ao importar tabela");
         }
     }
 
@@ -224,12 +230,34 @@ public class AlunosController implements Initializable {
 
     public void filtrar(){
         alunos.clear();
-        alunos = FXCollections.observableArrayList(alunoDAO.getAlunosAsList());
+        String rbSituacao = getRadioButtonString(situacaoAlunos);
+        String rbProgressao = getRadioButtonString(progressao);
+
+        if (rbSituacao.equalsIgnoreCase("ativos"))
+            alunos = FXCollections.observableArrayList(alunoDAO.getAlunosAtivos());
+        else if (rbSituacao.equalsIgnoreCase("inativos"))
+            alunos = FXCollections.observableArrayList(alunoDAO.getAlunosInativos());
+        else
+            alunos = FXCollections.observableArrayList(alunoDAO.getAlunosAsList());
+
+        if (rbProgressao.equalsIgnoreCase("em andamento")) {
+            System.out.println("filtrar em andamento");
+            alunos = FXCollections.observableArrayList(alunoDAO.getAlunosEmAndamento(alunos));
+        }else if (rbProgressao.equalsIgnoreCase("concluídos"))
+        {
+            System.out.println("filtrar concludos");
+            alunos = FXCollections.observableArrayList(alunoDAO.getAlunosConcluidos(alunos));
+        }
+
         filtrarNome();
         filtrarProntuario();
         filtrarAnoIngresso();
         filtrarSemestreIngresso();
         tabela.setItems(FXCollections.observableArrayList(alunos));
+    }
+
+    private String getRadioButtonString(ToggleGroup radioButton){
+        return ((RadioButton) radioButton.getSelectedToggle()).getText();
     }
 
     private void filtrarNome() {
@@ -282,5 +310,12 @@ public class AlunosController implements Initializable {
         cbAnoIngresso.getSelectionModel().clearSelection();
         cbSemestreIngresso.getSelectionModel().clearSelection();
         filtrar();
+    }
+
+    public void exibirMensagem(String tema, String mensagem){
+        Alert dialogoInfo = new Alert(Alert.AlertType.INFORMATION);
+        dialogoInfo.setTitle(tema);
+        dialogoInfo.setHeaderText(mensagem);
+        dialogoInfo.showAndWait();
     }
 }
