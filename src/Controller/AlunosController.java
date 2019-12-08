@@ -15,6 +15,7 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
+import javafx.scene.paint.Color;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import org.omg.CORBA.INTERNAL;
@@ -50,6 +51,10 @@ public class AlunosController implements Initializable {
     private ToggleGroup situacaoAlunos;
     @FXML
     private ToggleGroup progressao;
+    @FXML
+    private ToggleButton rbAtivos;
+    @FXML
+    private ToggleButton rbTodos;
 
 
     private ObservableList<Aluno> alunos;
@@ -70,6 +75,25 @@ public class AlunosController implements Initializable {
         clAnoIngresso.setCellValueFactory(new PropertyValueFactory<>("anoIngresso"));
         clSemestreIngresso.setCellValueFactory(new PropertyValueFactory<>("semestreIngresso"));
         clHorasCumpridas.setCellValueFactory(new PropertyValueFactory<>("horasCumpridas"));
+        clHorasCumpridas.setCellFactory(column -> {
+            return new TableCell<Aluno, Double>() {
+                @Override
+                protected void updateItem(Double item, boolean empty) {
+                    super.updateItem(item, empty);
+                    if (item == null || empty) {
+                        setText(null);
+                        setStyle("");
+                    } else {
+                        setText(String.valueOf(item));
+                        if (item > Aluno.TOTAL_HORAS_NECESSARIAS) {
+                            setStyle("-fx-background-color: #b8ff8f");
+                        } else {
+                            setStyle("");
+                        }
+                    }
+                }
+            };
+        });
         tabela.setItems(alunos);
         List<Integer> listaAnos = new ArrayList<>();
         for (int i=2008;i<2020;i++)
@@ -163,9 +187,9 @@ public class AlunosController implements Initializable {
                     out.append(ac.toString());
                 }
             }
-            exibirMensagem("Exportar dados", "Dados exportados COM SUCESSO!");
+            exibirMensagem("Exportar dados", "Dados Exportados com Sucesso!");
         } catch (FileNotFoundException e) {
-            exibirMensagem("Exportar dados", "Falha ao exportar dados");
+            exibirMensagem("Exportar dados", "Falha ao Exportar Dados");
         }
     }
 
@@ -243,8 +267,8 @@ public class AlunosController implements Initializable {
         if (rbProgressao.equalsIgnoreCase("em andamento")) {
             System.out.println("filtrar em andamento");
             alunos = FXCollections.observableArrayList(alunoDAO.getAlunosEmAndamento(alunos));
-        }else if (rbProgressao.equalsIgnoreCase("concluídos"))
-        {
+        }
+        else if (rbProgressao.equalsIgnoreCase("concluído")) {
             System.out.println("filtrar concludos");
             alunos = FXCollections.observableArrayList(alunoDAO.getAlunosConcluidos(alunos));
         }
@@ -309,6 +333,8 @@ public class AlunosController implements Initializable {
         tfProntuario.setText("");
         cbAnoIngresso.getSelectionModel().clearSelection();
         cbSemestreIngresso.getSelectionModel().clearSelection();
+        rbAtivos.setSelected(true);
+        rbTodos.setSelected(true);
         filtrar();
     }
 
