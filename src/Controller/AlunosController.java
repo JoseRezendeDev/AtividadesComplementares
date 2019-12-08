@@ -60,6 +60,8 @@ public class AlunosController implements Initializable {
     private TextField tfCodigo;
     @FXML
     private Label lbMensagem;
+    @FXML
+    private Button btVerAtividade;
 
 
     private ObservableList<Aluno> alunos;
@@ -105,6 +107,7 @@ public class AlunosController implements Initializable {
             listaAnos.add(i);
         cbAnoIngresso.setItems(FXCollections.observableArrayList(listaAnos));
         cbSemestreIngresso.setItems(FXCollections.observableArrayList(1,2));
+        btVerAtividade.setVisible(false);
     }
 
     public void exibirAtividades() {
@@ -275,8 +278,10 @@ public class AlunosController implements Initializable {
     public void validarAC(ActionEvent actionEvent) {
         if (atvDAO.getAtividade(tfCodigo.getText()) != null) {
             lbMensagem.setText("A atividade é válida.");
+            btVerAtividade.setVisible(true);
         } else {
             lbMensagem.setText("O código não é válido.");
+            btVerAtividade.setVisible(false);
         }
     }
 
@@ -381,5 +386,13 @@ public class AlunosController implements Initializable {
         dialogoInfo.setTitle(tema);
         dialogoInfo.setHeaderText(mensagem);
         dialogoInfo.showAndWait();
+    }
+
+    public void verAtividade(ActionEvent actionEvent) {
+        if (atvDAO.getAtividade(tfCodigo.getText()) != null) {
+            Stage stage = (Stage) pane.getScene().getWindow();
+            AtividadeValidadaLoader atividadeValidadaLoader = new AtividadeValidadaLoader();
+            atividadeValidadaLoader.loadAtividadeValidada(stage, atvDAO.getAtividade(tfCodigo.getText()));
+        }
     }
 }
