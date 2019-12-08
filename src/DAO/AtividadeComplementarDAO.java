@@ -89,50 +89,16 @@ public class AtividadeComplementarDAO {
         }
     }
 
-    public void editarAtividade(AtividadeComplementar atividadeComplementar, String campo){
-        String sql = "update atividade_complementar set descricao = ? WHERE codigo = ?";
-        switch (campo) {
-            case "descricao":
-                sql = "update atividade_complementar set descricao = ? WHERE codigo = ?";
-                break;
-            case "carga_horaria":
-                sql = "update atividade_complementar set carga_horaria = ? WHERE codigo = ?";
-                break;
-            case "ano":
-                sql = "update atividade_complementar set ano = ? WHERE codigo = ?";
-                break;
-            case "semestre":
-                sql = "update atividade_complementar set semestre = ? WHERE codigo = ?";
-                break;
-            case "categoria":
-                sql = "update atividade_complementar set item_categoria_ac = ? WHERE codigo = ?";
-                break;
-            case "professor":
-                sql = "update atividade_complementar set professor = ? WHERE codigo = ?";
-                break;
-        }
+    public void editarAtividade(AtividadeComplementar atividadeComplementar){
+        String sql = "update atividade_complementar set carga_horaria = ? , descricao = ?, ano = ?, semestre = ?, professor = ?, item_categoria_ac = ? where codigo = ?";
         try (PreparedStatement stmt = ConnectionFactory.createPreparedStatement(sql)) {
-            switch (campo) {
-                case "descricao":
-                    stmt.setString(1, atividadeComplementar.getDescricao());
-                    break;
-                case "carga_horaria":
-                    stmt.setDouble(1, atividadeComplementar.getCargaHoraria());
-                    break;
-                case "ano":
-                    stmt.setInt(1, atividadeComplementar.getAnoAC());
-                    break;
-                case "semestre":
-                    stmt.setInt(1, atividadeComplementar.getSemestreAC());
-                    break;
-                case "categoria":
-                    stmt.setInt(1, atividadeComplementar.getItemCategoriaAC().getId());
-                    break;
-                case "professor":
-                    stmt.setInt(1, atividadeComplementar.getProfessor().getId());
-                    break;
-            }
-            stmt.setString(2, atividadeComplementar.getCodigo());
+            stmt.setDouble(1, atividadeComplementar.getCargaHoraria());
+            stmt.setString(2, atividadeComplementar.getDescricao());
+            stmt.setInt(3, atividadeComplementar.getAnoAC());
+            stmt.setInt(4, atividadeComplementar.getSemestreAC());
+            stmt.setInt(5, atividadeComplementar.getProfessor().getId());
+            stmt.setInt(6, atividadeComplementar.getItemCategoriaAC().getId());
+            stmt.setString(7, atividadeComplementar.getCodigo());
             stmt.execute();
         } catch (SQLException e) {
             e.printStackTrace();
