@@ -305,11 +305,9 @@ public class AlunosController implements Initializable {
             alunos = FXCollections.observableArrayList(alunoDAO.getAlunosAsList());
 
         if (rbProgressao.equalsIgnoreCase("em andamento")) {
-            System.out.println("filtrar em andamento");
             alunos = FXCollections.observableArrayList(alunoDAO.getAlunosEmAndamento(alunos));
         }
         else if (rbProgressao.equalsIgnoreCase("concluído")) {
-            System.out.println("filtrar concludos");
             alunos = FXCollections.observableArrayList(alunoDAO.getAlunosConcluidos(alunos));
         }
 
