@@ -55,6 +55,10 @@ public class AlunosController implements Initializable {
     private ToggleButton rbAtivos;
     @FXML
     private ToggleButton rbTodos;
+    @FXML
+    private TextField tfCodigo;
+    @FXML
+    private Label lbMensagem;
 
 
     private ObservableList<Aluno> alunos;
@@ -235,9 +239,11 @@ public class AlunosController implements Initializable {
     }
 
     public void validarAC(ActionEvent actionEvent) {
-        Stage stage = (Stage) pane.getScene().getWindow();
-        ValidaACLoader validaACLoader = new ValidaACLoader();
-        validaACLoader.loadValidaAC(stage);
+        if (atvDAO.getAtividade(tfCodigo.getText()) != null) {
+            lbMensagem.setText("A atividade é válida.");
+        } else {
+            lbMensagem.setText("O código não é válido.");
+        }
     }
 
     public void deslogar(){
