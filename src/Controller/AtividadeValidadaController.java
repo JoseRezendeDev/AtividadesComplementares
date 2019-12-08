@@ -1,5 +1,6 @@
 package Controller;
 
+import Loader.AlunosLoader;
 import Loader.ValidaACLoader;
 import Model.AtividadeComplementar;
 import javafx.fxml.FXML;
@@ -34,8 +35,8 @@ public class AtividadeValidadaController{
 
     public void voltarValidaAC(){
         Stage stage = (Stage) pane.getScene().getWindow();
-        ValidaACLoader loader = new ValidaACLoader();
-        loader.loadValidaAC(stage);
+        AlunosLoader alunosLoader = new AlunosLoader();
+        alunosLoader.loadAlunos(stage);
     }
 
     public void initialize(URL location, ResourceBundle resources) {

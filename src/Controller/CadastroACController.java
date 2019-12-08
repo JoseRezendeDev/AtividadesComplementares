@@ -73,7 +73,6 @@ public class CadastroACController{
                 index = random.nextInt(letras.length());
                 armazenaChaves += letras.substring(index, index + 1);
             }
-            System.out.println(armazenaChaves);
             if (atvDAO.getAtividade(armazenaChaves) == null) {
                 chaveValida = 1;
             }
