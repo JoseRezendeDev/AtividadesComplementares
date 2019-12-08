@@ -79,6 +79,23 @@ public class AtividadeComplementarDAO {
         return null;
     }
 
+    public Double getSomaHorasPorItem(String aluno, Integer idItemCategoria) {
+        String sql = "SELECT sum(carga_horaria) as horas FROM atividade_complementar WHERE aluno = ? and item_categoria_ac = ?";
+        Double horas;
+        try (PreparedStatement stmt = ConnectionFactory.createPreparedStatement(sql)) {
+            stmt.setString(1, aluno);
+            stmt.setInt(2, idItemCategoria);
+            ResultSet rs = stmt.executeQuery();
+            if (rs.next()) {
+                horas = rs.getDouble("horas");
+                return horas;
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
     public void excluirAtividade(String codigo){
         String sql = "DELETE FROM atividade_complementar WHERE codigo = ?";
         try (PreparedStatement stmt = ConnectionFactory.createPreparedStatement(sql)) {
