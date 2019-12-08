@@ -30,6 +30,26 @@ public class ItemCategoriaACDAO {
         }
     }
 
+    public List<ItemCategoriaAC> getTodosItensCategoria(){
+        String sql = "SELECT * FROM item_categoria_ac";
+        List<ItemCategoriaAC> lista = new ArrayList<>();
+        try (PreparedStatement stmt = ConnectionFactory.createPreparedStatement(sql)) {
+            ResultSet rs = stmt.executeQuery();
+            while (rs.next()) {
+                ItemCategoriaAC item = new ItemCategoriaAC();
+                item.setId(rs.getInt("id"));
+                item.setNome(rs.getString("nome"));
+                item.setMaximoHoras(rs.getDouble("maximo_horas"));
+                item.setNumeroTabela(rs.getInt("numero_tabela"));
+                item.setCategoriaAC(categoriaACDAO.getCategoria(rs.getInt("categoria_ac")));
+                lista.add(item);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return lista;
+    }
+
     public List<ItemCategoriaAC> getItensCategoria(int numeroTabela){
         String sql = "SELECT * FROM item_categoria_ac WHERE numero_tabela = ?";
         List<ItemCategoriaAC> lista = new ArrayList<>();

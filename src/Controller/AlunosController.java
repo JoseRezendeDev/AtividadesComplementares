@@ -22,6 +22,7 @@ import org.omg.CORBA.INTERNAL;
 
 import java.io.*;
 import java.net.URL;
+import java.nio.charset.StandardCharsets;
 import java.util.*;
 
 public class AlunosController implements Initializable {
@@ -197,13 +198,29 @@ public class AlunosController implements Initializable {
                 return;
 
             try(PrintWriter out = new PrintWriter(new FileOutputStream(new File(file.getAbsolutePath())))){
+                List<ItemCategoriaAC> listaItemCategoria = itemCategoriaACDAO.getTodosItensCategoria();
+                String cabecalho = "Prontuário;Total Horas";
+                for (ItemCategoriaAC item : listaItemCategoria) {
+                    cabecalho = cabecalho + ";" + item.getNome();
+                }
+                cabecalho = cabecalho + "\n";
+                out.append(cabecalho);
                 for (Aluno aluno : alunos) {
                     if ((opcao == 1 && !aluno.getProgresso()) || (opcao == 2 && aluno.getProgresso()) || opcao == 3) {
-                        List<AtividadeComplementar> listaAC = atvDAO.getAtividades(aluno.getNumeroMatricula());
-                        for (AtividadeComplementar ac : listaAC) {
-                            out.append(ac.toString());
+                        String infoAluno = aluno.getNumeroMatricula() + ";" + aluno.getHorasCumpridas();
+                        for (ItemCategoriaAC item : listaItemCategoria) {
+                            if (item.getNumeroTabela() == aluno.getNumeroTabelaReferente()){
+                                Double horas = atvDAO.getSomaHorasPorItem(aluno.getNumeroMatricula(),item.getId());
+                                infoAluno = infoAluno + ";" + (horas == 0 ? " " : horas);
+                            }
+                            else {
+                                infoAluno = infoAluno + ";" + " ";
+                            }
                         }
+                        infoAluno = infoAluno + "\n";
+                        out.append(infoAluno);
                     }
+
                 }
                 exibirMensagem("Atividade Complementar - Exportar Dados", "Dados Exportados com Sucesso!");
             } catch (FileNotFoundException e) {
