@@ -1,16 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.Cursor?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.Pane?>
-<?import javafx.scene.shape.Rectangle?>
-<?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.AtividadeSelecionadaController">
+<AnchorPane prefHeight="400.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.AtividadeSelecionadaController">
    <AnchorPane maxWidth="-Infinity" prefHeight="200.0" prefWidth="260.0" style="-fx-background-color: #2f4050;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
       <children>
          <Pane prefWidth="260.0" style="-fx-background-color: #273a49;">
@@ -55,10 +52,47 @@
                <Font size="24.0" />
             </font>
          </Text>
+         <Button fx:id="btExcluir" layoutX="130.0" layoutY="479.0" mnemonicParsing="false" onAction="#excluirAtividade" style="-fx-background-color: #283845; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 5, 0, 0, 0);" text="Excluir Atividade" textFill="WHITE" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="14.0">
+            <font>
+               <Font name="System Bold" size="12.0" />
+            </font>
+            <cursor>
+               <Cursor fx:constant="HAND" />
+            </cursor>
+         </Button>
       </children>
    </AnchorPane>
       <AnchorPane fx:id="pane" layoutX="299.0" layoutY="3.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="518.0" prefWidth="363.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="260.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-      <Pane prefHeight="1.0" prefWidth="440.0" style="-fx-background-color: #e8e9eb;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="104.0" />
+      <Pane prefHeight="1.0" prefWidth="440.0" style="-fx-background-color: #e8e9eb;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="104.0">
+         <children>
+            <SVGPath content="M328.883,89.125l107.59,107.589l-272.34,272.34L56.604,361.465L328.883,89.125z M518.113,63.177l-47.981-47.981   c-18.543-18.543-48.653-18.543-67.259,0l-45.961,45.961l107.59,107.59l53.611-53.611   C532.495,100.753,532.495,77.559,518.113,63.177z M0.3,512.69c-1.958,8.812,5.998,16.708,14.811,14.565l119.891-29.069   L27.473,390.597L0.3,512.69z" fill="#727272" layoutX="-145.0" layoutY="-241.0" style="-fx-scale-x: 0.03; -fx-scale-y: 0.03;" />
+            <Button fx:id="btEditarDescicao" alignment="BASELINE_CENTER" layoutX="102.0" layoutY="11.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#editarDescricao" prefHeight="25.0" prefWidth="27.0" style="-fx-background-color: none;" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btSemestre" alignment="BASELINE_CENTER" layoutX="94.0" layoutY="190.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#editarSemestre" prefHeight="25.0" prefWidth="27.0" style="-fx-background-color: none;" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <SVGPath content="M328.883,89.125l107.59,107.589l-272.34,272.34L56.604,361.465L328.883,89.125z M518.113,63.177l-47.981-47.981   c-18.543-18.543-48.653-18.543-67.259,0l-45.961,45.961l107.59,107.59l53.611-53.611   C532.495,100.753,532.495,77.559,518.113,63.177z M0.3,512.69c-1.958,8.812,5.998,16.708,14.811,14.565l119.891-29.069   L27.473,390.597L0.3,512.69z" fill="#727272" layoutX="-159.0" layoutY="-63.0" style="-fx-scale-x: 0.03; -fx-scale-y: 0.03;" />
+            <Button fx:id="btEditarProfessor" alignment="BASELINE_CENTER" layoutX="102.0" layoutY="315.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#editarProfessor" prefHeight="25.0" prefWidth="27.0" style="-fx-background-color: none;" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <SVGPath content="M328.883,89.125l107.59,107.589l-272.34,272.34L56.604,361.465L328.883,89.125z M518.113,63.177l-47.981-47.981   c-18.543-18.543-48.653-18.543-67.259,0l-45.961,45.961l107.59,107.59l53.611-53.611   C532.495,100.753,532.495,77.559,518.113,63.177z M0.3,512.69c-1.958,8.812,5.998,16.708,14.811,14.565l119.891-29.069   L27.473,390.597L0.3,512.69z" fill="#727272" layoutX="-153.0" layoutY="61.0" style="-fx-scale-x: 0.03; -fx-scale-y: 0.03;" />
+         </children></Pane>
           <Label contentDisplay="CENTER" layoutX="33.0" layoutY="117.0" prefHeight="25.0" prefWidth="78.0" text="DESCRIÇÃO:" textAlignment="CENTER" AnchorPane.leftAnchor="33.0" AnchorPane.topAnchor="117.0" />
           <Label layoutX="33.0" layoutY="177.0" prefHeight="25.0" prefWidth="129.0" text="CARGA HORÁRIA:" AnchorPane.leftAnchor="33.0" />
           <Label layoutX="33.0" layoutY="294.0" prefHeight="25.0" prefWidth="58.0" text="SEMESTRE:" AnchorPane.leftAnchor="33.0" />
@@ -94,5 +128,32 @@
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
+      <SVGPath content="M328.883,89.125l107.59,107.589l-272.34,272.34L56.604,361.465L328.883,89.125z M518.113,63.177l-47.981-47.981   c-18.543-18.543-48.653-18.543-67.259,0l-45.961,45.961l107.59,107.59l53.611-53.611   C532.495,100.753,532.495,77.559,518.113,63.177z M0.3,512.69c-1.958,8.812,5.998,16.708,14.811,14.565l119.891-29.069   L27.473,390.597L0.3,512.69z" fill="#727272" layoutX="-120.0" layoutY="-75.0" style="-fx-scale-x: 0.03; -fx-scale-y: 0.03;" />
+      <Button fx:id="btEditarCargaHoraria" alignment="BASELINE_CENTER" layoutX="131.0" layoutY="177.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#editarCargaHoraria" prefHeight="25.0" prefWidth="27.0" style="-fx-background-color: none;" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="btEditarAno" alignment="BASELINE_CENTER" layoutX="66.0" layoutY="237.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#editarAno" prefHeight="25.0" prefWidth="27.0" style="-fx-background-color: none;" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <SVGPath content="M328.883,89.125l107.59,107.589l-272.34,272.34L56.604,361.465L328.883,89.125z M518.113,63.177l-47.981-47.981   c-18.543-18.543-48.653-18.543-67.259,0l-45.961,45.961l107.59,107.59l53.611-53.611   C532.495,100.753,532.495,77.559,518.113,63.177z M0.3,512.69c-1.958,8.812,5.998,16.708,14.811,14.565l119.891-29.069   L27.473,390.597L0.3,512.69z" fill="#727272" layoutX="-188.0" layoutY="-15.0" style="-fx-scale-x: 0.03; -fx-scale-y: 0.03;" />
+      <Button fx:id="btEditarCategoria" alignment="BASELINE_CENTER" layoutX="101.0" layoutY="354.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#editarCategoria" prefHeight="25.0" prefWidth="27.0" style="-fx-background-color: none;" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <SVGPath content="M328.883,89.125l107.59,107.589l-272.34,272.34L56.604,361.465L328.883,89.125z M518.113,63.177l-47.981-47.981   c-18.543-18.543-48.653-18.543-67.259,0l-45.961,45.961l107.59,107.59l53.611-53.611   C532.495,100.753,532.495,77.559,518.113,63.177z M0.3,512.69c-1.958,8.812,5.998,16.708,14.811,14.565l119.891-29.069   L27.473,390.597L0.3,512.69z" fill="#727272" layoutX="-153.0" layoutY="101.0" style="-fx-scale-x: 0.03; -fx-scale-y: 0.03;" />
       </AnchorPane>
 </AnchorPane>
