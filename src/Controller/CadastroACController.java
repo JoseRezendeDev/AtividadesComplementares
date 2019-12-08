@@ -18,6 +18,7 @@ import java.net.URL;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 import java.util.ResourceBundle;
 
 public class CadastroACController{
@@ -60,14 +61,33 @@ public class CadastroACController{
         atividadesLoader.loadAtividades(aluno, stage);
     }
 
+    private String gerarCodigo(){
+        String letras = "ABCDEFGHIJKLMNOPQRSTUVYWXZ";
+        int chaveValida = 0;
+        String armazenaChaves = "";
+        while (chaveValida == 0) {
+            Random random = new Random();
+            armazenaChaves = "";
+            int index = -1;
+            for (int i = 0; i < 5; i++) {
+                index = random.nextInt(letras.length());
+                armazenaChaves += letras.substring(index, index + 1);
+            }
+            System.out.println(armazenaChaves);
+            if (atvDAO.getAtividade(armazenaChaves) == null) {
+                chaveValida = 1;
+            }
+        }
+        return armazenaChaves;
+    }
+
     public void cadastrarAC() {
         String mensagemValidar = validarCadastro();
-
         if (mensagemValidar.equals("")){
             AtividadeComplementar atv = new AtividadeComplementar();
             atv.setDescricao(tfDescricao.getText());
             atv.setCargaHoraria(Double.parseDouble(tfCargaHoraria.getText()));
-            atv.setCodigo(aluno.getNome() + "_" + aluno.getNumeroMatricula() + "_" + cbSemestre.getValue() + "_" + cbCategoria.getValue().getId());
+            atv.setCodigo(gerarCodigo());
             atv.setProfessor(cbProfessor.getValue());
             atv.setAnoAC(cbAno.getValue());
             atv.setSemestreAC(cbSemestre.getValue());
