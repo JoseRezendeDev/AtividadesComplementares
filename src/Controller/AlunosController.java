@@ -176,25 +176,42 @@ public class AlunosController implements Initializable {
     }
 
     public void exportarDados(ActionEvent actionEvent) {
-        FileChooser fileChooser = new FileChooser();
-        fileChooser.setTitle("Exportar Dados do Sistema");
-        fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("CSV Files", "*.csv"));
-        File file = fileChooser.showSaveDialog(pane.getScene().getWindow());
+        List<String> status = new ArrayList<>();
+        status.add("Todos");
+        status.add("Em Andamento");
+        status.add("Concluídos");
+        ChoiceDialog<String> dialog = new ChoiceDialog<>("Todos", status);
+        dialog.setTitle("Atividade Complementar - Exportar Dados");
+        dialog.setHeaderText("Exportar Dados do Sistema");
+        dialog.setContentText("Quais alunos deseja exportar?");
 
-        if(file == null)
-            return;
+        Optional<String> result = dialog.showAndWait();
+        if (result.isPresent()){
+            int opcao = result.get().equals("Em Andamento") ? 1 : result.get().equals("Concluídos") ? 2 : 3;
+            FileChooser fileChooser = new FileChooser();
+            fileChooser.setTitle("Atividade Complementar - Exportar Dados");
+            fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("CSV Files", "*.csv"));
+            File file = fileChooser.showSaveDialog(pane.getScene().getWindow());
 
-        try(PrintWriter out = new PrintWriter(new FileOutputStream(new File(file.getAbsolutePath())))){
-            for (Aluno aluno : alunos) {
-                List<AtividadeComplementar> listaAC = atvDAO.getAtividades(aluno.getNumeroMatricula());
-                for (AtividadeComplementar ac : listaAC) {
-                    out.append(ac.toString());
+            if(file == null)
+                return;
+
+            try(PrintWriter out = new PrintWriter(new FileOutputStream(new File(file.getAbsolutePath())))){
+                for (Aluno aluno : alunos) {
+                    if ((opcao == 1 && !aluno.getProgresso()) || (opcao == 2 && aluno.getProgresso()) || opcao == 3) {
+                        List<AtividadeComplementar> listaAC = atvDAO.getAtividades(aluno.getNumeroMatricula());
+                        for (AtividadeComplementar ac : listaAC) {
+                            out.append(ac.toString());
+                        }
+                    }
                 }
+                exibirMensagem("Atividade Complementar - Exportar Dados", "Dados Exportados com Sucesso!");
+            } catch (FileNotFoundException e) {
+                exibirMensagem("Atividade Complementar - Exportar Dados", "Falha ao Exportar Dados");
             }
-            exibirMensagem("Exportar dados", "Dados Exportados com Sucesso!");
-        } catch (FileNotFoundException e) {
-            exibirMensagem("Exportar dados", "Falha ao Exportar Dados");
         }
+
+
     }
 
     /*
