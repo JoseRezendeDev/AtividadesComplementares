@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6db74bfc-8768-47a2-92ed-92e48d0e7253" name="Default Changelist" comment="Importar tabela de alunos sem deletar os antigos, alterando apenas a coluna 'graduando' do banco">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/AlunosController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AlunosController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DAO/AtividadeComplementarDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DAO/AtividadeComplementarDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DAO/ItemCategoriaACDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DAO/ItemCategoriaACDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/cadastroAC.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/cadastroAC.fxml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -110,7 +107,7 @@
       <updated>1571781742680</updated>
       <workItem from="1574381530824" duration="3178000" />
       <workItem from="1574462538455" duration="451000" />
-      <workItem from="1575818462744" duration="8423000" />
+      <workItem from="1575818462744" duration="11401000" />
     </task>
     <task id="LOCAL-00001" summary="Valida atividade complementar e valida cadastro manualmente">
       <created>1572062221548</created>

@@ -10,7 +10,7 @@
    <children>
       <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="610.0" prefWidth="854.0">
          <children>
-            <Button fx:id="btVoltar" layoutX="200.0" layoutY="542.0" mnemonicParsing="false" onAction="#voltarAluno" prefHeight="25.0" prefWidth="67.0" style="-fx-background-color: #dbe5ee; -fx-background-radius: 15;" text="VOLTAR" AnchorPane.bottomAnchor="43.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="587.0">
+            <Button fx:id="btVoltar" layoutX="200.0" layoutY="542.0" mnemonicParsing="false" onAction="#voltarAluno" prefHeight="25.0" prefWidth="67.0" style="-fx-background-color: #dbe5ee; -fx-background-radius: 15;" text="VOLTAR" AnchorPane.bottomAnchor="43.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="587.0" AnchorPane.topAnchor="542.0">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
@@ -18,7 +18,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <AnchorPane fx:id="pane" layoutX="48.0" layoutY="9.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="518.0" prefWidth="454.0" style="-fx-background-color: #ffffff; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.4), 10, 0, 0, 0); -fx-background-radius: 10;" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="200.0">
+            <AnchorPane fx:id="pane" layoutX="48.0" layoutY="9.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="518.0" prefWidth="454.0" style="-fx-background-color: #ffffff; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.4), 10, 0, 0, 0); -fx-background-radius: 10;" AnchorPane.bottomAnchor="83.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="9.0">
                <Label fx:id="lbAluno" alignment="CENTER" layoutX="117.0" layoutY="50.0" prefHeight="17.0" prefWidth="336.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
                   <font>
                      <Font name="System Bold" size="12.0" />
