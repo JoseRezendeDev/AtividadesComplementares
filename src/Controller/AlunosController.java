@@ -15,6 +15,7 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
+import javafx.scene.paint.Color;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import org.omg.CORBA.INTERNAL;
@@ -70,6 +71,25 @@ public class AlunosController implements Initializable {
         clAnoIngresso.setCellValueFactory(new PropertyValueFactory<>("anoIngresso"));
         clSemestreIngresso.setCellValueFactory(new PropertyValueFactory<>("semestreIngresso"));
         clHorasCumpridas.setCellValueFactory(new PropertyValueFactory<>("horasCumpridas"));
+        clHorasCumpridas.setCellFactory(column -> {
+            return new TableCell<Aluno, Double>() {
+                @Override
+                protected void updateItem(Double item, boolean empty) {
+                    super.updateItem(item, empty);
+                    if (item == null || empty) {
+                        setText(null);
+                        setStyle("");
+                    } else {
+                        setText(String.valueOf(item));
+                        if (item > Aluno.TOTAL_HORAS_NECESSARIAS) {
+                            setStyle("-fx-background-color: #b8ff8f");
+                        } else {
+                            setStyle("");
+                        }
+                    }
+                }
+            };
+        });
         tabela.setItems(alunos);
         List<Integer> listaAnos = new ArrayList<>();
         for (int i=2008;i<2020;i++)
