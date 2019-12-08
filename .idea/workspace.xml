@@ -4,13 +4,10 @@
     <list default="true" id="6db74bfc-8768-47a2-92ed-92e48d0e7253" name="Default Changelist" comment="Importar tabela de alunos sem deletar os antigos, alterando apenas a coluna 'graduando' do banco">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/AtividadesComplementares/Controller/AtividadeSelecionadaController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AtividadesComplementares/Controller/AtividadeSelecionadaController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AtividadesComplementares/View/alunos.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AtividadesComplementares/View/alunos.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/AtividadesComplementares/View/atividadeSelecionada.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AtividadesComplementares/View/atividadeSelecionada.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AtividadesComplementares/View/cadastroProfessor.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AtividadesComplementares/View/cadastroProfessor.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/AtividadesComplementares/atividades.db" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AtividadesComplementares/atividades.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/AtividadeSelecionadaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AtividadeSelecionadaController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DAO/AtividadeComplementarDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DAO/AtividadeComplementarDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/alunos.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/alunos.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/View/atividadeSelecionada.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/atividadeSelecionada.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/atividades.db" beforeDir="false" afterPath="$PROJECT_DIR$/src/atividades.db" afterDir="false" />
     </list>
