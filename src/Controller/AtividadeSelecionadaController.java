@@ -98,7 +98,7 @@ public class AtividadeSelecionadaController {
         Optional<String> result = dialog.showAndWait();
         if (result.isPresent()){
             this.atividadeComplementar.setDescricao(result.get());
-            atvDAO.editarAtividade(this.atividadeComplementar,"descricao");
+            atvDAO.editarAtividade(this.atividadeComplementar);
             lbDescricao.setText(atividadeComplementar.getDescricao());
         }
     }
@@ -111,9 +111,17 @@ public class AtividadeSelecionadaController {
 
         Optional<String> result = dialog.showAndWait();
         if (result.isPresent()){
-            this.atividadeComplementar.setCargaHoraria(Double.parseDouble(result.get()));
-            atvDAO.editarAtividade(this.atividadeComplementar,"carga_horaria");
-            lbCargaHoraria.setText(String.valueOf(atividadeComplementar.getCargaHoraria()));
+            if (atividadeComplementar.getItemCategoriaAC().getMaximoHoras() >= Double.parseDouble(result.get())) {
+                this.atividadeComplementar.setCargaHoraria(Double.parseDouble(result.get()));
+                atvDAO.editarAtividade(this.atividadeComplementar);
+                lbCargaHoraria.setText(String.valueOf(atividadeComplementar.getCargaHoraria()));
+            }
+            else {
+                Alert dialogoInfo = new Alert(Alert.AlertType.INFORMATION);
+                dialogoInfo.setTitle("Erro ao Editar");
+                dialogoInfo.setHeaderText("A categoria não permite essa carga horária.");
+                dialogoInfo.showAndWait();
+            }
         }
     }
 
@@ -126,7 +134,7 @@ public class AtividadeSelecionadaController {
         Optional<String> result = dialog.showAndWait();
         if (result.isPresent()){
             this.atividadeComplementar.setAnoAC(Integer.parseInt(result.get()));
-            atvDAO.editarAtividade(this.atividadeComplementar,"ano");
+            atvDAO.editarAtividade(this.atividadeComplementar);
             lbAno.setText(String.valueOf(atividadeComplementar.getAnoAC()));
         }
     }
@@ -147,7 +155,7 @@ public class AtividadeSelecionadaController {
                 if (cat.getNome().equals(result.get())) {
                     if (atividadeComplementar.getCargaHoraria() <= cat.getMaximoHoras()) {
                         this.atividadeComplementar.setItemCategoriaAC(cat);
-                        atvDAO.editarAtividade(this.atividadeComplementar, "categoria");
+                        atvDAO.editarAtividade(this.atividadeComplementar);
                         lbCategoria.setText(atividadeComplementar.getItemCategoriaAC().getNome());
                     }
                     else {
@@ -170,7 +178,7 @@ public class AtividadeSelecionadaController {
         Optional<String> result = dialog.showAndWait();
         if (result.isPresent()){
             this.atividadeComplementar.setSemestreAC(Integer.parseInt(result.get()));
-            atvDAO.editarAtividade(this.atividadeComplementar,"semestre");
+            atvDAO.editarAtividade(this.atividadeComplementar);
             lbAno.setText(String.valueOf(atividadeComplementar.getSemestreAC()));
         }
     }
@@ -190,7 +198,7 @@ public class AtividadeSelecionadaController {
             for (Professor professor : professorDAO.getProfessores()) {
                if (professor.getNome().equals(result.get())){
                    this.atividadeComplementar.setProfessor(professor);
-                   atvDAO.editarAtividade(this.atividadeComplementar,"professor");
+                   atvDAO.editarAtividade(this.atividadeComplementar);
                    lbProfessor.setText(String.valueOf(atividadeComplementar.getProfessor()));
                }
             }
