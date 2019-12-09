@@ -92,8 +92,13 @@ public class CadastroACController{
             atv.setSemestreAC(cbSemestre.getValue());
             atv.setItemCategoriaAC(cbCategoria.getValue());
             atv.setAluno(aluno);
-            atvDAO.salvar(atv);
-            aluno.atualizarHorasCumpridas();
+            if (aluno.getTotalCategoriaEspecifica(atv)) {
+                atvDAO.salvar(atv);
+                aluno.atualizarHorasCumpridas();
+            }
+            else {
+                exibirMensagemErro("Você não pode incluir atividade nessa categoria");
+            }
             AtividadesLoader atividadesLoader = new AtividadesLoader();
             Stage stage = (Stage) pane.getScene().getWindow();
             atividadesLoader.loadAtividades(aluno, stage);

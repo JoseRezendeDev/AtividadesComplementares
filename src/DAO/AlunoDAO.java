@@ -1,6 +1,7 @@
 package DAO;
 
 import Model.Aluno;
+import Model.AtividadeComplementar;
 
 import java.sql.*;
 import java.util.*;
@@ -219,5 +220,21 @@ public class AlunoDAO {
                 it.remove();
         }
         return alunos;
+    }
+
+    public double getTotalCategoriaEspecifica(Aluno aluno, AtividadeComplementar atv){
+        String sql = "SELECT * FROM atividade_complementar WHERE aluno = ? AND item_categoria_ac = ?";
+        double total = 0;
+        try (PreparedStatement stmt = ConnectionFactory.createPreparedStatement(sql)){
+            stmt.setString(1, aluno.getNumeroMatricula());
+            stmt.setInt(2, atv.getItemCategoriaAC().getId());
+            ResultSet rs = stmt.executeQuery();
+            while (rs.next()){
+                total += rs.getDouble("carga_horaria");
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return total;
     }
 }
