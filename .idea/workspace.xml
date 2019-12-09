@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="6db74bfc-8768-47a2-92ed-92e48d0e7253" name="Default Changelist" comment="Importar tabela de alunos sem deletar os antigos, alterando apenas a coluna 'graduando' do banco">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AtividadesComplementares/Controller/CadastroACController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AtividadesComplementares/Controller/CadastroACController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/atividades.db" beforeDir="false" afterPath="$PROJECT_DIR$/src/atividades.db" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -108,7 +110,8 @@
       <workItem from="1574381530824" duration="3178000" />
       <workItem from="1574462538455" duration="451000" />
       <workItem from="1575818462744" duration="12115000" />
-      <workItem from="1575852780696" duration="450000" />
+      <workItem from="1575852780696" duration="1744000" />
+      <workItem from="1575890859727" duration="812000" />
     </task>
     <task id="LOCAL-00001" summary="Valida atividade complementar e valida cadastro manualmente">
       <created>1572062221548</created>
