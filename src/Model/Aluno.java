@@ -106,7 +106,7 @@ public class Aluno {
     public boolean getTotalCategoriaEspecifica(AtividadeComplementar atv){
         AlunoDAO alunoDAO = new AlunoDAO();
         double total = alunoDAO.getTotalCategoriaEspecifica(this, atv);
-        if (total + atv.getCargaHoraria() < atv.getItemCategoriaAC().getMaximoHoras())
+        if (total + atv.getCargaHoraria() <= atv.getItemCategoriaAC().getMaximoHoras())
             return true;
         else
             return false;
