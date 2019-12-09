@@ -1,15 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6db74bfc-8768-47a2-92ed-92e48d0e7253" name="Default Changelist" comment="Adicionei csv para exportar">
+    <list default="true" id="6db74bfc-8768-47a2-92ed-92e48d0e7253" name="Default Changelist" comment="Importar tabela de alunos sem deletar os antigos, alterando apenas a coluna 'graduando' do banco">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AtividadesComplementares/Controller/AlunosController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AtividadesComplementares/Controller/AlunosController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AtividadesComplementares/Controller/CadastroACController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AtividadesComplementares/Controller/CadastroACController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AtividadesComplementares/atividades.db" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AtividadesComplementares/atividades.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/AlunosController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AlunosController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/AtividadeValidadaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AtividadeValidadaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/alunos.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/alunos.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/atividades.db" beforeDir="false" afterPath="$PROJECT_DIR$/src/atividades.db" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,75 +12,6 @@
   </component>
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
-  </component>
-  <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Controller/AlunosController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="333">
-              <caret line="396" column="5" selection-start-line="396" selection-start-column="5" selection-end-line="396" selection-end-column="5" />
-              <folding>
-                <element signature="e#2871#3556#0" expanded="true" />
-                <element signature="e#3555#3556#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Controller/AtividadeValidadaController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="38" column="37" selection-start-line="38" selection-start-column="37" selection-end-line="38" selection-end-column="37" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/View/atividadeValidada.fxml">
-          <provider selected="true" editor-type-id="text-editor" />
-          <provider editor-type-id="JavaFX-Scene-Builder" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/View/alunos.fxml">
-          <provider editor-type-id="text-editor">
-            <state relative-caret-position="729">
-              <caret line="123" column="128" selection-start-line="123" selection-start-column="128" selection-end-line="123" selection-end-column="128" />
-            </state>
-          </provider>
-          <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/CSV/exportar.csv">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="4" column="17" lean-forward="true" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Controller/CadastroCategoriaController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Controller/CadastroACController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="351">
-              <caret line="75" column="12" selection-start-line="75" selection-start-column="12" selection-end-line="75" selection-end-column="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -107,77 +31,12 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="tabelaACgradeAntiga" />
       </map>
     </option>
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/src/Controller/CadastroACController.java" />
-        <option value="$PROJECT_DIR$/src/Controller/AlunosController.java" />
-        <option value="$PROJECT_DIR$/src/Controller/AtividadeValidadaController.java" />
-        <option value="$PROJECT_DIR$/src/View/alunos.fxml" />
-      </list>
-    </option>
-  </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="675" />
-    <option name="y" value="-8" />
-    <option name="width" value="699" />
-    <option name="height" value="744" />
-  </component>
   <component name="ProjectId" id="1TwqMwo47z2mZnk32AFg8b6hMAT" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="AtividadesComplementares" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AtividadesComplementares" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="AtividadesComplementares" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AtividadesComplementares" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="AtividadesComplementares" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AtividadesComplementares" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="AtividadesComplementares" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AtividadesComplementares" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="CSV" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="AtividadesComplementares" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AtividadesComplementares" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Loader" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="AtividadesComplementares" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AtividadesComplementares" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="View" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
-    </panes>
-  </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -248,7 +107,8 @@
       <updated>1571781742680</updated>
       <workItem from="1574381530824" duration="3178000" />
       <workItem from="1574462538455" duration="451000" />
-      <workItem from="1575818462744" duration="11401000" />
+      <workItem from="1575818462744" duration="12115000" />
+      <workItem from="1575852780696" duration="450000" />
     </task>
     <task id="LOCAL-00001" summary="Valida atividade complementar e valida cadastro manualmente">
       <created>1572062221548</created>
@@ -320,54 +180,8 @@
       <option name="project" value="LOCAL" />
       <updated>1574712549813</updated>
     </task>
-    <task id="LOCAL-00011" summary="Tirei os prints no console">
-      <created>1575847060880</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1575847060880</updated>
-    </task>
-    <task id="LOCAL-00012" summary="Adicionei csv para exportar">
-      <created>1575847182105</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1575847182105</updated>
-    </task>
-    <option name="localTasksCounter" value="13" />
+    <option name="localTasksCounter" value="11" />
     <servers />
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
-    <layout>
-      <window_info id="Image Layers" />
-      <window_info id="Designer" />
-      <window_info id="UI Designer" />
-      <window_info id="Capture Tool" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.204236" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" weight="0.31587562" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3289689" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Palette" />
-      <window_info anchor="right" id="Theme Preview" />
-      <window_info anchor="right" id="Maven" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="right" id="Palette&#9;" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-    </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -378,12 +192,6 @@
         <entry key="MAIN">
           <value>
             <State>
-              <option name="RECENTLY_FILTERED_USER_GROUPS">
-                <collection />
-              </option>
-              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
-                <collection />
-              </option>
               <option name="COLUMN_ORDER" />
             </State>
           </value>
@@ -417,62 +225,7 @@
     <MESSAGE value="Inclusao da tabela de atividades complementares da grade antiga" />
     <MESSAGE value="Importar tabela de alunos sem deletar os antigos, alterando apenas a coluna 'graduando' do banco" />
     <MESSAGE value="Horas cumpridas funcionando" />
-    <MESSAGE value="Tirei os prints no console" />
-    <MESSAGE value="Adicionei csv para exportar" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adicionei csv para exportar" />
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Controller/CadastroACController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="75" column="12" selection-start-line="75" selection-start-column="12" selection-end-line="75" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/CadastroCategoriaController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CSV/exportar.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="4" column="17" lean-forward="true" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/View/atividadeValidada.fxml">
-      <provider selected="true" editor-type-id="text-editor" />
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/AlunosController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="333">
-          <caret line="396" column="5" selection-start-line="396" selection-start-column="5" selection-end-line="396" selection-end-column="5" />
-          <folding>
-            <element signature="e#2871#3556#0" expanded="true" />
-            <element signature="e#3555#3556#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/AtividadeValidadaController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="38" column="37" selection-start-line="38" selection-start-column="37" selection-end-line="38" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/View/alunos.fxml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="729">
-          <caret line="123" column="128" selection-start-line="123" selection-start-column="128" selection-end-line="123" selection-end-column="128" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
+    <option name="LAST_COMMIT_MESSAGE" value="Horas cumpridas funcionando" />
   </component>
   <component name="masterDetails">
     <states>

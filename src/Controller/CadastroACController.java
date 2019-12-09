@@ -64,20 +64,20 @@ public class CadastroACController{
     private String gerarCodigo(){
         String letras = "ABCDEFGHIJKLMNOPQRSTUVYWXZ";
         int chaveValida = 0;
-        String armazenaChaves = "";
+        String codigo = "";
         while (chaveValida == 0) {
             Random random = new Random();
-            armazenaChaves = "";
+            codigo = "";
             int index = -1;
             for (int i = 0; i < 5; i++) {
                 index = random.nextInt(letras.length());
-                armazenaChaves += letras.substring(index, index + 1);
+                codigo += letras.substring(index, index + 1);
             }
-            if (atvDAO.getAtividade(armazenaChaves) == null) {
+            if (atvDAO.getAtividade(codigo) == null) {
                 chaveValida = 1;
             }
         }
-        return armazenaChaves;
+        return codigo;
     }
 
     public void cadastrarAC() {
